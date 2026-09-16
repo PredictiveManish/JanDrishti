@@ -1,0 +1,384 @@
+[
+  {
+    "ministry": "Agriculture and Farmers Welfare",
+    "departments": [
+      "Department of Agriculture and Farmers Welfare",
+      "Department of Agricultural Research and Education"
+    ],
+    "minister_in_charge": "Shivraj Singh Chouhan",
+    "secretary_or_head": "Devesh Chaturvedi (IAS UP:89)"
+  },
+  {
+    "ministry": "Ayush",
+    "departments": [],
+    "minister_in_charge": "MoS(IC) Prataprao Jadhav",
+    "secretary_or_head": "Rajesh Kotecha (Scientist)"
+  },
+  {
+    "ministry": "Chemicals and Fertilizers",
+    "departments": [
+      "Dept. of Chemicals and Petro-Chemicals",
+      "Dept. of Fertilizers",
+      "Dept. of Pharmaceuticals"
+    ],
+    "minister_in_charge": "J.P. Nadda",
+    "secretary_or_head": "Nivedita S. Verma (Chem); Rajat K. Mishra (Fert); Manoj Joshi (Pharma)"
+  },
+  {
+    "ministry": "Civil Aviation",
+    "departments": [],
+    "minister_in_charge": "Kinjarapu Rammohan Naidu",
+    "secretary_or_head": "Samir Kumar Sinha (IAS AM:94)"
+  },
+  {
+    "ministry": "Coal",
+    "departments": [],
+    "minister_in_charge": "G. Kishan Reddy",
+    "secretary_or_head": "Vikram Dev Dutt (IAS UT:93)"
+  },
+  {
+    "ministry": "Commerce and Industry",
+    "departments": [
+      "Dept. of Commerce",
+      "Dept. for Promotion of Industry and Internal Trade (DPIIT)"
+    ],
+    "minister_in_charge": "Piyush Goyal",
+    "secretary_or_head": "Rajesh Agarwal (Commerce); Amardeep Singh Bhatia (DPIIT)"
+  },
+  {
+    "ministry": "Communications",
+    "departments": [
+      "Dept. of Telecommunications",
+      "Dept. of Posts"
+    ],
+    "minister_in_charge": "Jyotiraditya Scindia",
+    "secretary_or_head": "Amit Agrawal (Telecom); Vandita Kaul (Posts)"
+  },
+  {
+    "ministry": "Consumer Affairs, Food and Public Distribution",
+    "departments": [
+      "Dept. of Consumer Affairs",
+      "Dept. of Food and Public Distribution"
+    ],
+    "minister_in_charge": "Pralhad Joshi",
+    "secretary_or_head": "Nidhi Khare (CA); Sanjeev Chopra (F&PD)"
+  },
+  {
+    "ministry": "Cooperation",
+    "departments": [],
+    "minister_in_charge": "Amit Shah",
+    "secretary_or_head": "Ashish Kumar Bhutani (IAS AM:92)"
+  },
+  {
+    "ministry": "Corporate Affairs",
+    "departments": [],
+    "minister_in_charge": "Nirmala Sitharaman",
+    "secretary_or_head": "Deepti Gaur Mukerjee (IAS MP:93)"
+  },
+  {
+    "ministry": "Culture",
+    "departments": [],
+    "minister_in_charge": "Gajendra Singh Shekhawat (MoS: Rao Inderjit Singh)",
+    "secretary_or_head": "Vivek Aggarwal (IAS MP:94)"
+  },
+  {
+    "ministry": "Defence",
+    "departments": [
+      "Dept. of Defence",
+      "Dept. of Military Affairs",
+      "Dept. of Defence Production",
+      "Dept. of Defence Research and Development",
+      "Dept. of Ex-Servicemen Welfare"
+    ],
+    "minister_in_charge": "Rajnath Singh",
+    "secretary_or_head": "Rajesh Kumar Singh (Def); CDS Gen N.S. Raja Subramani (Military Affairs); Sanjeev Kumar (Production); Samir V. Kamat (R&D); Sukriti Likhi (ESW)"
+  },
+  {
+    "ministry": "Development of North Eastern Region",
+    "departments": [],
+    "minister_in_charge": "Jyotiraditya Scindia",
+    "secretary_or_head": "K. Srinivas (from Jul 2026; earlier Chanchal Kumar)"
+  },
+  {
+    "ministry": "Earth Sciences",
+    "departments": [],
+    "minister_in_charge": "Dr. Jitendra Singh (IC)",
+    "secretary_or_head": "M. Ravichandran (Scientist)"
+  },
+  {
+    "ministry": "Electronics and Information Technology",
+    "departments": [],
+    "minister_in_charge": "Ashwini Vaishnaw",
+    "secretary_or_head": "S. Krishnan (IAS TN:89)"
+  },
+  {
+    "ministry": "Environment, Forest and Climate Change",
+    "departments": [],
+    "minister_in_charge": "Bhupender Yadav",
+    "secretary_or_head": "Tanmay Kumar (IAS RJ:93)"
+  },
+  {
+    "ministry": "External Affairs",
+    "departments": [],
+    "minister_in_charge": "Dr. S. Jaishankar",
+    "secretary_or_head": "Foreign Secretary Vikram Misri (IFS:89); Secy(West) Sibi George; Secy(East) Rudrendra Tandon; Secy(ER) Sudhakar Dalela; Secy(CPV&OIA) Sripriya Ranganathan"
+  },
+  {
+    "ministry": "Finance",
+    "departments": [
+      "Dept. of Economic Affairs",
+      "Dept. of Expenditure",
+      "Dept. of Revenue",
+      "Dept. of Investment and Public Asset Management (DIPAM)",
+      "Dept. of Financial Services",
+      "Dept. of Public Enterprises"
+    ],
+    "minister_in_charge": "Nirmala Sitharaman",
+    "secretary_or_head": "Anuradha Thakur (DEA); V. Vualnam (Expenditure); Arvind Shrivastava (Revenue); Arunish Chawla (DIPAM); Nagaraju Maddirala (FS); see note"
+  },
+  {
+    "ministry": "Fisheries, Animal Husbandry and Dairying",
+    "departments": [
+      "Dept. of Fisheries",
+      "Dept. of Animal Husbandry and Dairying"
+    ],
+    "minister_in_charge": "Rajiv Ranjan Singh (Lalan Singh)",
+    "secretary_or_head": "AHD: Naresh Pal Gangwar (to Higher Ed Jul 2026); Fisheries: -"
+  },
+  {
+    "ministry": "Food Processing Industries",
+    "departments": [],
+    "minister_in_charge": "Chirag Paswan",
+    "secretary_or_head": "A. P. Das Joshi (IAS AM:1994) — since 2 Jul 2025"
+  },
+  {
+    "ministry": "Health and Family Welfare",
+    "departments": [
+      "Dept. of Health and Family Welfare",
+      "Dept. of Health Research"
+    ],
+    "minister_in_charge": "J.P. Nadda",
+    "secretary_or_head": "Ms. Punya Salila Srivastava (IAS, 1993 batch, AGMUT cadre) — since 30 September 2024 (OSD from 16 Aug 2024)"
+  },
+  {
+    "ministry": "Heavy Industries",
+    "departments": [],
+    "minister_in_charge": "H. D. Kumaraswamy",
+    "secretary_or_head": "Shri Kamran Rizvi (IAS, 1991 batch, Uttar Pradesh cadre) — since 18/19 November 2022 (vice Arun Goel)"
+  },
+  {
+    "ministry": "Home Affairs",
+    "departments": [
+      "Dept. of Internal Security",
+      "Dept. of States",
+      "Dept. of Home",
+      "Dept. of J&K and Ladakh Affairs",
+      "Dept. of Border Management",
+      "Dept. of Official Language",
+      "Dept. of Official Language (addl.)"
+    ],
+    "minister_in_charge": "Amit Shah",
+    "secretary_or_head": "Home Secretary Govind Mohan (IAS SK:89)"
+  },
+  {
+    "ministry": "Housing and Urban Affairs",
+    "departments": [],
+    "minister_in_charge": "Manohar Lal Khattar",
+    "secretary_or_head": "K. Srinivas (to DoNER Jul 2026); D. Thara / Satendra Singh (Urban Dev, from Jul 2026)"
+  },
+  {
+    "ministry": "Education",
+    "departments": [
+      "Dept. of School Education and Literacy",
+      "Dept. of Higher Education"
+    ],
+    "minister_in_charge": "Pralhad Joshi (since Jul 2026; Dharmendra Pradhan resigned)",
+    "secretary_or_head": "Higher Ed: Naresh Pal Gangwar (IAS RJ:94, from Jul 2026); School Ed: T.K. Anil Kumar (from Jul 2026)"
+  },
+  {
+    "ministry": "Information and Broadcasting",
+    "departments": [],
+    "minister_in_charge": "Ashwini Vaishnaw",
+    "secretary_or_head": "Shri Chanchal Kumar (IAS, 1992 batch, Bihar cadre) — since 1 April 2026 (ACC order 31 March 2026)"
+  },
+  {
+    "ministry": "Jal Shakti",
+    "departments": [
+      "Dept. of Water Resources, River Development and Ganga Rejuvenation",
+      "Dept. of Drinking Water and Sanitation"
+    ],
+    "minister_in_charge": "C. R. Patil",
+    "secretary_or_head": "Archana Varma (IAS AM:1995) — since 10 Aug 2026"
+  },
+  {
+    "ministry": "Labour and Employment",
+    "departments": [],
+    "minister_in_charge": "Dr. Mansukh Mandaviya",
+    "secretary_or_head": "Chandra Bhushan Kumar (from Jul 2026; succeeded Vandana Gurnani)"
+  },
+  {
+    "ministry": "Law and Justice",
+    "departments": [
+      "Dept. of Legal Affairs",
+      "Legislative Dept.",
+      "Dept. of Justice"
+    ],
+    "minister_in_charge": "Arjun Ram Meghwal (IC)",
+    "secretary_or_head": "Dr. Rajiv Mani (Indian Legal Service (ILS), not IAS) — since Legislative Department: 9 January 2024; additional charge of Legal Affairs: on relieving of Dr. Anju Rathi Rana (she became Member Secretary, 23rd Law Commission; ACC order 20 Nov 2025)"
+  },
+  {
+    "ministry": "Micro, Small and Medium Enterprises",
+    "departments": [],
+    "minister_in_charge": "Jitan Ram Manjhi",
+    "secretary_or_head": "Shri Bharat Harbanslal Khera (IAS, 1995 batch, Himachal Pradesh cadre) — since 1 May 2026 (ACC order 31 Mar 2026 as OSD; took over on superannuation of Subhas Chandra Lal Das on 30 Apr 2026)"
+  },
+  {
+    "ministry": "Mines",
+    "departments": [],
+    "minister_in_charge": "G. Kishan Reddy",
+    "secretary_or_head": "Keshav Chandra (from Jul 2026; succeeded Piyush Goyal)"
+  },
+  {
+    "ministry": "Minority Affairs",
+    "departments": [],
+    "minister_in_charge": "Kiren Rijiju",
+    "secretary_or_head": "Dr. Srivatsa Krishna (IAS, 1994 batch, Karnataka cadre) — since 1 April 2026 (ACC order 31 Mar 2026)"
+  },
+  {
+    "ministry": "New and Renewable Energy",
+    "departments": [],
+    "minister_in_charge": "Pralhad Joshi",
+    "secretary_or_head": "Shri Santosh Kumar Sarangi (IAS, 1994 batch, Odisha cadre) — since 21 April 2025 (ACC approval 18 Apr 2025)"
+  },
+  {
+    "ministry": "Panchayati Raj",
+    "departments": [],
+    "minister_in_charge": "Rajiv Ranjan Singh (Lalan Singh)",
+    "secretary_or_head": "Vineet Joshi (from Jul 2026; succeeded Vivek Bhardwaj)"
+  },
+  {
+    "ministry": "Parliamentary Affairs",
+    "departments": [],
+    "minister_in_charge": "Kiren Rijiju",
+    "secretary_or_head": "Shri Nikunja Bihari Dhal (IAS, 1993 batch, Odisha cadre) — since 1 July 2026 (i.e., on superannuation of Umang Narula on 30 June 2025; ACC order 18 Apr 2025, charge taken July 2025)"
+  },
+  {
+    "ministry": "Personnel, Public Grievances and Pensions",
+    "departments": [
+      "Dept. of Personnel and Training (DoPT)",
+      "Dept. of Administrative Reforms and Public Grievances",
+      "Dept. of Pensions and Pensioners' Welfare"
+    ],
+    "minister_in_charge": "PM (Narendra Modi)",
+    "secretary_or_head": "Ms. Rachna Shah (IAS, 1991 batch, Kerala cadre) — since 26 December 2024"
+  },
+  {
+    "ministry": "Petroleum and Natural Gas",
+    "departments": [],
+    "minister_in_charge": "Hardeep Singh Puri",
+    "secretary_or_head": "Dr. Neeraj Mittal (IAS, 1992 batch, Tamil Nadu cadre) — since ACC order 20 November 2025; took charge early January 2026 (vice Pankaj Jain, appointed Member Secretary, 8th Central Pay Commission)"
+  },
+  {
+    "ministry": "Ports, Shipping and Waterways",
+    "departments": [],
+    "minister_in_charge": "Sarbananda Sonowal",
+    "secretary_or_head": "Shri Vijay Kumar (IAS, 1992 batch, AGMUT cadre) — since 1 October 2025 (OSD from 22 Aug 2025; took over from T. K. Ramachandran)"
+  },
+  {
+    "ministry": "Power",
+    "departments": [],
+    "minister_in_charge": "Manohar Lal Khattar",
+    "secretary_or_head": "Shri Pankaj Agarwal (IAS, 1992 batch, Madhya Pradesh cadre) — since 1 July 2023"
+  },
+  {
+    "ministry": "Railways",
+    "departments": [],
+    "minister_in_charge": "Ashwini Vaishnaw",
+    "secretary_or_head": "Shri Satish Kumar (Chairman & CEO, Railway Board - the administrative head of Indian Railways) — since 1 September 2024 (as Chairman & CEO); tenure extended twice - currently till 31 August 2027 (second one-year extension approved 27-28 July 2026)"
+  },
+  {
+    "ministry": "Road Transport and Highways",
+    "departments": [],
+    "minister_in_charge": "Nitin Gadkari",
+    "secretary_or_head": "Shri V. Umashankar (IAS, 1993 batch, Haryana cadre) — since Appointed by ACC order of 19-20 October 2024; in office since late October 2024"
+  },
+  {
+    "ministry": "Rural Development",
+    "departments": [
+      "Dept. of Rural Development",
+      "Dept. of Land Resources"
+    ],
+    "minister_in_charge": "Shivraj Singh Chouhan",
+    "secretary_or_head": "Shri Rohit Kansal (IAS, 1995 batch, AGMUT cadre (one outlet, HinduBusinessline, reported 1996 - majority of ACC-order-based reports say 1995)) — since 1 April 2026 (ACC order 31 Mar 2026, vice Shailesh Kumar Singh on superannuation 31 Mar 2026)"
+  },
+  {
+    "ministry": "Science and Technology",
+    "departments": [
+      "Dept. of Science and Technology",
+      "Dept. of Biotechnology",
+      "Dept. of Scientific and Industrial Research (CSIR)"
+    ],
+    "minister_in_charge": "Dr. Jitendra Singh (IC)",
+    "secretary_or_head": "Prof. Umesh V. Waghmare (Not an IAS officer - senior scientist (Professor, Theoretical Sciences Unit, JNCASR Bengaluru; Shanti Swarup Bhatnagar and Infosys laureate)) — since 3 July 2026 (ACC order 1-2 July 2026; vice Prof. Abhay Karandikar, who moved to NITI Aayog in April 2026)"
+  },
+  {
+    "ministry": "Skill Development and Entrepreneurship",
+    "departments": [],
+    "minister_in_charge": "Jayant Chaudhary (IC)",
+    "secretary_or_head": "Ms. Debashree Mukherjee (IAS, 1991 batch, AGMUT cadre) — since 31 August 2025 (ACC order 22 Aug 2025, vice Rajit Punhani who became CEO, FSSAI)"
+  },
+  {
+    "ministry": "Social Justice and Empowerment",
+    "departments": [
+      "Dept. of Social Justice and Empowerment",
+      "Dept. of Empowerment of Persons with Disabilities"
+    ],
+    "minister_in_charge": "Dr. Virendra Kumar",
+    "secretary_or_head": "Sudhansh Pant (IAS RJ:91)"
+  },
+  {
+    "ministry": "Statistics and Programme Implementation",
+    "departments": [],
+    "minister_in_charge": "Rao Inderjit Singh (IC)",
+    "secretary_or_head": "Saurabh Garg (reported)"
+  },
+  {
+    "ministry": "Steel",
+    "departments": [],
+    "minister_in_charge": "H. D. Kumaraswamy",
+    "secretary_or_head": "Sandeep Pondrik (IAS BH:93)"
+  },
+  {
+    "ministry": "Textiles",
+    "departments": [],
+    "minister_in_charge": "Giriraj Singh",
+    "secretary_or_head": "Neelam Shami Rao (IAS MP:92)"
+  },
+  {
+    "ministry": "Tourism",
+    "departments": [],
+    "minister_in_charge": "Gajendra Singh Shekhawat",
+    "secretary_or_head": "Srivatsa Krishna (IAS KN:94)"
+  },
+  {
+    "ministry": "Tribal Affairs",
+    "departments": [],
+    "minister_in_charge": "Jual Oram",
+    "secretary_or_head": "Ranjana Chopra (IAS OR:94)"
+  },
+  {
+    "ministry": "Women and Child Development",
+    "departments": [],
+    "minister_in_charge": "Annpurna Devi",
+    "secretary_or_head": "Anil Malik (IAS HY:91)"
+  },
+  {
+    "ministry": "Youth Affairs and Sports",
+    "departments": [
+      "Dept. of Youth Affairs",
+      "Dept. of Sports"
+    ],
+    "minister_in_charge": "Dr. Mansukh Mandaviya",
+    "secretary_or_head": "Sports: Hari Ranjan Rao (IAS MP:94); Youth: Pallavi Jain Govil (IAS MP:94)"
+  }
+]

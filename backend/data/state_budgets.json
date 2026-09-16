@@ -1,0 +1,933 @@
+[
+  {
+    "state": "Andhra Pradesh",
+    "budget_size_cr": 322000,
+    "budget_size_display": "₹3.22 lakh crore",
+    "fiscal_deficit_pct": 4.38,
+    "fiscal_deficit_note": "Fiscal deficit ₹79,926-79,927 crore (4.38% of GSDP); revenue deficit ₹33,186 crore (1.8%). 2024-25 RE fiscal deficit was 4.6% of GSDP. First full budget of the TDP-led NDA government elected June 2024.",
+    "revenue_exp_cr": 251000,
+    "capital_exp_cr": 40635,
+    "key_allocations": [
+      {
+        "sector": "Backward Classes (BC) welfare component",
+        "amount_cr": 47456
+      },
+      {
+        "sector": "School Education department",
+        "amount_cr": 31805
+      },
+      {
+        "sector": "Health & Family Welfare department",
+        "amount_cr": 19264
+      },
+      {
+        "sector": "Thalliki Vandanam ('Super Six' mother-child scheme)",
+        "amount_cr": 9407
+      },
+      {
+        "sector": "Water Resources department",
+        "amount_cr": 18019
+      }
+    ],
+    "budget_portal_url": "https://apfinance.gov.in",
+    "sources": [
+      "PRS Legislative Research, Andhra Pradesh Budget Analysis 2025-26 (prsindia.org)",
+      "Andhra Pradesh Budget Documents 2025-26 (apfinance.gov.in)",
+      "The Indian Express, Feb 28, 2025",
+      "Times Now, Mar 1, 2025"
+    ],
+    "verification": "verified-2026"
+  },
+  {
+    "state": "Arunachal Pradesh",
+    "budget_size_cr": 39842,
+    "budget_size_display": "₹39,842 crore",
+    "fiscal_deficit_pct": 8.9,
+    "fiscal_deficit_note": "Fiscal deficit ₹4,255 crore (8.9% of GSDP; not adjusted for central capex loans). 2024-25 RE fiscal deficit 7.0% of GSDP. Budget presented by DCM Chowna Mein on Mar 10, 2025 ('Year of Human Capital'); revenue surplus position, own tax revenue ₹3,396 crore.",
+    "revenue_exp_cr": 29963,
+    "capital_exp_cr": 8842,
+    "key_allocations": [
+      {
+        "sector": "Health sector investment (3-year plan)",
+        "amount_cr": 3666
+      },
+      {
+        "sector": "Education - Mission Shikshit Arunachal-2029 (3-year revamp)",
+        "amount_cr": 3000
+      },
+      {
+        "sector": "CM Comprehensive State Power Development Programme",
+        "amount_cr": 2000
+      },
+      {
+        "sector": "CM rural roads & bridges development programme",
+        "amount_cr": 2000
+      }
+    ],
+    "budget_portal_url": "https://arunachalbudget.in/budget-2025-26/",
+    "sources": [
+      "PRS Legislative Research, Arunachal Pradesh Budget Analysis 2025-26 (prsindia.org)",
+      "Arunachal Pradesh Budget Documents 2025-26 (arunachalbudget.in)",
+      "The Arunachal Times, Mar 11, 2025"
+    ],
+    "verification": "verified-2026"
+  },
+  {
+    "state": "Assam",
+    "budget_size_cr": 155985,
+    "budget_size_display": "₹1.56 lakh crore",
+    "fiscal_deficit_pct": 3.7,
+    "fiscal_deficit_note": "Fiscal deficit ₹27,398 crore (3.7% of GSDP). 2024-25 RE fiscal deficit spiked to 5.7% of GSDP (budgeted 3.5%). Budget presented by FM Ajanta Neog on Mar 10, 2025 by the BJP government ahead of the 2026 assembly elections - FY2025-26 figures reflect the pre-election government. Revenue balance (nil surplus/deficit) budgeted.",
+    "revenue_exp_cr": 117226,
+    "capital_exp_cr": 38759,
+    "key_allocations": [
+      {
+        "sector": "Orunodoi 3.0 (monthly cash transfer to ~37 lakh women)",
+        "amount_cr": 5000
+      },
+      {
+        "sector": "Mukhya Mantri Mahila Udyamita Abhiyaan (SHG self-employment)",
+        "amount_cr": 3038
+      },
+      {
+        "sector": "Child welfare",
+        "amount_cr": 2238
+      },
+      {
+        "sector": "Mukhya Mantrir Nijut Moina (girls' education DBT)",
+        "amount_cr": 391
+      }
+    ],
+    "budget_portal_url": "https://finance.assam.gov.in/portlets/assam-budget-2025-26",
+    "sources": [
+      "PRS Legislative Research, Assam Budget Analysis 2025-26 (prsindia.org)",
+      "Assam Budget Speech 2025-26 (assambidhansabha.org)",
+      "The Assam Tribune, Mar 10, 2025"
+    ],
+    "verification": "verified-2026"
+  },
+  {
+    "state": "Bihar",
+    "budget_size_cr": 316895,
+    "budget_size_display": "₹3.17 lakh crore",
+    "fiscal_deficit_pct": 2.98,
+    "fiscal_deficit_note": "Fiscal deficit ₹32,718 crore (2.98% of GSDP, within FRBM limit); revenue surplus ₹8,831 crore. 2024-25 RE fiscal deficit reported at 9.2% of GSDP (vs 3.0% budgeted). Budget presented Mar 3, 2025 by the NDA government ahead of the Oct-Nov 2025 assembly elections; the post-election government presented its own FY2026-27 budget in 2026, but FY2025-26 figures here are from the pre-election budget.",
+    "revenue_exp_cr": 252000,
+    "capital_exp_cr": 64894,
+    "key_allocations": [
+      {
+        "sector": "Education",
+        "amount_cr": 60954
+      },
+      {
+        "sector": "Health",
+        "amount_cr": 20335
+      },
+      {
+        "sector": "Rural development",
+        "amount_cr": 16193
+      },
+      {
+        "sector": "Energy",
+        "amount_cr": 13483
+      },
+      {
+        "sector": "SC/ST/OBC/minority & social welfare",
+        "amount_cr": 13368
+      }
+    ],
+    "budget_portal_url": "http://budget.bihar.gov.in",
+    "sources": [
+      "PRS Legislative Research, Bihar Budget Analysis 2025-26 (prsindia.org)",
+      "The Hindu, Mar 3, 2025",
+      "Times of India, Mar 3, 2025"
+    ],
+    "verification": "verified-2026"
+  },
+  {
+    "state": "Chhattisgarh",
+    "budget_size_cr": 165000,
+    "budget_size_display": "₹1.65 lakh crore",
+    "fiscal_deficit_pct": 2.97,
+    "fiscal_deficit_note": "Net fiscal deficit ₹18,900 crore (2.97% of GSDP, within 3% FRBM limit) after netting ₹4,000 crore of Centre's SASCI loans; gross fiscal deficit ₹22,900-23,900 crore. 2024-25 RE fiscal deficit 5.3% of GSDP (budgeted 3.8%). Revenue surplus ₹2,804 crore. Second budget of the BJP government (FM O.P. Choudhary), presented Mar 3, 2025.",
+    "revenue_exp_cr": null,
+    "capital_exp_cr": 26341,
+    "key_allocations": [
+      {
+        "sector": "School Education department",
+        "amount_cr": 22356
+      },
+      {
+        "sector": "Krishak Unnati Yojana (farmers)",
+        "amount_cr": 10000
+      },
+      {
+        "sector": "PM Awas Yojana (Gramin)",
+        "amount_cr": 8500
+      },
+      {
+        "sector": "Mahtari Vandan Yojana (women, ₹1,000/month)",
+        "amount_cr": 5500
+      }
+    ],
+    "budget_portal_url": "https://finance.cg.gov.in",
+    "sources": [
+      "PRS Legislative Research, Chhattisgarh Budget Analysis 2025-26 (prsindia.org)",
+      "Chhattisgarh Budget Press Note 2025-26 (finance.cg.gov.in)",
+      "The Hindu, Mar 3, 2025",
+      "The Hitavada, Mar 4, 2025"
+    ],
+    "verification": "verified-2026"
+  },
+  {
+    "state": "Goa",
+    "budget_size_cr": 28163,
+    "budget_size_display": "₹28,163 crore",
+    "fiscal_deficit_pct": 2.1,
+    "fiscal_deficit_note": "Fiscal deficit ₹2,826 crore (Budget at a Glance; PRS estimates ₹2,932 crore = 2.1% of GSDP). Revenue surplus ₹2,404 crore (1.7% of GSDP). 2024-25 RE fiscal deficit was 3.5% of GSDP. Budget presented by CM Pramod Sawant on Mar 26, 2025; no new taxes; focus on investor tax holidays and tourism.",
+    "revenue_exp_cr": 20299,
+    "capital_exp_cr": 7863,
+    "key_allocations": [
+      {
+        "sector": "Health sector",
+        "amount_cr": 857
+      },
+      {
+        "sector": "Infrastructure projects (GSIDC)",
+        "amount_cr": 640
+      },
+      {
+        "sector": "Tourism sector",
+        "amount_cr": 440
+      }
+    ],
+    "budget_portal_url": "https://goabudget.gov.in",
+    "sources": [
+      "PRS Legislative Research, Goa Budget Analysis 2025-26 (prsindia.org)",
+      "Goa Budget at a Glance 2025-26 (goabudget.gov.in)",
+      "The Indian Express, Mar 27, 2025",
+      "Digital Goa, Mar 26, 2025"
+    ],
+    "verification": "verified-2026"
+  },
+  {
+    "state": "Gujarat",
+    "budget_size_cr": 370250,
+    "budget_size_display": "₹3.70 lakh crore",
+    "fiscal_deficit_pct": 2.0,
+    "fiscal_deficit_note": "Fiscal deficit ₹58,397 crore (2.0% of GSDP); revenue balance estimated. 2024-25 RE fiscal deficit 1.9% of GSDP. Budget presented by FM Kanubhai Desai on Feb 20, 2025; 11.3% larger than FY2024-25 BE; 'Year of Urban Development'.",
+    "revenue_exp_cr": 236044,
+    "capital_exp_cr": 134206,
+    "key_allocations": [
+      {
+        "sector": "Education department",
+        "amount_cr": 59998
+      },
+      {
+        "sector": "Urban development ('Year of Urban Development')",
+        "amount_cr": 30325
+      },
+      {
+        "sector": "Swarnim Mukhya Mantri Shaheri Vikas Yojana",
+        "amount_cr": 12846
+      },
+      {
+        "sector": "Power subsidy for agriculture",
+        "amount_cr": 10613
+      }
+    ],
+    "budget_portal_url": "https://finances.gujarat.gov.in",
+    "sources": [
+      "PRS Legislative Research, Gujarat Budget Analysis 2025-26 (prsindia.org)",
+      "Gujarat Budget Documents 2025-26",
+      "Economic Times, Feb 20, 2025",
+      "DeshGujarat, Feb 20, 2025"
+    ],
+    "verification": "verified-2026"
+  },
+  {
+    "state": "Haryana",
+    "budget_size_cr": 205017,
+    "budget_size_display": "₹2.05 lakh crore",
+    "fiscal_deficit_pct": 2.67,
+    "fiscal_deficit_note": "Fiscal deficit ₹35,995 crore (2.67% of GSDP); revenue deficit ₹20,600 crore (1.53%). 2024-25 RE fiscal deficit 2.7% of GSDP. Budget presented Mar 17, 2025 by CM Nayab Singh Saini (also FM); debt projected ₹3.53 lakh crore (26.2% of GSDP).",
+    "revenue_exp_cr": 148417,
+    "capital_exp_cr": 56601,
+    "key_allocations": [
+      {
+        "sector": "Lado Lakshmi Yojana (₹2,100/month to women)",
+        "amount_cr": 5000
+      },
+      {
+        "sector": "Agriculture & Farmers' Welfare department",
+        "amount_cr": 4229
+      },
+      {
+        "sector": "Animal Husbandry department",
+        "amount_cr": 2083
+      }
+    ],
+    "budget_portal_url": "https://finhry.gov.in/budget-2025-26/",
+    "sources": [
+      "PRS Legislative Research, Haryana Budget Analysis 2025-26 (prsindia.org)",
+      "Haryana Budget at a Glance 2025-26 (finhry.gov.in)",
+      "Hindustan Times, Mar 18, 2025",
+      "The Tribune, Mar 17, 2025"
+    ],
+    "verification": "verified-2026"
+  },
+  {
+    "state": "Himachal Pradesh",
+    "budget_size_cr": 58514,
+    "budget_size_display": "₹58,514 crore",
+    "fiscal_deficit_pct": 4.04,
+    "fiscal_deficit_note": "Fiscal deficit ₹10,338 crore (4.04% of GSDP per CM's speech; PRS rounds to 4.0%); revenue deficit ₹6,390 crore (2.5% of GSDP). 2024-25 RE fiscal deficit was 6.6% of GSDP. Tax-free budget presented by CM Sukhvinder Singh Sukhu on Mar 17, 2025; debt projected at ₹1.03 lakh crore; FM flagged sharp tapering of Revenue Deficit Grant (₹10,949 crore in FY22 to ₹3,257 crore in FY26).",
+    "revenue_exp_cr": 48733,
+    "capital_exp_cr": null,
+    "key_allocations": [
+      {
+        "sector": "Education sector",
+        "amount_cr": 9849
+      },
+      {
+        "sector": "Health sector",
+        "amount_cr": 3481
+      },
+      {
+        "sector": "Social security, women & child welfare and OBC welfare",
+        "amount_cr": 2533
+      }
+    ],
+    "budget_portal_url": "https://ebudget.hp.nic.in",
+    "sources": [
+      "PRS Legislative Research, Himachal Pradesh Budget Analysis 2025-26 (prsindia.org)",
+      "Himachal Pradesh Budget Speech 2025-26 (ebudget.hp.nic.in)",
+      "The Hindu, Mar 17, 2025",
+      "Times of India, Mar 17, 2025"
+    ],
+    "verification": "verified-2026"
+  },
+  {
+    "state": "Jharkhand",
+    "budget_size_cr": 145000,
+    "budget_size_display": "₹1.45 lakh crore",
+    "fiscal_deficit_pct": 2.0,
+    "fiscal_deficit_note": "Fiscal deficit ₹11,253 crore (2.0% of GSDP); revenue surplus ₹14,517 crore (2.6%). PRS net expenditure is ₹1,36,653 crore (excl. debt repayment) against the ₹1.45 lakh crore headline. 2024-25 RE fiscal deficit 2.3% of GSDP. First budget of the Hemant Soren government after its Nov 2024 re-election (FM Radhakrishna Kishore), presented Mar 3, 2025.",
+    "revenue_exp_cr": null,
+    "capital_exp_cr": null,
+    "key_allocations": [
+      {
+        "sector": "Social sector outlay",
+        "amount_cr": 62844
+      },
+      {
+        "sector": "Mukhyamantri Maiya Samman Yojana (women, ₹2,500/month)",
+        "amount_cr": 13363
+      },
+      {
+        "sector": "Mukhyamantri Sarvajan Pension Yojana",
+        "amount_cr": 3850
+      }
+    ],
+    "budget_portal_url": "https://finance.jharkhand.gov.in",
+    "sources": [
+      "PRS Legislative Research, Jharkhand Budget Analysis 2025-26 (prsindia.org)",
+      "The Hindu, Mar 3, 2025",
+      "Economic Times, Mar 3, 2025"
+    ],
+    "verification": "verified-2026"
+  },
+  {
+    "state": "Karnataka",
+    "budget_size_cr": 409549,
+    "budget_size_display": "₹4.10 lakh crore",
+    "fiscal_deficit_pct": 2.95,
+    "fiscal_deficit_note": "Fiscal deficit ₹90,262 crore per FM speech (2.95% of GSDP; PRS: ₹90,428 crore, 2.9%); revenue deficit ₹19,262 crore (0.63%). 2024-25 RE fiscal deficit 2.9% of GSDP. Budget presented by CM Siddaramaiah on Mar 7, 2025; first time outlay crossed ₹4 lakh crore; debt ₹7.65 lakh crore (24.9% of GSDP).",
+    "revenue_exp_cr": 311739,
+    "capital_exp_cr": 71336,
+    "key_allocations": [
+      {
+        "sector": "Five guarantee schemes (total)",
+        "amount_cr": 51034
+      },
+      {
+        "sector": "Gruha Lakshmi (women's guarantee)",
+        "amount_cr": 28608
+      },
+      {
+        "sector": "Free power to irrigation pump sets",
+        "amount_cr": 16021
+      },
+      {
+        "sector": "Gruha Jyothi (free electricity guarantee)",
+        "amount_cr": 10100
+      }
+    ],
+    "budget_portal_url": "https://finance.karnataka.gov.in",
+    "sources": [
+      "PRS Legislative Research, Karnataka Budget Analysis 2025-26 (prsindia.org)",
+      "Karnataka Budget Speech 2025-26",
+      "The Hindu, Mar 7, 2025",
+      "New Indian Express, Mar 7, 2025"
+    ],
+    "verification": "verified-2026"
+  },
+  {
+    "state": "Kerala",
+    "budget_size_cr": 198582,
+    "budget_size_display": "₹1.99 lakh crore",
+    "fiscal_deficit_pct": 3.16,
+    "fiscal_deficit_note": "Fiscal deficit ₹45,039 crore (3.16% of GSDP); revenue deficit ₹27,125 crore (1.9%). Total expenditure including debt repayment is ₹3,13,543 crore; media headlined it as a ~₹2 lakh crore budget. 2024-25 RE fiscal deficit 3.5% of GSDP. Budget presented Feb 7, 2025 by FM K.N. Balagopal (LDF government) before the 2026 assembly elections - FY2025-26 data reflects the pre-election government.",
+    "revenue_exp_cr": null,
+    "capital_exp_cr": 16938,
+    "key_allocations": [
+      {
+        "sector": "Pensions & other retirement benefits",
+        "amount_cr": 29460
+      },
+      {
+        "sector": "Education, sports, arts & culture (sector)",
+        "amount_cr": 25926
+      },
+      {
+        "sector": "Social welfare & nutrition",
+        "amount_cr": 15468
+      },
+      {
+        "sector": "Health & family welfare (sector)",
+        "amount_cr": 10580
+      },
+      {
+        "sector": "Wayanad landslide rehabilitation",
+        "amount_cr": 750
+      }
+    ],
+    "budget_portal_url": "https://finance.kerala.gov.in",
+    "sources": [
+      "PRS Legislative Research, Kerala Budget Analysis 2025-26 (prsindia.org)",
+      "Kerala Budget in Brief 2025-26 (niyamasabha.org)",
+      "Onmanorama, Feb 8, 2025",
+      "The Hindu (budget live coverage), Feb 7, 2025"
+    ],
+    "verification": "verified-2026"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "budget_size_cr": 421032,
+    "budget_size_display": "₹4.21 lakh crore",
+    "fiscal_deficit_pct": 4.66,
+    "fiscal_deficit_note": "Fiscal deficit ₹78,900 crore (4.66% of GSDP per FM; PRS: 4.7%); revenue surplus ₹618 crore (0.04%). 2024-25 RE fiscal deficit 4.2% of GSDP. Budget presented by Deputy CM/FM Jagdish Devda on Mar 12, 2025; first time MP's outlay crossed ₹4 lakh crore; capital expenditure up 31%.",
+    "revenue_exp_cr": null,
+    "capital_exp_cr": null,
+    "key_allocations": [
+      {
+        "sector": "Agriculture & allied sectors",
+        "amount_cr": 58257
+      },
+      {
+        "sector": "Tribal welfare",
+        "amount_cr": 45276
+      },
+      {
+        "sector": "Primary education",
+        "amount_cr": 25499
+      },
+      {
+        "sector": "Mukhya Mantri Ladli Behna Yojana (women, ₹1,250/month)",
+        "amount_cr": 18669
+      }
+    ],
+    "budget_portal_url": "https://finance.mp.gov.in",
+    "sources": [
+      "PRS Legislative Research, Madhya Pradesh Budget Analysis 2025-26 (prsindia.org)",
+      "The Hindu, Mar 12, 2025",
+      "Times of India, Mar 12, 2025"
+    ],
+    "verification": "verified-2026"
+  },
+  {
+    "state": "Maharashtra",
+    "budget_size_cr": 700020,
+    "budget_size_display": "₹7.00 lakh crore",
+    "fiscal_deficit_pct": 2.76,
+    "fiscal_deficit_note": "Fiscal deficit ₹1,36,235 crore (2.76% of GSDP); revenue deficit ₹45,891 crore (0.9%). 2024-25 RE fiscal deficit 2.9% of GSDP. India's largest state budget after UP, presented by Deputy CM/FM Ajit Pawar on Mar 10, 2025 - the Mahayuti government's first budget after the Nov 2024 elections; debt projected ₹9.32 lakh crore (18.9% of GSDP).",
+    "revenue_exp_cr": 606855,
+    "capital_exp_cr": 93166,
+    "key_allocations": [
+      {
+        "sector": "Mukhya Mantri Majhi Ladki Bahin Yojana (women, ₹1,500/month)",
+        "amount_cr": 36000
+      },
+      {
+        "sector": "Power subsidy for agricultural pump consumers",
+        "amount_cr": 17815
+      },
+      {
+        "sector": "PM Awas Yojana",
+        "amount_cr": 15138
+      },
+      {
+        "sector": "Namo Shetkari Mahasanman Nidhi Yojana (farmers)",
+        "amount_cr": 6060
+      }
+    ],
+    "budget_portal_url": "https://finance.maharashtra.gov.in",
+    "sources": [
+      "PRS Legislative Research, Maharashtra Budget Analysis 2025-26 (prsindia.org)",
+      "Maharashtra Budget Speech 2025-26",
+      "The Hindu, Mar 10, 2025",
+      "Indian Express, Mar 10, 2025"
+    ],
+    "verification": "verified-2026"
+  },
+  {
+    "state": "Manipur",
+    "budget_size_cr": 35104,
+    "budget_size_display": "₹35,104 crore",
+    "fiscal_deficit_pct": 3.42,
+    "fiscal_deficit_note": "Fiscal deficit estimated at 3.42% of GSDP. 2024-25 RE fiscal deficit 4.0% of GSDP. Manipur was under President's Rule (imposed Feb 13, 2025), so the FY2025-26 budget was tabled in the Lok Sabha by Union FM Nirmala Sitharaman on Mar 10, 2025 (initially as a vote-on-account, then full budget via Appropriation Acts); outstanding debt projected at 37% of GSDP.",
+    "revenue_exp_cr": null,
+    "capital_exp_cr": 7773,
+    "key_allocations": [
+      {
+        "sector": "Social sector outlay",
+        "amount_cr": 9520
+      },
+      {
+        "sector": "Incentives for police personnel in sensitive areas",
+        "amount_cr": 2866
+      },
+      {
+        "sector": "SASCI (Special Assistance to States for Capital Investment)",
+        "amount_cr": 2000
+      }
+    ],
+    "budget_portal_url": "https://manipur.gov.in",
+    "sources": [
+      "PRS Legislative Research, Manipur Budget Analysis 2025-26 (prsindia.org)",
+      "Business Standard (PTI), Mar 10, 2025",
+      "The Week (PTI), Mar 10, 2025"
+    ],
+    "verification": "needs-verification"
+  },
+  {
+    "state": "Meghalaya",
+    "budget_size_cr": 30003,
+    "budget_size_display": "₹30,003 crore",
+    "fiscal_deficit_pct": 2.96,
+    "fiscal_deficit_note": "Fiscal deficit ₹1,970 crore (2.96% of GSDP, within the 3.5% limit); revenue surplus ₹5,035 crore (7.6% of GSDP). 2024-25 RE fiscal deficit 2.6% of GSDP. Budget presented by CM Conrad Sangma on Mar 5, 2025; framed around 'Meghalaya Mission 10' targeting a $10 billion economy by 2028.",
+    "revenue_exp_cr": 20556,
+    "capital_exp_cr": 9447,
+    "key_allocations": [
+      {
+        "sector": "Capital expenditure (total; 7x the 2017-18 level)",
+        "amount_cr": 9447
+      }
+    ],
+    "budget_portal_url": "https://www.megfinance.gov.in",
+    "sources": [
+      "PRS Legislative Research, Meghalaya Budget Analysis 2025-26 (prsindia.org)",
+      "Meghalaya Budget Speech 2025-26 (meghalaya.gov.in)",
+      "The Shillong Times, Mar 6, 2025"
+    ],
+    "verification": "needs-verification"
+  },
+  {
+    "state": "Mizoram",
+    "budget_size_cr": 15199,
+    "budget_size_display": "₹15,199 crore",
+    "fiscal_deficit_pct": 4.57,
+    "fiscal_deficit_note": "Fiscal deficit ₹1,651.68 crore (4.57% of GSDP; PRS: 4.6%). The higher percentage partly reflects a revised, more realistic GSDP methodology which cut the 2024-25 GSDP estimate from ₹48,038 crore to ₹34,003 crore; 2024-25 RE fiscal deficit was 7.6% of GSDP. Budget presented by CM Lalduhoma (ZPM) on Mar 4, 2025.",
+    "revenue_exp_cr": 12540,
+    "capital_exp_cr": 2659,
+    "key_allocations": [
+      {
+        "sector": "Power purchase",
+        "amount_cr": 500
+      },
+      {
+        "sector": "Bana Kaih (farming/livelihood scheme)",
+        "amount_cr": 350
+      },
+      {
+        "sector": "Road construction & maintenance",
+        "amount_cr": 100
+      },
+      {
+        "sector": "Mizoram Healthcare Scheme",
+        "amount_cr": 50
+      }
+    ],
+    "budget_portal_url": "https://finance.mizoram.gov.in",
+    "sources": [
+      "PRS Legislative Research, Mizoram Budget Analysis 2025-26 (prsindia.org)",
+      "Mizoram Budget Speech 2025-26 (DIPR Mizoram)",
+      "Times of India, Mar 4, 2025"
+    ],
+    "verification": "needs-verification"
+  },
+  {
+    "state": "Nagaland",
+    "budget_size_cr": 24699,
+    "budget_size_display": "₹24,699 crore",
+    "fiscal_deficit_pct": 3.0,
+    "fiscal_deficit_note": "Fiscal deficit ₹1,350 crore (3.0% of GSDP); revenue surplus ₹1,618 crore (3.6%). 2024-25 RE fiscal deficit was 8.1% of GSDP (more than double the 3% budgeted). Budget presented by CM Neiphiu Rio on Mar 6, 2025: gross receipts ₹24,849 crore vs gross expenditure ₹24,699 crore; ~90 paise of every rupee comes from external (central) sources; accumulated closing deficit ₹843.21 crore.",
+    "revenue_exp_cr": null,
+    "capital_exp_cr": null,
+    "key_allocations": [
+      {
+        "sector": "Salaries, wages & pensions (non-developmental)",
+        "amount_cr": 11401
+      },
+      {
+        "sector": "Developmental outlay (incl. CSS)",
+        "amount_cr": 5819
+      }
+    ],
+    "budget_portal_url": "https://finance.nagaland.gov.in",
+    "sources": [
+      "PRS Legislative Research, Nagaland Budget Analysis 2025-26 (prsindia.org)",
+      "Morung Express, Mar 7, 2025",
+      "Morung Express (budget analysis), Mar 2025"
+    ],
+    "verification": "needs-verification"
+  },
+  {
+    "state": "Odisha",
+    "budget_size_cr": 290000,
+    "budget_size_display": "₹2.90 lakh crore",
+    "fiscal_deficit_pct": 3.2,
+    "fiscal_deficit_note": "Fiscal deficit ₹34,200 crore (3.2% of GSDP); revenue surplus ~3% of GSDP. 2024-25 RE fiscal deficit 3.1% of GSDP. Budget presented by CM Mohan Charan Majhi on Feb 17, 2025 - the BJP government's first full budget; programme budget ₹1.70 lakh crore (59% of total); capital outlay of ₹65,012 crore is 6.1% of GSDP, among the highest of major states.",
+    "revenue_exp_cr": null,
+    "capital_exp_cr": 65012,
+    "key_allocations": [
+      {
+        "sector": "Capital outlay (6.1% of GSDP)",
+        "amount_cr": 65012
+      },
+      {
+        "sector": "Education, sports & culture (sector)",
+        "amount_cr": 37310
+      },
+      {
+        "sector": "Samrudha Krushak Yojana (farmer subsidies)",
+        "amount_cr": 6000
+      },
+      {
+        "sector": "Gopabandhu Jana Arogya Yojana (health insurance)",
+        "amount_cr": 6249
+      }
+    ],
+    "budget_portal_url": "https://budget.odisha.gov.in",
+    "sources": [
+      "PRS Legislative Research, Odisha Budget Analysis 2025-26 (prsindia.org)",
+      "Odisha Fiscal Strategy Paper 2025-26 (finance.odisha.gov.in)",
+      "The Hindu, Feb 17, 2025"
+    ],
+    "verification": "verified-2026"
+  },
+  {
+    "state": "Punjab",
+    "budget_size_cr": 236080,
+    "budget_size_display": "₹2.36 lakh crore",
+    "fiscal_deficit_pct": 3.84,
+    "fiscal_deficit_note": "Fiscal deficit ₹34,201 crore (3.84% of GSDP per budget speech; PRS: 3.8%); revenue deficit ₹23,957 crore (2.7%); effective revenue deficit 2.51%. 2024-25 RE fiscal deficit 4.5% of GSDP. Budget presented by FM Harpal Singh Cheema on Mar 26, 2025 (no new taxes); outstanding debt projected ₹3.96 lakh crore; PRS notes committed expenditure exceeded 100% of revenue receipts in recent years.",
+    "revenue_exp_cr": null,
+    "capital_exp_cr": null,
+    "key_allocations": [
+      {
+        "sector": "Power subsidy to agriculture",
+        "amount_cr": 9992
+      },
+      {
+        "sector": "Agriculture & allied sectors",
+        "amount_cr": 14524
+      },
+      {
+        "sector": "Assistance to electricity boards",
+        "amount_cr": 7614
+      },
+      {
+        "sector": "Health sector",
+        "amount_cr": 5598
+      }
+    ],
+    "budget_portal_url": "https://finance.punjab.gov.in/StateBudget/Index",
+    "sources": [
+      "PRS Legislative Research, Punjab Budget Analysis 2025-26 (prsindia.org)",
+      "Punjab Budget Speech 2025-26 (yespunjab.com mirror of official speech)",
+      "New Indian Express, Mar 26, 2025"
+    ],
+    "verification": "verified-2026"
+  },
+  {
+    "state": "Rajasthan",
+    "budget_size_cr": 537000,
+    "budget_size_display": "₹5.37 lakh crore",
+    "fiscal_deficit_pct": 4.25,
+    "fiscal_deficit_note": "Fiscal deficit ₹84,643 crore (4.25% of GSDP); revenue deficit ₹31,009 crore (1.6%). 2024-25 RE fiscal deficit 4.1% of GSDP. Budget presented by Deputy CM/FM Diya Kumari on Feb 19, 2025 (state's first 'Green Theme Budget'); revenue expenditure ₹3.26 lakh crore; capital expenditure has risen >40% over two years.",
+    "revenue_exp_cr": 325546,
+    "capital_exp_cr": null,
+    "key_allocations": [
+      {
+        "sector": "Nine greenfield expressways (announced programme cost)",
+        "amount_cr": 60000
+      },
+      {
+        "sector": "Mukhya Mantri Arogya Maa Yojana - free treatment 'Maa Kosh'",
+        "amount_cr": 3500
+      },
+      {
+        "sector": "Tourism promotion",
+        "amount_cr": 975
+      },
+      {
+        "sector": "New drinking water connections (20 lakh households)",
+        "amount_cr": 400
+      }
+    ],
+    "budget_portal_url": "https://finance.rajasthan.gov.in/website/StateBudget2526.aspx",
+    "sources": [
+      "PRS Legislative Research, Rajasthan Budget Analysis 2025-26 (prsindia.org)",
+      "Rajasthan Budget Press Note 2025-26 (finance.rajasthan.gov.in)",
+      "The Hindu, Feb 20, 2025"
+    ],
+    "verification": "verified-2026"
+  },
+  {
+    "state": "Sikkim",
+    "budget_size_cr": 16196,
+    "budget_size_display": "₹16,196 crore",
+    "fiscal_deficit_pct": 5.8,
+    "fiscal_deficit_note": "Fiscal deficit ₹3,303 crore (5.8% of GSDP); revenue surplus ₹1,203 crore (2.1%). 2024-25 RE fiscal deficit 6.1% of GSDP. Budget presented by CM Prem Singh Tamang (SKM) on Mar 26, 2025 - 7th consecutive budget; golden jubilee (50th year of statehood) budget; a vote-on-account was used for FY2026-27.",
+    "revenue_exp_cr": 11028,
+    "capital_exp_cr": 5168,
+    "key_allocations": [
+      {
+        "sector": "Sikkim Power Sector Development Project (ADB-assisted, 24x7 power)",
+        "amount_cr": 1608
+      },
+      {
+        "sector": "State share for centrally sponsored schemes",
+        "amount_cr": 2896
+      },
+      {
+        "sector": "RDSS loss-reduction programme (power distribution)",
+        "amount_cr": 360
+      }
+    ],
+    "budget_portal_url": "https://sikkimfred.gov.in",
+    "sources": [
+      "PRS Legislative Research, Sikkim Budget Analysis 2025-26 (prsindia.org)",
+      "Sikkim Budget Speech 2025-26 (sikkimfred.gov.in)",
+      "Business Standard (PTI), Mar 26, 2025"
+    ],
+    "verification": "needs-verification"
+  },
+  {
+    "state": "Tamil Nadu",
+    "budget_size_cr": 439293,
+    "budget_size_display": "₹4.39 lakh crore",
+    "fiscal_deficit_pct": 3.0,
+    "fiscal_deficit_note": "Fiscal deficit ₹1,06,968 crore (3.0% of GSDP); revenue deficit ₹41,635 crore (1.2%). Budget presented by FM Thangam Thennarasu on Mar 14, 2025 (total disbursement outlay ₹4,39,293 crore excluding public debt; total expenditure incl. debt repayment ₹4,86,332 crore). 2024-25 RE fiscal deficit 3.3% of GSDP. DMK government's budget before the 2026 assembly elections - FY2025-26 figures reflect the pre-election government.",
+    "revenue_exp_cr": 373204,
+    "capital_exp_cr": 57231,
+    "key_allocations": [
+      {
+        "sector": "Education (sector total)",
+        "amount_cr": 55261
+      },
+      {
+        "sector": "School Education department",
+        "amount_cr": 46760
+      },
+      {
+        "sector": "Rural Development & Panchayat Raj",
+        "amount_cr": 29465
+      },
+      {
+        "sector": "Magalir Urimai Thogai (women's basic income)",
+        "amount_cr": 13807
+      }
+    ],
+    "budget_portal_url": "https://budget.tn.gov.in",
+    "sources": [
+      "PRS Legislative Research, Tamil Nadu Budget Analysis 2025-26 (prsindia.org)",
+      "Tamil Nadu Budget Speech 2025-26",
+      "The Hindu, Mar 14, 2025",
+      "New Indian Express, Mar 15, 2025"
+    ],
+    "verification": "verified-2026"
+  },
+  {
+    "state": "Telangana",
+    "budget_size_cr": 304965,
+    "budget_size_display": "₹3.05 lakh crore",
+    "fiscal_deficit_pct": 3.0,
+    "fiscal_deficit_note": "Fiscal deficit ₹54,010 crore (3.0% of GSDP); revenue surplus ₹2,738 crore. First Telangana budget to cross ₹3 lakh crore, presented by Deputy CM/FM Mallu Bhatti Vikramarka on Mar 19, 2025 (Congress government). 2024-25 RE fiscal deficit 2.9% of GSDP. Outstanding liabilities (FRBM loans) ~₹5.05 lakh crore projected for end-FY26.",
+    "revenue_exp_cr": 226982,
+    "capital_exp_cr": 36504,
+    "key_allocations": [
+      {
+        "sector": "Six poll guarantees (total)",
+        "amount_cr": 56084
+      },
+      {
+        "sector": "SC welfare sub-plan",
+        "amount_cr": 40232
+      },
+      {
+        "sector": "Rythu Bharosa (farmer investment support)",
+        "amount_cr": 18000
+      },
+      {
+        "sector": "Irrigation department",
+        "amount_cr": 23373
+      }
+    ],
+    "budget_portal_url": "https://finance.telangana.gov.in",
+    "sources": [
+      "PRS Legislative Research, Telangana Budget Analysis 2025-26 (prsindia.org)",
+      "Economic Times, Mar 19, 2025",
+      "New Indian Express, Mar 20, 2025",
+      "Business Standard, Mar 19, 2025"
+    ],
+    "verification": "verified-2026"
+  },
+  {
+    "state": "Tripura",
+    "budget_size_cr": 32423,
+    "budget_size_display": "₹32,423 crore",
+    "fiscal_deficit_pct": 4.9,
+    "fiscal_deficit_note": "Fiscal deficit ₹4,962 crore (4.9% of GSDP, PRS basis which treats SASCI as borrowing; the state's own budget documents show a smaller deficit). Revenue surplus ₹1,896 crore (1.9% of GSDP). 2024-25 RE fiscal deficit 5.7% of GSDP. Budget presented by FM Pranajit Singha Roy on Mar 21, 2025; no new taxes for the third straight year; 13 new welfare schemes.",
+    "revenue_exp_cr": null,
+    "capital_exp_cr": 7903,
+    "key_allocations": [
+      {
+        "sector": "Education sector",
+        "amount_cr": 6166
+      },
+      {
+        "sector": "Capital expenditure (total)",
+        "amount_cr": 7903
+      },
+      {
+        "sector": "Health sector",
+        "amount_cr": 1949
+      },
+      {
+        "sector": "Agriculture & allied sector",
+        "amount_cr": 1885
+      }
+    ],
+    "budget_portal_url": "https://finance.tripura.gov.in",
+    "sources": [
+      "PRS Legislative Research, Tripura Budget Analysis 2025-26 (prsindia.org)",
+      "The Statesman, Mar 21, 2025",
+      "Assam Tribune, Mar 21, 2025"
+    ],
+    "verification": "verified-2026"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "budget_size_cr": 808736,
+    "budget_size_display": "₹8.09 lakh crore",
+    "fiscal_deficit_pct": 2.97,
+    "fiscal_deficit_note": "Fiscal deficit ₹91,400 crore (2.97% of GSDP, within the 3% FRBM limit); revenue surplus ₹79,516 crore (2.6%). India's largest state budget, presented by FM Suresh Khanna on Feb 20, 2025. 2024-25 RE fiscal deficit 3.4% of GSDP. New schemes provision ₹28,478 crore.",
+    "revenue_exp_cr": 583175,
+    "capital_exp_cr": 225561,
+    "key_allocations": [
+      {
+        "sector": "Infrastructure & development (approx. 22% of budget)",
+        "amount_cr": 178000
+      },
+      {
+        "sector": "Education (approx. 13% of budget)",
+        "amount_cr": 105000
+      },
+      {
+        "sector": "Agriculture & allied (approx. 11% of budget)",
+        "amount_cr": 89000
+      },
+      {
+        "sector": "Capital outlay (asset creation)",
+        "amount_cr": 165243
+      }
+    ],
+    "budget_portal_url": "https://upbudget.up.gov.in",
+    "sources": [
+      "PRS Legislative Research, Uttar Pradesh Budget Analysis 2025-26 (prsindia.org)",
+      "UP Budget Highlights 2025-26 (Times of India)",
+      "Business Standard, Feb 20, 2025"
+    ],
+    "verification": "verified-2026"
+  },
+  {
+    "state": "Uttarakhand",
+    "budget_size_cr": 101175,
+    "budget_size_display": "₹1.01 lakh crore",
+    "fiscal_deficit_pct": 2.94,
+    "fiscal_deficit_note": "Fiscal deficit ₹12,605 crore (2.94% of GSDP); revenue surplus ₹2,586 crore. First time the state's budget crossed ₹1 lakh crore; presented by FM Prem Chand Agarwal on Feb 20, 2025. 2024-25 RE fiscal deficit 2.5% of GSDP.",
+    "revenue_exp_cr": 59955,
+    "capital_exp_cr": 41221,
+    "key_allocations": [
+      {
+        "sector": "Infrastructure development (highest-ever allocation)",
+        "amount_cr": 14763
+      },
+      {
+        "sector": "Rural development",
+        "amount_cr": 3866
+      },
+      {
+        "sector": "Social security pension schemes",
+        "amount_cr": 1812
+      },
+      {
+        "sector": "Tourism department",
+        "amount_cr": 487
+      }
+    ],
+    "budget_portal_url": "https://budget.uk.gov.in/budget-2025-26/",
+    "sources": [
+      "PRS Legislative Research, Uttarakhand Budget Analysis 2025-26 (prsindia.org)",
+      "Pioneer Edge, Feb 20, 2025",
+      "Indian Express, Feb 20, 2025"
+    ],
+    "verification": "verified-2026"
+  },
+  {
+    "state": "West Bengal",
+    "budget_size_cr": 389216,
+    "budget_size_display": "₹3.89 lakh crore",
+    "fiscal_deficit_pct": 3.6,
+    "fiscal_deficit_note": "Fiscal deficit ₹73,178 crore (3.6% of GSDP); revenue deficit ₹35,315 crore (1.7%). Budget presented by FM Chandrima Bhattacharya on Feb 12, 2025 (total expenditure ₹3.89 lakh crore incl. >₹80,000 crore loan repayment; net expenditure ₹3.41 lakh crore). 2024-25 RE fiscal deficit 4.0% of GSDP. Pre-poll budget ahead of the 2026 assembly elections - FY2025-26 figures reflect the Trinamool Congress government's budget; debt projected ₹7.71 lakh crore.",
+    "revenue_exp_cr": null,
+    "capital_exp_cr": null,
+    "key_allocations": [
+      {
+        "sector": "Women & Child Development and Social Welfare department",
+        "amount_cr": 38762
+      },
+      {
+        "sector": "Lakshmir Bhandar (women's basic income, ~2.21 crore beneficiaries)",
+        "amount_cr": 26700
+      },
+      {
+        "sector": "Housing benefits",
+        "amount_cr": 24000
+      },
+      {
+        "sector": "Kanyashree (girls' scholarship)",
+        "amount_cr": 15000
+      }
+    ],
+    "budget_portal_url": "https://finance.wb.gov.in",
+    "sources": [
+      "PRS Legislative Research, West Bengal Budget Analysis 2025-26 (prsindia.org)",
+      "The Hindu, Feb 12, 2025",
+      "Business Standard, Feb 12, 2025"
+    ],
+    "verification": "verified-2026"
+  }
+]

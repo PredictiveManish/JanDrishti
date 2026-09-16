@@ -1,0 +1,114 @@
+[
+  {
+    "name": "data.gov.in (OGD Platform)",
+    "url": "data.gov.in",
+    "format": "API (JSON/CSV), Excel",
+    "cadence": "Varies per dataset",
+    "scope": "1,00,000+ datasets, ministries, schemes, live data",
+    "api": true
+  },
+  {
+    "name": "Union Budget Portal",
+    "url": "indiabudget.gov.in",
+    "format": "PDF + Excel",
+    "cadence": "Annual (Feb 1)",
+    "scope": "All ministry allocations, demands, schemes",
+    "api": false
+  },
+  {
+    "name": "PRS Legislative Research",
+    "url": "prsindia.org",
+    "format": "HTML + PDF",
+    "cadence": "Daily during sessions",
+    "scope": "Bills, MP profiles, Vital Stats, policy reviews",
+    "api": false
+  },
+  {
+    "name": "Parliament (Digital Sansad)",
+    "url": "sansad.in",
+    "format": "HTML + PDF",
+    "cadence": "Daily during sessions",
+    "scope": "Questions, debates, members, bills since 1952",
+    "api": false
+  },
+  {
+    "name": "CAG Audit Reports",
+    "url": "cag.gov.in",
+    "format": "PDF",
+    "cadence": "Continuous as tabled",
+    "scope": "2,411+ audit reports (Union, State, Local)",
+    "api": false
+  },
+  {
+    "name": "NITI Aayog Dashboards",
+    "url": "niti.gov.in",
+    "format": "Interactive dashboards",
+    "cadence": "Monthly (ADP) / Annual (SDG)",
+    "scope": "SDG Index, Aspirational Districts KPIs",
+    "api": false
+  },
+  {
+    "name": "PIB (Press Information Bureau)",
+    "url": "pib.gov.in",
+    "format": "RSS + HTML",
+    "cadence": "Hourly (intraday)",
+    "scope": "90-100+ releases/day, all ministries",
+    "api": false
+  },
+  {
+    "name": "API Setu (MeitY)",
+    "url": "apisetu.gov.in",
+    "format": "JSON API (OAuth2)",
+    "cadence": "Continuous",
+    "scope": "1,000+ government APIs",
+    "api": true
+  },
+  {
+    "name": "CGA Monthly Accounts",
+    "url": "cga.nic.in",
+    "format": "Excel + HTML",
+    "cadence": "Monthly",
+    "scope": "Union receipts, expenditure, deficits vs RE",
+    "api": false
+  },
+  {
+    "name": "RBI DBIE & State Finances",
+    "url": "data.rbi.org.in",
+    "format": "Excel + PDF",
+    "cadence": "Daily to annual",
+    "scope": "All-state fiscal data, time series",
+    "api": false
+  },
+  {
+    "name": "ECI + ADR (Myneta)",
+    "url": "eci.gov.in / myneta.info",
+    "format": "PDF + HTML tables",
+    "cadence": "Per election cycle",
+    "scope": "MP/MLA affidavits, assets, criminal records",
+    "api": false
+  },
+  {
+    "name": "NJDG (eCourts)",
+    "url": "njdg.ecourts.gov.in",
+    "format": "Dashboard",
+    "cadence": "Daily",
+    "scope": "Court pendency all levels, case types",
+    "api": false
+  },
+  {
+    "name": "Open Budgets India",
+    "url": "openbudgetsindia.org",
+    "format": "CSV + Excel",
+    "cadence": "Annual",
+    "scope": "10,600+ budget datasets, 509 sources",
+    "api": false
+  },
+  {
+    "name": "RTI Online / CIC Reports",
+    "url": "rtionline.gov.in",
+    "format": "Portal + PDF",
+    "cadence": "Annual reports",
+    "scope": "RTI stats by ministry, 2,914 authorities",
+    "api": false
+  }
+]

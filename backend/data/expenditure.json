@@ -1,0 +1,133 @@
+{
+  "union_actuals": {
+    "fy24_25": {
+      "be": 4820512,
+      "actual": 4652867,
+      "pct_of_be": 96.5,
+      "fiscal_deficit": "₹15.77 lakh crore (100.5% of RE; 4.62% of GDP audited)",
+      "capex_actual": 858256,
+      "capex_note": "+6.3% YoY",
+      "committed_exp": "46.1% of revenue expenditure (salary+pension+interest)"
+    },
+    "fy25_26_provisional": {
+      "total": 4905151,
+      "pct_of_re": 98.8,
+      "fiscal_deficit": "₹15.19 lakh crore = 4.40% of GDP (target met via ₹1.6–1.7 lakh crore expenditure compression)"
+    },
+    "fy26_27_apr_jul": {
+      "period": "April–July 2026 (4 months)",
+      "total_exp": 1761853,
+      "pct_of_be": 32.9,
+      "pct_yoy": 30.9,
+      "revenue_receipts": 1267573,
+      "fiscal_deficit": 455144,
+      "fd_pct_of_be": 26.8,
+      "capex_note": "Capex front-loaded at 36.9% of BE; record RBI dividend ₹2.87 lakh crore",
+      "be_total": 5347315,
+      "be_fd_pct": 4.3
+    }
+  },
+  "scheme_utilisation": [
+    {
+      "scheme": "MGNREGA",
+      "ministry": "Rural Development",
+      "be_2425": 86000,
+      "actual_2425": 85834,
+      "utilisation_pct": 99.8,
+      "physical": "290.6 crore person-days; 15.99 crore households; 50.18 days/household avg; ₹974 crore wages pending",
+      "note": "Replaced by Viksit Bharat–Guarantee for Rozoor & Ajeevika (VB-G RAM G) Act, Dec 2025"
+    },
+    {
+      "scheme": "PM-KISAN",
+      "ministry": "Agriculture",
+      "be_2425": 60000,
+      "actual_2425": 66121,
+      "utilisation_pct": 110.2,
+      "physical": "₹42,700 crore disbursed (instalments 18+19) to ~9.4–9.8 crore farmers; ₹4.46 lakh crore cumulative over 23 instalments",
+      "note": "Actuals exceed BE due to instalment-cycle timing"
+    },
+    {
+      "scheme": "PM Awas Yojana – Gramin",
+      "ministry": "Rural Development",
+      "be_2425": 54500,
+      "actual_2425": 32327,
+      "utilisation_pct": 59.3,
+      "physical": "64.7 lakh houses sanctioned (target 84.4 lakh); 3.12 crore cumulative completions; 79 lakh under construction",
+      "note": "CAG flags persistent savings due to fewer state proposals; phase-2 targets allocated late"
+    },
+    {
+      "scheme": "Ayushman Bharat PM-JAY",
+      "ministry": "Health & FW",
+      "be_2425": 7300,
+      "actual_2425": null,
+      "utilisation_pct": null,
+      "physical": "9.19 crore cumulative admissions worth ₹1.29 lakh crore (as of 31 Mar 2025)",
+      "note": ""
+    },
+    {
+      "scheme": "Samagra Shiksha",
+      "ministry": "Education",
+      "be_2425": 37500,
+      "actual_2425": 36288,
+      "utilisation_pct": 96.8,
+      "physical": "",
+      "note": ""
+    },
+    {
+      "scheme": "National Health Mission",
+      "ministry": "Health & FW",
+      "be_2425": 36000,
+      "actual_2425": 38889,
+      "utilisation_pct": 108.0,
+      "physical": "",
+      "note": ""
+    },
+    {
+      "scheme": "PM Gram Sadak Yojana",
+      "ministry": "Rural Development",
+      "be_2425": 19000,
+      "actual_2425": 18672,
+      "utilisation_pct": 98.3,
+      "physical": "18,110 km roads completed",
+      "note": ""
+    }
+  ],
+  "cag_highlights": {
+    "report": "CAG Report No. 6 of 2026 - Accounts of the Union Government for the year 2024-25 (accounts certified 04-Dec-2025, tabled in Parliament 18-Dec-2025; audit report tabled 02-Apr-2026)",
+    "approved": 14756796,
+    "approved_display": "₹142.63 lakh crore (actual expenditure base)",
+    "savings": 491303,
+    "savings_pct": 3.33,
+    "voted_savings_note": "Voted (programme) savings ₹4.22 lakh crore = 86% of total savings — ~9% of the voted budget",
+    "biggest_pct": [
+      {
+        "grant": "Ministry of Tourism",
+        "savings_pct": 81.62
+      },
+      {
+        "grant": "Ministry of Corporate Affairs",
+        "savings_pct": 73.66
+      },
+      {
+        "grant": "Ministry of Planning (NITI Aayog)",
+        "savings_pct": 71.77
+      },
+      {
+        "grant": "Department of Drinking Water and Sanitation (Jal Jeevan Mission)",
+        "savings_pct": 66.07
+      },
+      {
+        "grant": "Ministry of Heavy Industries",
+        "savings_pct": 62.9
+      }
+    ],
+    "pending_ucs": "33,973 utilisation certificates worth ₹54,282 crore pending",
+    "misclassification": "₹12,754 crore of misclassification flagged"
+  },
+  "states_combined": {
+    "expenditure_2024_25": "₹52.8 lakh crore (provisional actual)",
+    "vs_re": "₹57.7 lakh crore RE — 91.5% utilisation",
+    "gfd": "3.3% of GDP (₹10.8 lakh crore)",
+    "note": "Centre grants fell from ₹6.9 lakh crore (RE) to ₹4.5 lakh crore actual — the main driver of the shortfall"
+  }
+}

@@ -1,0 +1,190 @@
+{
+  "headline": {
+    "total_expenditure": "₹50.65 lakh crore",
+    "total_expenditure_num": 5065345,
+    "revenue_expenditure": "₹39.44 lakh crore",
+    "capital_expenditure": "₹11.21 lakh crore",
+    "fiscal_deficit": "4.4% of GDP",
+    "fiscal_deficit_num": "₹15.69 lakh crore",
+    "interest_payments": "₹12.76 lakh crore",
+    "interest_pct": "25.2% of expenditure",
+    "pensions": "₹2.77 lakh crore",
+    "subsidies": "₹3.83 lakh crore",
+    "transfers_to_states": "₹25.60 lakh crore",
+    "central_debt": "56.1% of GDP"
+  },
+  "ministry_budgets": [
+    {
+      "ministry": "Defence",
+      "be_2526": 681210,
+      "be_2425": 621941,
+      "pct": 13.4
+    },
+    {
+      "ministry": "Road Transport & Highways",
+      "be_2526": 287333,
+      "be_2425": 278000,
+      "pct": 5.7
+    },
+    {
+      "ministry": "Railways",
+      "be_2526": 255445,
+      "be_2425": 255393,
+      "pct": 5.0
+    },
+    {
+      "ministry": "Home Affairs",
+      "be_2526": 233211,
+      "be_2425": 219643,
+      "pct": 4.6
+    },
+    {
+      "ministry": "Consumer Affairs, Food & PD",
+      "be_2526": 215767,
+      "be_2425": 223323,
+      "pct": 4.3
+    },
+    {
+      "ministry": "Rural Development",
+      "be_2526": 190406,
+      "be_2425": 180233,
+      "pct": 3.8
+    },
+    {
+      "ministry": "Chemicals & Fertilisers",
+      "be_2526": 161965,
+      "be_2425": 168500,
+      "pct": 3.2
+    },
+    {
+      "ministry": "Agriculture & Farmers' Welfare",
+      "be_2526": 137757,
+      "be_2425": 132470,
+      "pct": 2.7
+    },
+    {
+      "ministry": "Education",
+      "be_2526": 128650,
+      "be_2425": 120628,
+      "pct": 2.5
+    },
+    {
+      "ministry": "Communications",
+      "be_2526": 108105,
+      "be_2425": 137294,
+      "pct": 2.1
+    },
+    {
+      "ministry": "Health & Family Welfare",
+      "be_2526": 99859,
+      "be_2425": 90959,
+      "pct": 2.0
+    },
+    {
+      "ministry": "Jal Shakti",
+      "be_2526": 99503,
+      "be_2425": 98714,
+      "pct": 2.0
+    }
+  ],
+  "scheme_budgets": [
+    {
+      "scheme": "MGNREGS",
+      "be_2425": 86000,
+      "re_2425": 86000,
+      "be_2526": 86000,
+      "ministry": "Rural Development"
+    },
+    {
+      "scheme": "Jal Jeevan Mission",
+      "be_2425": 70163,
+      "re_2425": 22694,
+      "be_2526": 67000,
+      "ministry": "Jal Shakti"
+    },
+    {
+      "scheme": "PM-KISAN",
+      "be_2425": 60000,
+      "re_2425": 63500,
+      "be_2526": 63500,
+      "ministry": "Agriculture"
+    },
+    {
+      "scheme": "PM Awas Yojana – Rural",
+      "be_2425": 54500,
+      "re_2425": 32426,
+      "be_2526": 54832,
+      "ministry": "Rural Development"
+    },
+    {
+      "scheme": "Samagra Shiksha",
+      "be_2425": 37500,
+      "re_2425": 37010,
+      "be_2526": 41250,
+      "ministry": "Education"
+    },
+    {
+      "scheme": "National Health Mission",
+      "be_2425": 36000,
+      "re_2425": 36000,
+      "be_2526": 37227,
+      "ministry": "Health & FW"
+    },
+    {
+      "scheme": "PM Awas Yojana – Urban",
+      "be_2425": 30171,
+      "re_2425": 15170,
+      "be_2526": 23294,
+      "ministry": "MoHUA"
+    },
+    {
+      "scheme": "Saksham Anganwadi & POSHAN 2.0",
+      "be_2425": 21200,
+      "re_2425": 20071,
+      "be_2526": 21960,
+      "ministry": "WCD"
+    },
+    {
+      "scheme": "Interest Subvention (agri credit)",
+      "be_2425": 22600,
+      "re_2425": 22600,
+      "be_2526": 22600,
+      "ministry": "Agriculture"
+    },
+    {
+      "scheme": "PM Surya Ghar (rooftop solar)",
+      "be_2425": 6250,
+      "re_2425": 11100,
+      "be_2526": 20000,
+      "ministry": "New & Renewable Energy"
+    },
+    {
+      "scheme": "PM Gram Sadak Yojana",
+      "be_2425": 19000,
+      "re_2425": 14500,
+      "be_2526": 19000,
+      "ministry": "Rural Development"
+    },
+    {
+      "scheme": "NRLM (Ajeevika)",
+      "be_2425": 15047,
+      "re_2425": 15047,
+      "be_2526": 19005,
+      "ministry": "Rural Development"
+    },
+    {
+      "scheme": "PM-JAY (Ayushman Bharat)",
+      "be_2425": 7300,
+      "re_2425": 7600,
+      "be_2526": 9406,
+      "ministry": "Health & FW"
+    },
+    {
+      "scheme": "PMABHIM (health infra)",
+      "be_2425": 3200,
+      "re_2425": 0,
+      "be_2526": 4200,
+      "ministry": "Health & FW"
+    }
+  ]
+}

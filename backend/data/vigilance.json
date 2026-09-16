@@ -1,0 +1,92 @@
+[
+  {
+    "title": "Jal Jeevan Mission: 68% budget cut",
+    "detail": "Allocated ₹70,163 crore (BE 2024-25), revised down to ₹22,694 crore (RE) — a 68% mid-year cut. Actual spend was just ₹22,612 crore. 15.57 crore (80.4%) households have taps, but the scheme is India's single biggest undershoot.",
+    "severity": "high",
+    "category": "Budget Cut"
+  },
+  {
+    "title": "PMAY-Urban: 50% budget cut",
+    "detail": "₹30,171 crore allocated (BE 2024-25), slashed to ₹15,170 crore (RE). Further reduced to ₹23,294 crore in 2025-26 BE. Housing for All targets affected.",
+    "severity": "high",
+    "category": "Budget Cut"
+  },
+  {
+    "title": "PFMS opacity: real-time fund data exists but is not public",
+    "detail": "PFMS tracks every rupee of CSS schemes to the gram panchayat level in near-real-time — but only individual 'Know Your Payment' lookups are public. Scheme-wise, district-wise fund utilisation is login-gated. This is the single biggest transparency gap in Indian government finance.",
+    "severity": "high",
+    "category": "Transparency Gap"
+  },
+  {
+    "title": "33,973 pending Utilisation Certificates worth ₹54,282 crore",
+    "detail": "CAG's FY2024-25 accounts audit: 33,973 UCs worth ₹54,282 crore remain pending with autonomous bodies — money released with no proof of spending. Plus ₹12,754 crore of misclassification flagged.",
+    "severity": "high",
+    "category": "CAG Finding"
+  },
+  {
+    "title": "₹903 crore unspent BRGF grants not recovered",
+    "detail": "CAG found ₹903.42 crore of unspent Backward Regions Grant Fund grants not refunded by states. Ministry of Panchayati Raj failed to monitor. (CAG audit report)",
+    "severity": "high",
+    "category": "CAG Finding"
+  },
+  {
+    "title": "PMAY-Gramin spent only 59% of its budget",
+    "detail": "Of ₹54,500 crore BE (2024-25), only ₹32,327 crore was actually spent. CAG flags 'persistent savings' due to fewer proposals from state governments — targets for the extended phase were allocated late (Dec 2024–Jan 2025).",
+    "severity": "medium",
+    "category": "Utilisation"
+  },
+  {
+    "title": "Interest payments consume 25% of all spending",
+    "detail": "₹12.76 lakh crore goes to interest payments alone — 25.2% of total expenditure and ~37% of revenue receipts. This is more than Defence, Education, and Health combined.",
+    "severity": "medium",
+    "category": "Fiscal Health"
+  },
+  {
+    "title": "No monthly scheme-level expenditure data",
+    "detail": "Between the annual budget (scheme-level) and CGA's monthly aggregate, there is no public monthly scheme-level dataset. You can know the total spent but not which scheme spent what. Only MGNREGA publishes daily GP-level data.",
+    "severity": "medium",
+    "category": "Transparency Gap"
+  },
+  {
+    "title": "CAG audit lag of 1-3 years",
+    "detail": "Performance audits typically appear 1-3 years after the period audited. By the time findings are public, the money has been spent and officials transferred. Real-time audit does not exist.",
+    "severity": "medium",
+    "category": "Systemic Lag"
+  },
+  {
+    "title": "Parliament functioning at 15% of scheduled time",
+    "detail": "Monsoon Session 2026: Lok Sabha functioned 15% of scheduled time. 11 Bills passed, of which 9 without discussion in LS. Question Hour ran for 9 minutes. Only 21% of Bills referred to committees in 18th LS vs 28% in 16th.",
+    "severity": "medium",
+    "category": "Democratic Accountability"
+  },
+  {
+    "title": "Fiscal deficit definitions disagree",
+    "detail": "For FY2024-25: CGA provisional says 4.8% of GDP; CAG's audited Finance Accounts say 4.62%; a strict FRBM-definition computation gives ₹14.70 lakh crore vs ₹15.74 lakh crore in Budget at a Glance — a 7% definitional gap. The platform shows all three.",
+    "severity": "low",
+    "category": "Data Quality"
+  },
+  {
+    "title": "Most state budgets are PDF-only, often vernacular-only",
+    "detail": "Only Odisha publishes budget data natively in Excel. Most states publish only PDFs, often only in regional languages, with poor archives. Machine-readable state finance data is the exception, not the rule.",
+    "severity": "low",
+    "category": "Data Quality"
+  },
+  {
+    "title": "MGNREGA replaced by new legislation (Dec 2025)",
+    "detail": "The Viksit Bharat–Guarantee for Rozgar and Ajeevika (VB-G RAM G) Act, December 2025, replaced MGNREGA. Watch how wage guarantees, social audit requirements, and entitlements change under the new architecture.",
+    "severity": "medium",
+    "category": "Policy Change"
+  },
+  {
+    "title": "Tourism underspent 81.6% of its grant (FY24-25)",
+    "detail": "CAG Appropriation Accounts: Ministry of Tourism saved 81.6% of its grant — the highest underspend ratio in the Union government. Corporate Affairs (73.7%), NITI Aayog (71.8%), and Drinking Water & Sanitation (66.1%) follow.",
+    "severity": "medium",
+    "category": "CAG Finding"
+  },
+  {
+    "title": "States spent only 91.5% of their budgeted outlay (2024-25)",
+    "detail": "All states combined: ₹52.8 lakh crore provisional actual vs ₹57.7 lakh crore Revised Estimate. The main driver: Centre's grants to states fell from ₹6.9 lakh crore (RE) to ₹4.5 lakh crore actual.",
+    "severity": "medium",
+    "category": "State Finances"
+  }
+]

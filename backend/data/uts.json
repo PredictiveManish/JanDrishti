@@ -1,0 +1,189 @@
+[
+  {
+    "name": "Delhi (National Capital Territory of Delhi)",
+    "capital": "New Delhi",
+    "has_legislature": true,
+    "chief_minister": "Rekha Gupta",
+    "party": "BJP",
+    "cm_since": "2025-02-20",
+    "lieutenant_governor": "Taranjit Singh Sandhu (per 2026 aggregator lists; earlier V.K. Saxena - verify on delhi.gov.in)",
+    "chief_secretary": "Rajeev Verma, IAS (AGMUT:1992)",
+    "website": "https://delhi.gov.in",
+    "key_ministers": [
+      [
+        "Rekha Gupta (CM)",
+        "Finance, Planning, GAD, WCD, Services, Revenue, Land & Building, I&PR, Vigilance, AR"
+      ],
+      [
+        "Parvesh Sahib Singh Verma",
+        "PWD, Legislative Affairs, I&FC, Water, Gurudwara Elections"
+      ],
+      [
+        "Ashish Sood",
+        "Home, Power, Urban Development, Education, Higher Education, Technical Education"
+      ],
+      [
+        "Manjinder Singh Sirsa",
+        "Food & Supplies, Forest & Environment, Industries"
+      ],
+      [
+        "Ravinder Kumar Indraj",
+        "Social Welfare, SC & ST Welfare, Cooperation, Elections"
+      ],
+      [
+        "Kapil Mishra",
+        "Law & Justice, Labour, Employment, Development, Art & Culture, Language, Tourism"
+      ],
+      [
+        "Pankaj Kumar Singh",
+        "Health & Family Welfare, Transport, IT"
+      ]
+    ],
+    "sources": [
+      "HT / Indian Express / Moneycontrol portfolio lists, 20-21 Feb 2025",
+      "MHA AGMUT CS list 16.02.2026",
+      "Wikipedia CM list (Sept 2026)"
+    ],
+    "verification": "verified-2026"
+  },
+  {
+    "name": "Jammu and Kashmir",
+    "capital": "Srinagar (May-Oct) / Jammu (Nov-Apr)",
+    "has_legislature": true,
+    "chief_minister": "Omar Abdullah",
+    "party": "JKNC (INDIA; Congress supports from outside)",
+    "cm_since": "2024-10-16",
+    "lieutenant_governor": "Manoj Sinha",
+    "chief_secretary": "Atal Dulloo, IAS (AGMUT:1989)",
+    "website": "https://jk.gov.in",
+    "key_ministers": [
+      [
+        "Omar Abdullah (CM)",
+        "GAD, Home, Finance, Planning, Information and all unallocated departments"
+      ],
+      [
+        "Surinder Kumar Choudhary (Deputy CM)",
+        "Public Works (R&B), Industries & Commerce, Mining, Labour, Skill Development"
+      ],
+      [
+        "Sakina Itoo",
+        "Health & Medical Education, School Education, Higher Education, Social Welfare"
+      ],
+      [
+        "Javid Ahmad Dar",
+        "Agriculture Production, Rural Development & Panchayati Raj, Cooperatives, Election"
+      ],
+      [
+        "Javed Ahmed Rana",
+        "Jal Shakti, Forest, Ecology & Environment, Tribal Affairs"
+      ],
+      [
+        "Satish Sharma (Independent)",
+        "Food & Civil Supplies, Transport, Science & Technology, IT, Youth Services & Sports"
+      ]
+    ],
+    "sources": [
+      "Wikipedia Second Omar Abdullah ministry",
+      "Kashmir Examiner / Greater Kashmir (Aug 2026 - cabinet expansion due after 15 Aug 2026, 3 of 9 berths vacant)"
+    ],
+    "verification": "verified-2026",
+    "note": "Council capped at 9 (10% of 90-seat Assembly); 6 members as of Aug 2026; reshuffle/expansion expected - re-verify"
+  },
+  {
+    "name": "Puducherry",
+    "capital": "Puducherry",
+    "has_legislature": true,
+    "chief_minister": "N. Rangasamy",
+    "party": "AINRC (NDA)",
+    "cm_since": "2026-05-13 (5th term; earlier terms 2001-08, 2011-14, 2021-26)",
+    "lieutenant_governor": "Kuniyil Kailashnathan",
+    "chief_secretary": "Dr. Sharat Chauhan, IAS (AGMUT:1994)",
+    "website": "https://www.py.gov.in",
+    "key_ministers": [
+      [
+        "N. Rangasamy (CM)",
+        "- (portfolio allocation of new ministry to be verified on py.gov.in)"
+      ],
+      [
+        "A. Namassivayam (BJP)",
+        "elected deputy leader of NDA legislature party; senior minister (Home in previous term)"
+      ]
+    ],
+    "sources": [
+      "The Hindu / ET / Times Now Puducherry election results 4-5 May 2026",
+      "nextindiamagazine / newkerala government formation 8 May 2026",
+      "MHA AGMUT CS list"
+    ],
+    "verification": "verified-2026",
+    "note": "AINRC-led NDA retained power (18/30 seats; AINRC 12, BJP 4, AIADMK 1, LJK 1); TVK and DMK-Congress in opposition; 5th Rangasamy term"
+  },
+  {
+    "name": "Andaman and Nicobar Islands",
+    "capital": "Port Blair (Sri Vijaya Puram)",
+    "has_legislature": false,
+    "administrator": "Lt. Governor Devendra Kumar Joshi (Admiral, retd.)",
+    "chief_secretary": "Dr. Chandra Bhushan Kumar, IAS (AGMUT:1995)",
+    "website": "https://andaman.gov.in",
+    "sources": [
+      "MHA AGMUT list 16.02.2026",
+      "DoPT CS list 01.02.2026",
+      "careerpower (2026)"
+    ],
+    "verification": "verified-2026-medium"
+  },
+  {
+    "name": "Chandigarh",
+    "capital": "Chandigarh",
+    "has_legislature": false,
+    "administrator": "Gulab Chand Kataria (Administrator; also Punjab Governor)",
+    "chief_secretary": "H. Rajesh Prasad, IAS (AGMUT:1995)",
+    "website": "https://chandigarh.gov.in",
+    "sources": [
+      "MHA AGMUT list 16.02.2026",
+      "DoPT CS list 01.02.2026",
+      "Wikipedia Chief Secretary (India) list"
+    ],
+    "verification": "verified-2026-medium"
+  },
+  {
+    "name": "Dadra and Nagar Haveli and Daman and Diu",
+    "capital": "Daman",
+    "has_legislature": false,
+    "administrator": "Praful Khodabhai Patel",
+    "chief_secretary": "Ankur Garg, IAS (AGMUT:2003)",
+    "website": "https://www.dnh.gov.in",
+    "sources": [
+      "MHA AGMUT list 16.02.2026",
+      "DoPT CS list 01.02.2026",
+      "careerpower (2026)"
+    ],
+    "verification": "verified-2026-medium"
+  },
+  {
+    "name": "Lakshadweep",
+    "capital": "Kavaratti",
+    "has_legislature": false,
+    "administrator": "Praful Khodabhai Patel (additional charge with DNH & Daman-Diu; Kerala HC questioned dual charge Aug 2026)",
+    "chief_secretary": "Dr. S. B. Deepak Kumar, IAS (AGMUT:2005)",
+    "website": "https://lakshadweep.gov.in",
+    "sources": [
+      "MHA AGMUT list 16.02.2026",
+      "careerpower (2026)"
+    ],
+    "verification": "verified-2026"
+  },
+  {
+    "name": "Ladakh",
+    "capital": "Leh (Kargil - winter)",
+    "has_legislature": false,
+    "administrator": "Lt. Governor Vinai Kumar Saxena (since 13 Mar 2026; succeeded Kavinder Gupta)",
+    "chief_secretary": "Ashish Kundra, IAS (AGMUT:1996)",
+    "website": "https://ladakh.gov.in",
+    "sources": [
+      "MHA AGMUT list 16.02.2026",
+      "careerpower (2026)"
+    ],
+    "verification": "verified-2026",
+    "note": "Ladakh has Lt. Governor + two Autonomous Hill Development Councils (Leh, Kargil); no elected assembly"
+  }
+]

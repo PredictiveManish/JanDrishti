@@ -1,0 +1,1987 @@
+[
+  {
+    "state": "Andhra Pradesh",
+    "capital": "Amaravati",
+    "chief_minister": "N. Chandrababu Naidu",
+    "party_alliance": "TDP (NDA)",
+    "cm_since": "2024-06-12",
+    "deputy_cms": [
+      {
+        "name": "Pawan Kalyan (JSP)",
+        "portfolios": [
+          "Panchayati Raj and Rural Development",
+          "Environment and Forests",
+          "Science and Technology"
+        ]
+      }
+    ],
+    "governor": "Justice (Retd.) S. Abdul Nazeer",
+    "chief_secretary": "G. Sai Prasad, IAS",
+    "chief_secretary_note": "K. Vijayanand shown in DoPT list of 01.02.2026; Wikipedia shows G. Sai Prasad (1991 batch) as current - verify on ap.gov.in",
+    "website": "https://ap.gov.in",
+    "key_ministers": [
+      [
+        "Nara Chandrababu Naidu (CM)",
+        "GAD, Law & Order, Public Enterprises"
+      ],
+      [
+        "Anitha Vangalapudi",
+        "Home, Disaster Management"
+      ],
+      [
+        "Payyavula Keshav",
+        "Finance, Planning, Commercial Taxes"
+      ],
+      [
+        "Nara Lokesh",
+        "HRD (School Education), IT, Electronics"
+      ],
+      [
+        "Satya Kumar Yadav (BJP)",
+        "Health, Family Welfare, Medical Education"
+      ],
+      [
+        "Kinjarapu Atchannaidu",
+        "Agriculture, Marketing, Animal Husbandry"
+      ],
+      [
+        "Ponguru Narayana",
+        "Municipal Administration & Urban Development"
+      ],
+      [
+        "Nimmala Ramanaidu",
+        "Water Resources"
+      ]
+    ],
+    "departments_count": null,
+    "departments_note": "State portal department listing at ap.gov.in (verify count)",
+    "sources": [
+      "Wikipedia Fourth N. Chandrababu Naidu ministry",
+      "HT/CNBC AP portfolio lists (Jun 2024)",
+      "newsdarpan.in AP ministers list (Aug 2026)",
+      "DoPT CS list 01.02.2026"
+    ],
+    "verification": "verified-2026"
+  },
+  {
+    "state": "Arunachal Pradesh",
+    "capital": "Itanagar",
+    "chief_minister": "Pema Khandu",
+    "party_alliance": "BJP (NDA/NEDA)",
+    "cm_since": "2016-07-16",
+    "deputy_cms": [
+      {
+        "name": "Chowna Mein",
+        "portfolios": [
+          "Deputy CM (Finance, Planning - reported)"
+        ]
+      }
+    ],
+    "governor": "Lt. Gen. Kaiwalya Trivikram Parnaik (Retd.)",
+    "chief_secretary": "Manish Kumar Gupta, IAS",
+    "chief_secretary_note": "DoPT list 01.02.2026; MHA AGMUT list 16.02.2026",
+    "website": "https://arunachalpradesh.gov.in",
+    "key_ministers": [
+      [
+        "Pema Khandu (Chief Minister)",
+        "General Administration; Public Works Department (PWD); Personnel; All departments not assigned to Deputy CM or any Cabinet Minister"
+      ],
+      [
+        "Chowna Mein (Deputy Chief Minister)",
+        "Finance; Planning & Investment; Tax & Excise; State Lotteries; Economics & Statistics; Power and Non-Conventional Energy Resources"
+      ],
+      [
+        "Ojing Tasing",
+        "Rural Development & Panchayati Raj; Co-operation; Transport"
+      ],
+      [
+        "Kento Jini",
+        "Law, Legislative and Justice; Social Justice, Empowerment & Tribal Affairs; Sports & Youth Affairs"
+      ],
+      [
+        "Balo Raja",
+        "Urban Affairs; Land Management; Civil Aviation"
+      ],
+      [
+        "Mama Natung",
+        "Home and Inter-State Border Affairs; Public Health Engineering & Water Supply; Indigenous Affairs"
+      ],
+      [
+        "Dasanglu Pul",
+        "Women & Child Development; Cultural Affairs; Science & Technology"
+      ],
+      [
+        "Pasang Dorjee Sona",
+        "Education; Rural Works; Parliamentary Affairs; Tourism; Libraries"
+      ],
+      [
+        "Gabriel Denwang Wangsu",
+        "Agriculture; Horticulture; Animal Husbandry & Veterinary; Dairy Development; Fisheries; Food & Civil Supplies; Legal Metrology; Consumer Affairs"
+      ],
+      [
+        "Wangki Lowang",
+        "Environment & Forests; Geology, Mining & Minerals; Tirap, Changlang and Longding (TCL) departments"
+      ],
+      [
+        "Nyato Dukam",
+        "Commerce & Industries; Labour & Employment; Information, Public Relations & Printing"
+      ],
+      [
+        "Biyuram Wahge",
+        "Health & Family Welfare; Water Resources"
+      ]
+    ],
+    "departments_count": null,
+    "departments_note": "Key-minister portfolio detail not verified in this research; scrape state portal 'Council of Ministers'",
+    "sources": [
+      "Wikipedia CM list (Sept 2026)",
+      "careerpower CM-Governor list",
+      "MHA AGMUT chief secretaries PDF 16.02.2026"
+    ],
+    "verification": "verified-2026"
+  },
+  {
+    "state": "Assam",
+    "capital": "Dispur (Guwahati)",
+    "chief_minister": "Dr. Himanta Biswa Sarma",
+    "party_alliance": "BJP (NDA)",
+    "cm_since": "2021-05-10 (2nd term from 2026-05-12)",
+    "deputy_cms": [],
+    "governor": "Lakshman Prasad Acharya",
+    "chief_secretary": "Dr. Ravi Kota, IAS",
+    "chief_secretary_note": "DoPT list 01.02.2026",
+    "website": "https://assam.gov.in",
+    "key_ministers": [
+      [
+        "Himanta Biswa Sarma (CM)",
+        "Home & Political; PWD (Buildings & NH, Roads); Power; I&PR"
+      ],
+      [
+        "Jayanta Malla Baruah",
+        "Finance; Environment & Forest; Mines & Minerals"
+      ],
+      [
+        "Ranoj Pegu",
+        "Education (School, Higher, IT)"
+      ],
+      [
+        "Ashok Singhal",
+        "Health & Family Welfare; Medical Education"
+      ],
+      [
+        "Bimal Borah",
+        "Industries, Commerce & Public Enterprises; Cultural Affairs"
+      ],
+      [
+        "Pijush Hazarika",
+        "Agriculture; Irrigation; Parliamentary Affairs"
+      ],
+      [
+        "Keshab Mahanta",
+        "Revenue & Disaster Management; GAD; Science & Technology"
+      ],
+      [
+        "Ajanta Neog",
+        "Women & Child Development; Tourism"
+      ],
+      [
+        "Biswajit Daimary",
+        "Handloom & Textiles; Sports; Skill"
+      ]
+    ],
+    "departments_count": null,
+    "departments_note": "13-member council after June 2026 expansion; portfolios announced 8 June 2026",
+    "sources": [
+      "The Hindu / ET / CNBC / Assam Tribune, June 2026 (portfolio allocation)",
+      "May 2026 swearing-in reporting",
+      "DoPT CS list"
+    ],
+    "verification": "verified-2026"
+  },
+  {
+    "state": "Bihar",
+    "capital": "Patna",
+    "chief_minister": "Samrat Choudhary",
+    "party_alliance": "BJP (NDA)",
+    "cm_since": "2026-04-15",
+    "deputy_cms": [
+      {
+        "name": "Vijay Kumar Chaudhary (JD-U)",
+        "portfolios": [
+          "Water Resources",
+          "Parliamentary Affairs"
+        ]
+      },
+      {
+        "name": "Bijendra Prasad Yadav (JD-U)",
+        "portfolios": [
+          "Finance",
+          "Commercial Taxes"
+        ]
+      }
+    ],
+    "governor": "Lt. Gen. Syed Ata Hasnain (Retd.)",
+    "chief_secretary": "Pratyaya Amrit, IAS",
+    "chief_secretary_note": "DoPT 01.02.2026 list shows 'Shri Pratyaya'; Wikipedia confirms Pratyaya Amrit - verify",
+    "website": "https://state.bihar.gov.in",
+    "key_ministers": [
+      [
+        "Samrat Choudhary (CM)",
+        "Home, GAD, Cabinet Secretariat, Vigilance, Election, Civil Aviation"
+      ],
+      [
+        "Vijay Kumar Sinha",
+        "Agriculture"
+      ],
+      [
+        "Nishant Kumar (JD-U)",
+        "Health"
+      ],
+      [
+        "Mithilesh Tiwari",
+        "Education"
+      ],
+      [
+        "Sanjay Singh Tiger",
+        "Higher Education, Law"
+      ],
+      [
+        "Dilip Kumar Jaiswal",
+        "Revenue & Land Reforms"
+      ],
+      [
+        "Shravan Kumar (JD-U)",
+        "Rural Development, I&PR"
+      ],
+      [
+        "Neeloo Mishra",
+        "Urban Development & Housing, IT"
+      ],
+      [
+        "Shreyasi Singh",
+        "Industries, Sports"
+      ]
+    ],
+    "departments_count": null,
+    "departments_note": "32 ministers sworn in 7 May 2026 (NDA); portfolios announced same day; Nitish Kumar moved to Rajya Sabha Apr 2026",
+    "sources": [
+      "The Hindu Bihar cabinet list 07.05.2026",
+      "ET / NDTV Profit portfolio lists 07.05.2026",
+      "TOI (Nitish-to-RS context)",
+      "DoPT CS list"
+    ],
+    "verification": "verified-2026"
+  },
+  {
+    "state": "Chhattisgarh",
+    "capital": "Raipur (Nava Raipur Atal Nagar)",
+    "chief_minister": "Vishnu Deo Sai",
+    "party_alliance": "BJP (NDA)",
+    "cm_since": "2023-12-13",
+    "deputy_cms": [
+      {
+        "name": "Arun Sao",
+        "portfolios": [
+          "Public Works",
+          "Public Health Engineering",
+          "Urban Administration & Development",
+          "Sports & Youth Welfare"
+        ]
+      },
+      {
+        "name": "Vijay Sharma",
+        "portfolios": [
+          "Home Affairs",
+          "Panchayat & Rural Development",
+          "Science & Technology"
+        ]
+      }
+    ],
+    "governor": "Ramen Deka",
+    "chief_secretary": "Vikas Sheel, IAS",
+    "chief_secretary_note": "DoPT list 01.02.2026; Wikipedia agrees",
+    "website": "https://cgstate.gov.in",
+    "key_ministers": [
+      [
+        "O. P. Choudhary",
+        "Finance, Commercial Tax, Housing & Environment, Planning"
+      ],
+      [
+        "Shyam Bihari Jaiswal",
+        "Health & Family Welfare, Medical Education, OBC & Minorities"
+      ],
+      [
+        "Ramvichar Netam",
+        "Agriculture, ST Welfare"
+      ],
+      [
+        "Kedar Nath Kashyap",
+        "Forest, Transport, Cooperation, Parliamentary Affairs"
+      ],
+      [
+        "Gajendra Yadav",
+        "School Education, Law & Legislative Affairs"
+      ],
+      [
+        "Tank Ram Verma",
+        "Revenue & Disaster Management, Higher Education"
+      ],
+      [
+        "Lakshmi Rajwade",
+        "Women & Child Development, Social Welfare"
+      ]
+    ],
+    "departments_count": null,
+    "departments_note": "Cabinet at full strength of 14 since Aug 2025 expansion",
+    "sources": [
+      "Wikipedia Chhattisgarh Council of Ministers / Sai ministry",
+      "TOI portfolio allocation 20.08.2025",
+      "The Statesman list 20.08.2025"
+    ],
+    "verification": "verified-2026"
+  },
+  {
+    "state": "Goa",
+    "capital": "Panaji",
+    "chief_minister": "Pramod Sawant",
+    "party_alliance": "BJP (NDA)",
+    "cm_since": "2019-03-19",
+    "deputy_cms": [],
+    "governor": "Pusapati Ashok Gajapathi Raju",
+    "chief_secretary": "Dr. V. Candavelou, IAS",
+    "chief_secretary_note": "DoPT list 01.02.2026",
+    "website": "https://goa.gov.in",
+    "key_ministers": [
+      [
+        "Pramod Sawant (Chief Minister)",
+        "Home; Finance; Personnel; Vigilance; Official Language; All unallocated departments (incl. Education, Law & Judiciary, Environment, Agriculture after Ravi Naik's death)"
+      ],
+      [
+        "Vishwajit Rane",
+        "Public Health; Urban Development; Town & Country Planning; Women & Child Development; Forest"
+      ],
+      [
+        "Mauvin Godinho",
+        "Transport; Industries, Trade and Commerce; Panchayati Raj; Protocol; Legislative Affairs"
+      ],
+      [
+        "Subhash Shirodkar",
+        "Water Resources; Co-operation; Institute of Public Assistance (Provedoria)"
+      ],
+      [
+        "Rohan Khaunte",
+        "Tourism; Information Technology; Printing & Stationery"
+      ],
+      [
+        "Atanasio Monserrate",
+        "Revenue; Labour and Employment; Waste Management"
+      ],
+      [
+        "Ramkrishna alias Sudin Dhavalikar (MGP)",
+        "Power; New and Renewable Energy; Museum; Goa Gazetteer; Historical Records"
+      ],
+      [
+        "Nilkanth Halarnkar",
+        "Fisheries; Animal Husbandry and Veterinary Services; Factories and Boilers"
+      ],
+      [
+        "Subhash Phal Dessai",
+        "Social Welfare; Drinking Water; Empowerment of Persons with Disabilities; River Navigation"
+      ],
+      [
+        "Digambar Kamat",
+        "Public Works Department (PWD); Captain of Ports; Legal Metrology"
+      ],
+      [
+        "Ramesh Tawadkar",
+        "Art and Culture; Tribal Welfare; Sports & Youth Affairs"
+      ]
+    ],
+    "departments_count": null,
+    "departments_note": "Key-minister portfolios not verified; scrape goa.gov.in 'Council of Ministers'",
+    "sources": [
+      "careerpower CM-Governor list (2026)",
+      "DoPT CS list",
+      "Wikipedia CM list"
+    ],
+    "verification": "verified-2026"
+  },
+  {
+    "state": "Gujarat",
+    "capital": "Gandhinagar",
+    "chief_minister": "Bhupendra Patel",
+    "party_alliance": "BJP (NDA)",
+    "cm_since": "2021-09-13",
+    "deputy_cms": [
+      {
+        "name": "Harsh Sanghavi",
+        "portfolios": [
+          "Home",
+          "Police Housing",
+          "Jails",
+          "Border Security",
+          "Prohibition & Excise",
+          "Transport",
+          "Law & Justice",
+          "Sports",
+          "Industries",
+          "Tourism",
+          "Civil Aviation"
+        ]
+      }
+    ],
+    "governor": "Acharya Devvrat",
+    "chief_secretary": "Manoj Kumar Das, IAS",
+    "chief_secretary_note": "DoPT list 01.02.2026",
+    "website": "https://gujarat.gov.in",
+    "key_ministers": [
+      [
+        "Bhupendra Patel (CM)",
+        "GAD, Planning, Revenue & Disaster Mgmt, Roads & Buildings, Narmada, Mines, Ports, I&B"
+      ],
+      [
+        "Kanubhai Desai",
+        "Finance, Urban Development, Urban Housing"
+      ],
+      [
+        "Jitendrabhai Vaghani",
+        "Agriculture, Cooperation, Fisheries, Animal Husbandry"
+      ],
+      [
+        "Rushikesh Patel",
+        "Energy & Petrochemicals, Panchayat, Legislative Affairs"
+      ],
+      [
+        "Arjun Modhwadia",
+        "Forests & Environment, Science & Technology"
+      ],
+      [
+        "Rivaba Jadeja (MoS)",
+        "Primary, Secondary & Adult Education"
+      ],
+      [
+        "Praful Pansheriya (MoS-IC)",
+        "Health, Family Welfare, Medical Education"
+      ]
+    ],
+    "departments_count": null,
+    "departments_note": "Cabinet reconstituted 17 Oct 2025 (25 ministers + CM)",
+    "sources": [
+      "News18 / Livemint / India Today / Indian Express, 17 Oct 2025 (portfolio lists)",
+      "Wikipedia CM list",
+      "DoPT CS list"
+    ],
+    "verification": "verified-2026"
+  },
+  {
+    "state": "Haryana",
+    "capital": "Chandigarh",
+    "chief_minister": "Nayab Singh Saini",
+    "party_alliance": "BJP (NDA)",
+    "cm_since": "2024-03-12 (2nd ministry 2024-10-17)",
+    "deputy_cms": [],
+    "governor": "Prof. Ashim Kumar Ghosh",
+    "chief_secretary": "Anurag Rastogi, IAS",
+    "chief_secretary_note": "DoPT list 01.02.2026; Wikipedia agrees",
+    "website": "https://haryana.gov.in",
+    "key_ministers": [
+      [
+        "Nayab Singh Saini (CM)",
+        "Home, Finance, Planning, Excise & Taxation, Town & Country Planning, CID, Law, Personnel"
+      ],
+      [
+        "Anil Vij",
+        "Energy, Transport, Labour"
+      ],
+      [
+        "Mahipal Dhanda",
+        "School Education, Higher Education, Parliamentary Affairs"
+      ],
+      [
+        "Arti Singh Rao",
+        "Health, Medical Education, Ayush"
+      ],
+      [
+        "Shyam Singh Rana",
+        "Agriculture, Animal Husbandry, Fisheries"
+      ],
+      [
+        "Vipul Goel",
+        "Revenue & Disaster Management, Urban Local Bodies"
+      ],
+      [
+        "Rao Narbir Singh",
+        "Industries & Commerce, Environment"
+      ],
+      [
+        "Ranbir Gangwa",
+        "PHE, PWD (B&R)"
+      ],
+      [
+        "Shruti Choudhry",
+        "Women & Child Development, Irrigation"
+      ]
+    ],
+    "departments_count": null,
+    "departments_note": "14-member council (12 cabinet + 2 MoS-IC); portfolios allocated 20 Oct 2024",
+    "sources": [
+      "The Hindu / TOI / ET Haryana portfolio lists, Oct 2024",
+      "newsdarpan.in Haryana list (Aug 2026)",
+      "Wikipedia Second Saini ministry"
+    ],
+    "verification": "verified-2026"
+  },
+  {
+    "state": "Himachal Pradesh",
+    "capital": "Shimla (Dharamshala - winter capital)",
+    "chief_minister": "Sukhvinder Singh Sukhu",
+    "party_alliance": "INC (INDIA)",
+    "cm_since": "2022-12-11",
+    "deputy_cms": [
+      {
+        "name": "Mukesh Agnihotri",
+        "portfolios": [
+          "Deputy CM (portfolio detail not verified)"
+        ]
+      }
+    ],
+    "governor": "Kavinder Gupta",
+    "chief_secretary": "Sanjay Gupta, IAS",
+    "chief_secretary_note": "DoPT 01.02.2026 list shows Sanjay Gupta; Wikipedia shows Kamlesh Kumar Pant (additional charge) - verify on himachal.nic.in",
+    "website": "https://himachal.nic.in",
+    "key_ministers": [
+      [
+        "Sukhvinder Singh Sukhu (Chief Minister)",
+        "Finance; General Administration; Home; Planning; Personnel; All departments not allotted to any other Minister"
+      ],
+      [
+        "Mukesh Agnihotri (Deputy Chief Minister)",
+        "Jal Shakti; Transport; Language, Arts and Culture; Co-operation"
+      ],
+      [
+        "Dr. (Col.) Dhani Ram Shandil",
+        "Health and Family Welfare; Social Justice and Empowerment; Sainik Welfare"
+      ],
+      [
+        "Chander Kumar",
+        "Agriculture; Animal Husbandry"
+      ],
+      [
+        "Harshwardhan Chauhan",
+        "Industries; Parliamentary Affairs; Labour and Employment"
+      ],
+      [
+        "Jagat Singh Negi",
+        "Revenue; Horticulture; Tribal Development; Redressal of Public Grievances"
+      ],
+      [
+        "Rohit Thakur",
+        "Elementary Education; Higher Education; Printing & Stationery"
+      ],
+      [
+        "Anirudh Singh",
+        "Rural Development; Panchayati Raj"
+      ],
+      [
+        "Vikramaditya Singh",
+        "Public Works (PWD); Urban Development"
+      ],
+      [
+        "Rajesh Dharmani",
+        "Town & Country Planning; Housing; Technical Education; Vocational and Industrial Training"
+      ],
+      [
+        "Yadvinder Goma",
+        "Ayush; Youth Services and Sports; Law & Legal Remembrancer's"
+      ]
+    ],
+    "departments_count": null,
+    "departments_note": "Key-minister portfolios not verified in this research; scrape hp.gov.in",
+    "sources": [
+      "Wikipedia CM list (Sept 2026)",
+      "careerpower",
+      "DoPT CS list 01.02.2026"
+    ],
+    "verification": "verified-2026"
+  },
+  {
+    "state": "Jharkhand",
+    "capital": "Ranchi",
+    "chief_minister": "Hemant Soren",
+    "party_alliance": "JMM (INDIA/MGB)",
+    "cm_since": "2024-11-28 (4th term)",
+    "deputy_cms": [],
+    "governor": "Santosh Kumar Gangwar",
+    "chief_secretary": "Avinash Kumar, IAS",
+    "chief_secretary_note": "DoPT list 01.02.2026; jharkhand.gov.in 'Who's Who'",
+    "website": "https://jharkhand.gov.in",
+    "key_ministers": [
+      [
+        "Hemant Soren (CM)",
+        "Home (incl. Prisons), Cabinet Secretariat, Personnel & Administrative Reforms, Road & Building Construction, Vigilance"
+      ],
+      [
+        "Radha Krishna Kishore",
+        "Finance, Commercial Taxes, Planning & Development, Parliamentary Affairs"
+      ],
+      [
+        "Irfan Ansari",
+        "Health, Medical Education & Family Welfare, Food & PD, Disaster Management"
+      ],
+      [
+        "Ramdas Soren",
+        "School Education & Literacy, Registration"
+      ],
+      [
+        "Sudivya Kumar",
+        "Urban Development & Housing, Higher & Technical Education, Tourism, Sports"
+      ],
+      [
+        "Deepak Birua",
+        "Revenue & Land Reforms, Transport"
+      ],
+      [
+        "Chamra Linda",
+        "ST/SC/BC Welfare"
+      ],
+      [
+        "Deepika Pandey Singh",
+        "Rural Development, Panchayati Raj"
+      ],
+      [
+        "Shilpi Neha Tirkey",
+        "Agriculture, Animal Husbandry, Cooperation"
+      ],
+      [
+        "Hafizul Hassan",
+        "Water Resources, Minority Welfare"
+      ]
+    ],
+    "departments_count": null,
+    "departments_note": "12-member council (incl. CM); portfolios per Jharkhand CMO 'Ministers & Portfolio' page",
+    "sources": [
+      "cm.jharkhand.gov.in Ministers & Portfolio page",
+      "The Hindu / News18, 6 Dec 2024",
+      "DoPT CS list"
+    ],
+    "verification": "verified-2026"
+  },
+  {
+    "state": "Karnataka",
+    "capital": "Bengaluru",
+    "chief_minister": "D. K. Shivakumar",
+    "party_alliance": "INC (INDIA)",
+    "cm_since": "2026-06-03 (power-sharing rotation from Siddaramaiah)",
+    "deputy_cms": [
+      {
+        "name": "G. Parameshwara",
+        "portfolios": [
+          "Revenue",
+          "Youth Empowerment and Sports"
+        ]
+      }
+    ],
+    "governor": "Thaawarchand Gehlot",
+    "chief_secretary": "Dr. Shalini Rajneesh, IAS",
+    "chief_secretary_note": "DoPT list 01.02.2026",
+    "website": "https://karnataka.gov.in",
+    "key_ministers": [
+      [
+        "D. K. Shivakumar (CM)",
+        "Finance, Cabinet Affairs, DPAR, Intelligence, all unallocated portfolios"
+      ],
+      [
+        "Priyank Kharge",
+        "Home (excl. intelligence), IT-BT, e-Governance"
+      ],
+      [
+        "K. J. George",
+        "Energy, Tourism"
+      ],
+      [
+        "M. B. Patil",
+        "Large & Medium Industries, Infrastructure"
+      ],
+      [
+        "Satish Jarkiholi",
+        "Public Works"
+      ],
+      [
+        "U. T. Khader",
+        "Health & Family Welfare"
+      ],
+      [
+        "K. H. Muniyappa",
+        "Food & Civil Supplies, Consumer Affairs"
+      ],
+      [
+        "Krishna Byre Gowda",
+        "Greater Bengaluru Development"
+      ],
+      [
+        "Ramalinga Reddy",
+        "Major & Medium Irrigation"
+      ],
+      [
+        "Eshwar Khandre",
+        "Rural Development & Panchayati Raj"
+      ],
+      [
+        "Yathindra Siddaramaiah",
+        "Urban Development"
+      ],
+      [
+        "Byrathi Suresh",
+        "Transport"
+      ]
+    ],
+    "departments_count": null,
+    "departments_note": "14-member cabinet as of June 2026 (max 34); a second expansion phase was expected around 10 June 2026 - verify for additions",
+    "sources": [
+      "New Indian Express / Times Now / India TV / Business Today, 4-5 June 2026 (portfolio allocation)",
+      "Wikipedia CM list (Sept 2026)",
+      "DoPT CS list"
+    ],
+    "verification": "verified-2026"
+  },
+  {
+    "state": "Kerala",
+    "capital": "Thiruvananthapuram",
+    "chief_minister": "V. D. Satheesan",
+    "party_alliance": "INC (UDF)",
+    "cm_since": "2026-05-18",
+    "deputy_cms": [],
+    "governor": "Rajendra Vishwanath Arlekar",
+    "chief_secretary": "Bishwanath Sinha, IAS",
+    "chief_secretary_note": "Feb 2026 DoPT list shows Dr. A. Jayathilak; Wikipedia (Sept 2026) shows Bishwanath Sinha - post-election change reported, verify on kerala.gov.in",
+    "website": "https://kerala.gov.in",
+    "key_ministers": [
+      [
+        "V. D. Satheesan (CM)",
+        "Finance, Law, General Administration, Ports + ~35 departments"
+      ],
+      [
+        "Ramesh Chennithala",
+        "Home, Vigilance, Fire & Rescue, Prisons, Coir"
+      ],
+      [
+        "K. Muraleedharan",
+        "Health, Medical Education, Devaswoms, Food Safety, Ayush"
+      ],
+      [
+        "P. K. Kunhalikutty (IUML)",
+        "Industries & Commerce, IT, AI, Startups, Mining & Geology, Textiles"
+      ],
+      [
+        "Sunny Joseph",
+        "Electricity, Environment, Parliamentary Affairs"
+      ],
+      [
+        "A. P. Anil Kumar",
+        "Land Revenue, Survey & Land Records"
+      ],
+      [
+        "Roji M. John",
+        "Higher Education, Technical Education"
+      ],
+      [
+        "N. Samsudheen (IUML)",
+        "General Education, Literacy, Wakf & Minority Welfare"
+      ],
+      [
+        "T. Siddique",
+        "Agriculture, KAU"
+      ],
+      [
+        "P. K. Basheer (IUML)",
+        "Public Works Department"
+      ],
+      [
+        "K. M. Shaji (IUML)",
+        "Local Self Government, Rural Development"
+      ],
+      [
+        "Bindu Krishna",
+        "Labour, Women & Child Development"
+      ],
+      [
+        "Mons Joseph",
+        "Irrigation, Water Supply, Housing"
+      ]
+    ],
+    "departments_count": null,
+    "departments_note": "21-member UDF cabinet; portfolios gazetted 20 May 2026; UDF won 102/140 seats (LDF 35, BJP 3)",
+    "sources": [
+      "Onmanorama / The News Minute / HT / ETV portfolio lists, 20-21 May 2026",
+      "niyamasabha.org Council of Ministers",
+      "Wikipedia CM list"
+    ],
+    "verification": "verified-2026"
+  },
+  {
+    "state": "Madhya Pradesh",
+    "capital": "Bhopal",
+    "chief_minister": "Dr. Mohan Yadav",
+    "party_alliance": "BJP (NDA)",
+    "cm_since": "2023-12-13",
+    "deputy_cms": [
+      {
+        "name": "Jagdish Devda",
+        "portfolios": [
+          "Finance",
+          "Commercial Tax",
+          "Planning, Economics & Statistics"
+        ]
+      },
+      {
+        "name": "Rajendra Shukla",
+        "portfolios": [
+          "Public Health",
+          "Medical Education"
+        ]
+      }
+    ],
+    "governor": "Mangubhai C. Patel",
+    "chief_secretary": "Anurag Jain, IAS",
+    "chief_secretary_note": "DoPT 01.02.2026 shows Anurag Jain; Wikipedia/sarkaritel (2026) show Ashok Barnwal - change reported, verify on mp.gov.in",
+    "website": "https://mp.gov.in",
+    "key_ministers": [
+      [
+        "Mohan Yadav (CM)",
+        "GAD, Home, Jail, Industrial Policy & Investment Promotion, PR, Narmada Valley, Aviation, Mines, Animal Husbandry"
+      ],
+      [
+        "Kailash Vijayvargiya",
+        "Urban Development & Housing, Parliamentary Affairs"
+      ],
+      [
+        "Prahlad Singh Patel",
+        "Panchayat & Rural Development, Labour"
+      ],
+      [
+        "Rakesh Singh",
+        "Public Works Department"
+      ],
+      [
+        "Uday Pratap Singh",
+        "Transport, School Education"
+      ],
+      [
+        "Inder Singh Parmar",
+        "Higher Education, Technical Education, Ayush"
+      ],
+      [
+        "Pradyumn Singh Tomar",
+        "Energy"
+      ],
+      [
+        "Karan Singh Verma",
+        "Revenue"
+      ],
+      [
+        "Tulsiram Silawat",
+        "Water Resources"
+      ]
+    ],
+    "departments_count": null,
+    "departments_note": "~31-member council; portfolio list current as of Aug 2026 (mpinfo.org based)",
+    "sources": [
+      "newsdarpan.in MP ministers list (Aug 2026, sourced from mpinfo.org)",
+      "Wikipedia Mohan Yadav ministry",
+      "The Hindu Dec 2023 portfolio allocation",
+      "DoPT CS list"
+    ],
+    "verification": "verified-2026"
+  },
+  {
+    "state": "Maharashtra",
+    "capital": "Mumbai",
+    "chief_minister": "Devendra Fadnavis",
+    "party_alliance": "BJP (Mahayuti/NDA)",
+    "cm_since": "2024-12-05",
+    "deputy_cms": [
+      {
+        "name": "Eknath Shinde (SHS)",
+        "portfolios": [
+          "Urban Development",
+          "Housing",
+          "Public Works (Public Enterprises)"
+        ]
+      },
+      {
+        "name": "Sunetra Ajit Pawar (NCP)",
+        "portfolios": [
+          "Deputy CM since 31 Jan 2026, replacing Ajit Pawar (portfolio allocation to be verified)"
+        ]
+      }
+    ],
+    "governor": "Jishnu Dev Varma",
+    "chief_secretary": "Rajesh Aggarwal, IAS",
+    "chief_secretary_note": "DoPT list 01.02.2026; consistent across sources",
+    "website": "https://maharashtra.gov.in",
+    "key_ministers": [
+      [
+        "Devendra Fadnavis (CM)",
+        "Home, Energy (excl. renewables), Law & Judiciary, GAD, I&B, unallocated"
+      ],
+      [
+        "Chandrashekhar Bawankule",
+        "Revenue"
+      ],
+      [
+        "Chandrakant Patil",
+        "Higher & Technical Education, Parliamentary Affairs"
+      ],
+      [
+        "Girish Mahajan",
+        "Water Resources (Vidarbha/Tapi/Konkan), Disaster Management"
+      ],
+      [
+        "Prakash Abitkar",
+        "Public Health & Family Welfare"
+      ],
+      [
+        "Dadaji Bhuse",
+        "School Education"
+      ],
+      [
+        "Uday Samant",
+        "Industries, Marathi Language"
+      ],
+      [
+        "Hasan Mushrif",
+        "Medical Education"
+      ],
+      [
+        "Manikrao Kokate",
+        "Agriculture"
+      ],
+      [
+        "Pankaja Munde",
+        "Environment & Climate Change, Animal Husbandry"
+      ],
+      [
+        "Ashish Shelar",
+        "Cultural Affairs, Information Technology"
+      ]
+    ],
+    "departments_count": null,
+    "departments_note": "42-member council (max 43); portfolios allocated 21 Dec 2024; Sunetra Pawar replaced Ajit Pawar as Dy CM on 31 Jan 2026 (per Wikipedia CM list - verify)",
+    "sources": [
+      "ET / ThePrint / NDTV / Scroll portfolio lists, 21-22 Dec 2024",
+      "Wikipedia CM list (Sept 2026)",
+      "DoPT CS list"
+    ],
+    "verification": "verified-2026"
+  },
+  {
+    "state": "Manipur",
+    "capital": "Imphal",
+    "chief_minister": "Yumnam Khemchand Singh",
+    "party_alliance": "BJP (NDA/NEDA)",
+    "cm_since": "2026-02-04",
+    "deputy_cms": [
+      {
+        "name": "Nemcha Kipgen",
+        "portfolios": [
+          "reported deputy CM"
+        ]
+      },
+      {
+        "name": "Losii Dikho (NPF)",
+        "portfolios": [
+          "reported deputy CM"
+        ]
+      }
+    ],
+    "governor": "Ajay Kumar Bhalla",
+    "chief_secretary": "Dr. Puneet Kumar Goel, IAS",
+    "chief_secretary_note": "DoPT list 01.02.2026",
+    "website": "https://manipur.gov.in",
+    "key_ministers": [
+      [
+        "Yumnam Khemchand Singh (Chief Minister)",
+        "Any department not allocated specifically - holds over 20 departments incl. Finance, Personnel & Administrative Reforms, Planning, Education, Health, PWD, Agriculture, IT"
+      ],
+      [
+        "Nemcha Kipgen (Deputy Chief Minister, BJP - Kuki community)",
+        "Rural Development & Panchayati Raj; Tribal Affairs & Hills"
+      ],
+      [
+        "Losii Dikho (Deputy Chief Minister, NPF - Naga community)",
+        "Public Health Engineering; Forest, Environment & Climate Change"
+      ],
+      [
+        "Konthoujam Govindas Singh (BJP)",
+        "Home; Youth Affairs & Sports"
+      ],
+      [
+        "Khuraijam Loken Singh (NPP)",
+        "Arts & Culture; Tourism"
+      ]
+    ],
+    "departments_count": null,
+    "departments_note": "New government formed Feb 2026 after transition from N. Biren Singh; key-minister portfolios not verified - verify on manipur.gov.in",
+    "sources": [
+      "Wikipedia CM list (Sept 2026)",
+      "careerpower updates",
+      "DoPT CS list"
+    ],
+    "verification": "verified-2026"
+  },
+  {
+    "state": "Meghalaya",
+    "capital": "Shillong",
+    "chief_minister": "Conrad Kongkal Sangma",
+    "party_alliance": "NPP (MDA/NEDA)",
+    "cm_since": "2018-03-06",
+    "deputy_cms": [
+      {
+        "name": "Prestone Tynsong",
+        "portfolios": [
+          "deputy CM"
+        ]
+      },
+      {
+        "name": "Sniawbhalang Dhar",
+        "portfolios": [
+          "deputy CM"
+        ]
+      }
+    ],
+    "governor": "C. H. Vijayashankar",
+    "chief_secretary": "Dr. Shakil P. Ahammed, IAS",
+    "chief_secretary_note": "DoPT list 01.02.2026",
+    "website": "https://meghalaya.gov.in",
+    "key_ministers": [
+      [
+        "Conrad K. Sangma (Chief Minister)",
+        "Cabinet Affairs; Finance; Home (Political); Personnel & Administrative Reforms; Planning, Investment Promotion & Sustainable Development; IT & Communication; Mining & Geology; Forests & Environment; Elections; Programme Implementation & Evaluation; Any portfolios not allotted to other Ministers"
+      ],
+      [
+        "Prestone Tynsong (Deputy Chief Minister)",
+        "Home (Police); Public Works Department (both wings); District Council Affairs; Parliamentary Affairs"
+      ],
+      [
+        "Sniawbhalang Dhar (Deputy Chief Minister)",
+        "Urban Affairs; Transport; Commerce & Industries; Prisons & Correctional Services"
+      ],
+      [
+        "Marcuise N. Marak",
+        "Public Health Engineering; Housing; Soil & Water Conservation"
+      ],
+      [
+        "Wailadmiki Shylla",
+        "Health & Family Welfare; Sports & Youth Affairs; Home (Passport)"
+      ],
+      [
+        "Timothy D. Shira",
+        "Tourism; Agriculture; Fisheries"
+      ],
+      [
+        "Brening A. Sangma",
+        "Border Area Development; Excise; Home (Civil Defence & Home Guards)"
+      ],
+      [
+        "Sosthenes Sohtun",
+        "Community & Rural Development; Secretariat Administration; General Administration"
+      ],
+      [
+        "Metbah Lyngdoh (UDP)",
+        "Power; Water Resources; Taxation; Textiles"
+      ],
+      [
+        "Lahkmen Rymbui (UDP)",
+        "Education; Revenue & Disaster Management; Information & Public Relations; Law"
+      ],
+      [
+        "Sanbor Shullai (BJP)",
+        "Animal Husbandry & Veterinary; Arts & Culture; Printing & Stationery; Legal Metrology"
+      ],
+      [
+        "Methodius Dkhar (HSPDP)",
+        "Food, Civil Supplies & Consumer Affairs; Labour, Employment & Skill Development; Registration & Stamps; Co-operation"
+      ]
+    ],
+    "departments_count": null,
+    "departments_note": "Key-minister portfolios not verified; scrape meghalaya.gov.in",
+    "sources": [
+      "Wikipedia CM list (Sept 2026)",
+      "DoPT CS list"
+    ],
+    "verification": "verified-2026"
+  },
+  {
+    "state": "Mizoram",
+    "capital": "Aizawl",
+    "chief_minister": "Pu Lalduhoma",
+    "party_alliance": "ZPM",
+    "cm_since": "2023-12-08",
+    "deputy_cms": [],
+    "governor": "Gen. (Dr.) Vijay Kumar Singh (Retd.)",
+    "chief_secretary": "Khilli Ram Meena, IAS",
+    "chief_secretary_note": "DoPT list 01.02.2026 and MHA AGMUT list agree on Khilli Ram Meena; Governor name per careerpower (Wikipedia shows different) - verify",
+    "website": "https://mizoram.gov.in",
+    "key_ministers": [
+      [
+        "Lalduhoma (Chief Minister)",
+        "Finance; Planning & Programme Implementation; Vigilance; General Administration; Political & Cabinet; Law & Judicial; Personnel & Administrative Reforms (taken over June 2026)"
+      ],
+      [
+        "K. Sapdanga",
+        "Home; Urban Development & Poverty Alleviation"
+      ],
+      [
+        "Vanlalhlana",
+        "Public Works Department; Transport; Parliamentary Affairs"
+      ],
+      [
+        "C. Lalsawivunga",
+        "District Council & Minority Affairs; Art & Culture; Animal Husbandry & Veterinary; Horticulture"
+      ],
+      [
+        "Lalthansanga",
+        "Environment, Forests & Climate Change; Sericulture; Fisheries; Land Resources, Soil & Water Conservation"
+      ],
+      [
+        "Dr. Vanlalthlana",
+        "School Education; Higher & Technical Education; Information & Public Relations; Information & Communication Technology"
+      ],
+      [
+        "P. C. Vanlalruata",
+        "Agriculture; Irrigation & Water Resources; Co-operation"
+      ],
+      [
+        "Pi Lalrinpuii",
+        "Health & Family Welfare; Social Welfare, Women & Child Development"
+      ],
+      [
+        "F. Rodingliana (Minister of State)",
+        "Power & Electricity; Commerce & Industries"
+      ],
+      [
+        "B. Lalchhanzova (Minister of State)",
+        "Food, Civil Supplies & Consumer Affairs; Land Revenue & Settlement"
+      ],
+      [
+        "Prof. Lalnilawma (Minister of State)",
+        "Rural Development; Public Health Engineering; Disaster Management & Rehabilitation"
+      ],
+      [
+        "Lalnghinglova Hmar (Minister of State)",
+        "Labour, Employment, Skill Development & Entrepreneurship; Sports & Youth Services; Excise & Narcotics; Tourism"
+      ]
+    ],
+    "departments_count": null,
+    "departments_note": "ZPM government; portfolios not verified in this research",
+    "sources": [
+      "Wikipedia CM list",
+      "careerpower",
+      "DoPT/MHA CS lists"
+    ],
+    "verification": "verified-2026"
+  },
+  {
+    "state": "Nagaland",
+    "capital": "Kohima",
+    "chief_minister": "Neiphiu Rio",
+    "party_alliance": "NDPP (PDA/NEDA)",
+    "cm_since": "2018-03-08",
+    "deputy_cms": [
+      {
+        "name": "Yanthungo Patton (BJP)",
+        "portfolios": [
+          "deputy CM"
+        ]
+      },
+      {
+        "name": "T. R. Zeliang",
+        "portfolios": [
+          "deputy CM"
+        ]
+      }
+    ],
+    "governor": "Nand Kishore Yadav (per careerpower; Wikipedia shows La. Ganesan - conflicting)",
+    "chief_secretary": "Senti Yanger Imchen, IAS",
+    "chief_secretary_note": "DoPT list 01.02.2026 shows Senti Yanger Imchen; Wikipedia shows different - verify",
+    "website": "https://nagaland.gov.in",
+    "key_ministers": [
+      [
+        "Neiphiu Rio (Chief Minister)",
+        "Finance; Personnel and Administrative Reforms; All important policy issues and any other portfolios not allocated (incl. Agriculture, School Education)"
+      ],
+      [
+        "T. R. Zeliang (Deputy Chief Minister)",
+        "Planning and Transformation; National Highway"
+      ],
+      [
+        "Yanthungo Patton (Deputy Chief Minister)",
+        "Home; Border Affairs"
+      ],
+      [
+        "G. Kaito Aye",
+        "Roads & Bridges"
+      ],
+      [
+        "Jacob Zhimomi",
+        "Public Health Engineering; Co-operation"
+      ],
+      [
+        "K. G. Kenye",
+        "Power; Parliamentary Affairs"
+      ],
+      [
+        "P. Paiwang Konyak",
+        "Health & Family Welfare"
+      ],
+      [
+        "Metsubo Jamir",
+        "Rural Development; SIRD"
+      ],
+      [
+        "Temjen Imna Along",
+        "Tourism; Higher Education"
+      ],
+      [
+        "C. L. John",
+        "Forest, Environment & Climate Change; Village Guards"
+      ],
+      [
+        "Salhoutuonuo Kruse",
+        "Women Resource Development; Horticulture"
+      ],
+      [
+        "P. Bashangmongba Chang",
+        "Housing & Mechanical Engineering"
+      ]
+    ],
+    "departments_count": null,
+    "departments_note": "Key-minister portfolios not verified; scrape nagaland.gov.in",
+    "sources": [
+      "Wikipedia CM list (Sept 2026)",
+      "careerpower",
+      "DoPT CS list"
+    ],
+    "verification": "verified-2026"
+  },
+  {
+    "state": "Odisha",
+    "capital": "Bhubaneswar",
+    "chief_minister": "Mohan Charan Majhi",
+    "party_alliance": "BJP (NDA)",
+    "cm_since": "2024-06-12",
+    "deputy_cms": [
+      {
+        "name": "Kanak Vardhan Singh Deo",
+        "portfolios": [
+          "Agriculture and Farmers' Empowerment",
+          "Energy"
+        ]
+      },
+      {
+        "name": "Pravati Parida",
+        "portfolios": [
+          "Women and Child Development",
+          "Mission Shakti",
+          "Tourism"
+        ]
+      }
+    ],
+    "governor": "Hari Babu Kambhampati",
+    "chief_secretary": "Smt. Anu Garg, IAS",
+    "chief_secretary_note": "DoPT list 01.02.2026",
+    "website": "https://odisha.gov.in",
+    "key_ministers": [
+      [
+        "Mohan Charan Majhi (CM)",
+        "Home, Finance, GAD, I&PR, Water Resources, Planning"
+      ],
+      [
+        "Suresh Pujari",
+        "Revenue & Disaster Management"
+      ],
+      [
+        "Mukesh Mahaling",
+        "Health & Family Welfare, Parliamentary Affairs, E&IT"
+      ],
+      [
+        "Nityananda Gond",
+        "School & Mass Education, ST/SC Development"
+      ],
+      [
+        "Prithiviraj Harichandan",
+        "Law, Works, Excise"
+      ],
+      [
+        "Bibhuti Bhusan Jena",
+        "Commerce & Transport, Steel & Mines"
+      ],
+      [
+        "Suryabanshi Suraj (MoS-IC)",
+        "Higher Education, Sports"
+      ],
+      [
+        "Ganesh Ram Singhkhuntia (MoS-IC)",
+        "Forest, Environment, Labour"
+      ]
+    ],
+    "departments_count": null,
+    "departments_note": "16-member council (11 cabinet rank incl. CM+2 DyCMs, 5 MoS-IC)",
+    "sources": [
+      "assembly.odisha.gov.in Council of Ministers",
+      "Business Standard / The Hindu, 15 Jun 2024",
+      "newsdarpan.in Odisha list (Aug 2026)"
+    ],
+    "verification": "verified-2026"
+  },
+  {
+    "state": "Punjab",
+    "capital": "Chandigarh",
+    "chief_minister": "Bhagwant Singh Mann",
+    "party_alliance": "AAP",
+    "cm_since": "2022-03-16",
+    "deputy_cms": [],
+    "governor": "Gulab Chand Kataria",
+    "chief_secretary": "K. A. Prasad Sinha, IAS",
+    "chief_secretary_note": "DoPT list 01.02.2026; consistent",
+    "website": "https://punjab.gov.in",
+    "key_ministers": [
+      [
+        "Bhagwant Mann (CM)",
+        "Home Affairs & Justice, GAD, Personnel, Vigilance, Cooperation, Civil Aviation, Science & Tech, Sports"
+      ],
+      [
+        "Harpal Singh Cheema",
+        "Finance, Planning, Programme Implementation, Excise & Taxation, Transport"
+      ],
+      [
+        "Dr. Balbir Singh",
+        "Health & Family Welfare, Medical Education, Elections"
+      ],
+      [
+        "Harjot Singh Bains",
+        "School Education, Higher Education, Technical Education, IT, Local Government (from May 2026)"
+      ],
+      [
+        "Dr. Baljit Kaur",
+        "Social Justice, Empowerment & Minorities, Social Security, WCD"
+      ],
+      [
+        "Gurmeet Singh Khudian",
+        "Agriculture, Animal Husbandry, Fisheries, Food Processing"
+      ],
+      [
+        "Aman Arora",
+        "Industries & Commerce, Investment Promotion (from May 2026)"
+      ],
+      [
+        "Tarunpreet Singh Sond",
+        "Power (from May 2026), Labour, Tourism"
+      ],
+      [
+        "Ravjot Singh",
+        "Parliamentary Affairs, NRI Affairs, Jails"
+      ]
+    ],
+    "departments_count": null,
+    "departments_note": "16 ministers + 1 MoS (Skoon Bhandari, Jan 2026); multiple portfolio reshuffles Jan-May 2026; verify latest on punjab.gov.in",
+    "sources": [
+      "sarkarilist.in Punjab cabinet (Sept 2026)",
+      "TOI reshuffle reports Mar/May 2026",
+      "Wikipedia Mann ministry",
+      "DoPT CS list"
+    ],
+    "verification": "verified-2026"
+  },
+  {
+    "state": "Rajasthan",
+    "capital": "Jaipur",
+    "chief_minister": "Bhajan Lal Sharma",
+    "party_alliance": "BJP (NDA)",
+    "cm_since": "2023-12-15",
+    "deputy_cms": [
+      {
+        "name": "Diya Kumari",
+        "portfolios": [
+          "Finance",
+          "Tourism",
+          "Art, Literature & Culture",
+          "PWD",
+          "Women & Child Development"
+        ]
+      },
+      {
+        "name": "Prem Chand Bairwa",
+        "portfolios": [
+          "Higher Education",
+          "Technical Education",
+          "Ayush",
+          "Transport & Road Safety"
+        ]
+      }
+    ],
+    "governor": "Haribhau Kisanrao Bagde",
+    "chief_secretary": "V. Srinivas, IAS",
+    "chief_secretary_note": "DoPT list 01.02.2026; sarkaritel (Jul 2026) agrees",
+    "website": "https://rajasthan.gov.in",
+    "key_ministers": [
+      [
+        "Bhajan Lal Sharma (CM)",
+        "Home, Personnel, Excise, Planning, GAD, I&PR, ACB"
+      ],
+      [
+        "Gajendra Singh Khinvsar",
+        "Medical & Health, ESI"
+      ],
+      [
+        "Rajyavardhan Singh Rathore",
+        "Industries & Commerce, IT & Communication, Youth Affairs & Sports, Sainik Welfare"
+      ],
+      [
+        "Madan Dilawar",
+        "School Education, Panchayati Raj, Sanskrit Education"
+      ],
+      [
+        "Jogaram Patel",
+        "Parliamentary Affairs, Law & Legal Affairs"
+      ],
+      [
+        "Suresh Singh Rawat",
+        "Water Resources"
+      ],
+      [
+        "Hemant Meena",
+        "Revenue, Colonisation"
+      ],
+      [
+        "Kanhaiya Lal Choudhary",
+        "Public Health Engineering, Ground Water"
+      ]
+    ],
+    "departments_count": null,
+    "departments_note": "~22-member council; portfolios allocated Jan 2024",
+    "sources": [
+      "Wikipedia Bhajan Lal Sharma ministry",
+      "Financial Express / Times Now portfolio lists, Jan 2024",
+      "DoPT CS list"
+    ],
+    "verification": "verified-2026"
+  },
+  {
+    "state": "Sikkim",
+    "capital": "Gangtok",
+    "chief_minister": "Prem Singh Tamang (P. S. Golay)",
+    "party_alliance": "SKM (NDA)",
+    "cm_since": "2019-05-27",
+    "deputy_cms": [],
+    "governor": "Om Prakash Mathur",
+    "chief_secretary": "Ravindra Telang, IAS",
+    "chief_secretary_note": "DoPT list 01.02.2026",
+    "website": "https://sikkim.gov.in",
+    "key_ministers": [
+      [
+        "Prem Singh Tamang (Golay) (Chief Minister)",
+        "Home; Finance; Planning & Development; Personnel; Power; Excise; Land Revenue & Disaster Management; Transport; Information & Public Relations; Information Technology; Skill Development; Other departments not allotted"
+      ],
+      [
+        "Puran Kumar Gurung",
+        "Agriculture; Horticulture; Animal Husbandry & Veterinary Services; Fisheries"
+      ],
+      [
+        "Tshering Thendup Bhutia",
+        "Commerce & Industries; Tourism & Civil Aviation; Food Processing Industries (added Mar 2026)"
+      ],
+      [
+        "Bhim Hang Limboo",
+        "Buildings & Housing; Labour"
+      ],
+      [
+        "Pintso Namgyal Lepcha",
+        "Forest & Environment; Mines & Geology; Science & Technology"
+      ],
+      [
+        "Raju Basnet",
+        "Education; Law; Sports & Youth Affairs; Parliamentary Affairs"
+      ],
+      [
+        "Nar Bahadur Dahal (Chettri)",
+        "Roads & Bridges"
+      ],
+      [
+        "G. T. Dhungel",
+        "Health & Family Welfare; Culture; AYUSH (added Mar 2026)"
+      ],
+      [
+        "Bhoj Raj Rai",
+        "Food & Civil Supplies; Urban Development"
+      ],
+      [
+        "Sonam Lama",
+        "Ecclesiastical; Public Health Engineering; Water Resources"
+      ],
+      [
+        "Samdup Lepcha",
+        "Printing & Stationery; Social Welfare; Women, Child, Senior Citizen & Divyangjan Welfare"
+      ],
+      [
+        "Arun Upreti",
+        "Co-operation; Rural Development; Panchayati Raj (added Mar 2026)"
+      ]
+    ],
+    "departments_count": null,
+    "departments_note": "Key-minister portfolios not verified; scrape sikkim.gov.in",
+    "sources": [
+      "Wikipedia CM list (Sept 2026)",
+      "careerpower",
+      "DoPT CS list"
+    ],
+    "verification": "verified-2026"
+  },
+  {
+    "state": "Tamil Nadu",
+    "capital": "Chennai",
+    "chief_minister": "C. Joseph Vijay ('Vijay')",
+    "party_alliance": "TVK (outside support: Congress, CPI, CPI(M), VCK, IUML)",
+    "cm_since": "2026-05-10",
+    "deputy_cms": [],
+    "governor": "Rajendra Vishwanath Arlekar (additional charge)",
+    "chief_secretary": "N. Muruganandam, IAS",
+    "chief_secretary_note": "DoPT list 01.02.2026; consistent",
+    "website": "https://www.tn.gov.in",
+    "key_ministers": [
+      [
+        "Vijay (CM)",
+        "Public, GAD, Home, Police, Municipal Administration, Urban & Water Supply, Special Programme Implementation, Women/Youth/Child Welfare, Poverty Alleviation"
+      ],
+      [
+        "N. Marie Wilson",
+        "Finance, Planning and Development (post-expansion)"
+      ],
+      [
+        "K. A. Sengottaiyan",
+        "Revenue and Disaster Management"
+      ],
+      [
+        "N. Anand",
+        "Rural Development and Water Resources (No. 2 in cabinet)"
+      ],
+      [
+        "Aadhav Arjuna",
+        "Public Works (Buildings, Highways, Minor Ports), Sports Development"
+      ],
+      [
+        "S. Keerthana",
+        "Industries and Investment Promotion (first woman Industries Minister of TN)"
+      ],
+      [
+        "K. G. Arunraj",
+        "Health, Medical Education and Family Welfare"
+      ],
+      [
+        "Rajmohan",
+        "School Education, Tamil Development, Information & Publicity"
+      ],
+      [
+        "R. Nirmalkumar",
+        "Energy Resources, Law, Courts, Prisons"
+      ],
+      [
+        "P. Viswanathan (Congress)",
+        "Higher Education"
+      ],
+      [
+        "S. Rajesh Kumar (Congress)",
+        "Tourism"
+      ],
+      [
+        "K. Jegadeshwari",
+        "Social Welfare & Women Empowerment"
+      ],
+      [
+        "R. Kumar",
+        "Artificial Intelligence, IT and Digital Services"
+      ]
+    ],
+    "departments_count": null,
+    "departments_note": "33-member cabinet after 21 May 2026 expansion (max 35); TVK 108 seats, AIADMK 65, DMK 43 in 2026 election; Congress entered TN cabinet after ~6 decades",
+    "sources": [
+      "TOI / ET / Times Now / NIE / NDTV full portfolio lists, 16 & 21 May 2026",
+      "BBC swearing-in report 10 May 2026",
+      "DoPT CS list"
+    ],
+    "verification": "verified-2026"
+  },
+  {
+    "state": "Telangana",
+    "capital": "Hyderabad",
+    "chief_minister": "A. Revanth Reddy",
+    "party_alliance": "INC (INDIA)",
+    "cm_since": "2023-12-07",
+    "deputy_cms": [
+      {
+        "name": "Mallu Bhatti Vikramarka",
+        "portfolios": [
+          "Finance & Planning",
+          "Energy"
+        ]
+      }
+    ],
+    "governor": "Shiv Pratap Shukla",
+    "chief_secretary": "K. Ramakrishna Rao, IAS",
+    "chief_secretary_note": "DoPT Feb 2026 list shows K. Ramakrishna Rao; Wikipedia/sarkaritel (2026) show Sanjay Jaju - conflicting, verify on telangana.gov.in",
+    "website": "https://telangana.gov.in",
+    "key_ministers": [
+      [
+        "A. Revanth Reddy (CM)",
+        "Municipal Administration & Urban Development, GAD, Law & Order, unallocated portfolios"
+      ],
+      [
+        "Mallu Bhatti Vikramarka (DyCM)",
+        "Finance & Planning, Energy"
+      ],
+      [
+        "Nalamada Uttam Kumar Reddy",
+        "Irrigation & CAD, Food & Civil Supplies"
+      ],
+      [
+        "C. Damodar Rajanarasimha",
+        "Health, Medical & Family Welfare, Science & Technology"
+      ],
+      [
+        "Duddilla Sridhar Babu",
+        "IT, Electronics & Communications, Industries & Commerce, Legislative Affairs"
+      ],
+      [
+        "Ponguleti Srinivas Reddy",
+        "Revenue and Housing, I&PR"
+      ],
+      [
+        "Ponnam Prabhakar",
+        "Transport, BC Welfare"
+      ],
+      [
+        "Konda Surekha",
+        "Environment & Forests, Endowments"
+      ],
+      [
+        "D. Anasuya Seethakka",
+        "Panchayati Raj & Rural Development, WCD"
+      ],
+      [
+        "Tummala Nageswara Rao",
+        "Agriculture, Marketing, Cooperation, Textiles"
+      ],
+      [
+        "Gaddam Vivek",
+        "Labour, Employment, Mines & Geology"
+      ],
+      [
+        "Mohammed Azharuddin",
+        "Minorities Welfare, Public Enterprises"
+      ]
+    ],
+    "departments_count": null,
+    "departments_note": "Data from official telangana.gov.in Council of Ministers page (current)",
+    "sources": [
+      "telangana.gov.in/government/council-of-ministers/",
+      "The Hindu Dec 2023 portfolio allocation",
+      "TOI June 2025 expansion report",
+      "Wikipedia Telangana Council of Ministers"
+    ],
+    "verification": "verified-2026"
+  },
+  {
+    "state": "Tripura",
+    "capital": "Agartala",
+    "chief_minister": "Dr. Manik Saha",
+    "party_alliance": "BJP (NDA)",
+    "cm_since": "2022-05-15",
+    "deputy_cms": [],
+    "governor": "Indra Sena Reddy Nallu",
+    "chief_secretary": "Jitendra Kumar Sinha, IAS",
+    "chief_secretary_note": "DoPT list 01.02.2026",
+    "website": "https://tripura.gov.in",
+    "key_ministers": [
+      [
+        "Manik Saha (Chief Minister)",
+        "Home; Health & Family Welfare; PWD; Departments not allocated to any Minister"
+      ],
+      [
+        "Ratan Lal Nath",
+        "Power; Agriculture & Farmers' Welfare; Law (Parliamentary Affairs); Election"
+      ],
+      [
+        "Pranajit Singha Roy",
+        "Finance; Planning & Coordination; Information Technology"
+      ],
+      [
+        "Santana Chakma",
+        "Industries & Commerce; Jail (Home); Welfare of OBCs"
+      ],
+      [
+        "Sushanta Chowdhury",
+        "Food, Civil Supplies & Consumer Affairs; Transport; Tourism"
+      ],
+      [
+        "Tinku Roy",
+        "Youth Affairs & Sports; Social Welfare & Social Education; Labour"
+      ],
+      [
+        "Bikash Debbarma",
+        "Tribal Welfare; Handloom, Handicrafts & Sericulture; Statistics"
+      ],
+      [
+        "Sudhangshu Das",
+        "Welfare of Scheduled Castes; Animal Resource Development; Fisheries"
+      ],
+      [
+        "Sukla Charan Noatia (IPFT)",
+        "Co-operation; Tribal Welfare (TRP & PTG); Welfare of Minorities"
+      ],
+      [
+        "Animesh Debbarma (TIPRA Motha)",
+        "Forest; General Administration (Printing & Stationery); Science, Technology & Environment"
+      ],
+      [
+        "Kishor Barman",
+        "Higher Education; General Administration (Political); Panchayat"
+      ],
+      [
+        "Brishaketu Debbarma (Minister of State, TIPRA Motha)",
+        "Industries & Commerce"
+      ]
+    ],
+    "departments_count": null,
+    "departments_note": "Key-minister portfolios not verified; scrape tripura.gov.in",
+    "sources": [
+      "Wikipedia CM list (Sept 2026)",
+      "careerpower",
+      "DoPT CS list"
+    ],
+    "verification": "verified-2026"
+  },
+  {
+    "state": "Uttar Pradesh",
+    "capital": "Lucknow",
+    "chief_minister": "Yogi Adityanath",
+    "party_alliance": "BJP (NDA)",
+    "cm_since": "2017-03-19",
+    "deputy_cms": [
+      {
+        "name": "Keshav Prasad Maurya",
+        "portfolios": [
+          "Rural Development",
+          "Overall Village Development",
+          "Rural Engineering",
+          "Food Processing"
+        ]
+      },
+      {
+        "name": "Brajesh Pathak",
+        "portfolios": [
+          "Medical Education",
+          "Medical Health, Family Welfare",
+          "Mother & Child Welfare"
+        ]
+      }
+    ],
+    "governor": "Anandiben Patel",
+    "chief_secretary": "Shashi Prakash Goyal, IAS",
+    "chief_secretary_note": "DoPT list 01.02.2026; consistent",
+    "website": "https://up.gov.in",
+    "key_ministers": [
+      [
+        "Yogi Adityanath (CM)",
+        "Personnel, Home, Vigilance, Housing & Urban Planning, Revenue, Mining, PWD, Law, Institutional Finance, Planning, Information, Civil Aviation"
+      ],
+      [
+        "Suresh Kumar Khanna",
+        "Finance and Parliamentary Affairs"
+      ],
+      [
+        "Surya Pratap Shahi",
+        "Agriculture, Agricultural Education & Research"
+      ],
+      [
+        "Swatantra Dev Singh",
+        "Jal Shakti and Flood Control"
+      ],
+      [
+        "Arvind Kumar Sharma",
+        "Urban Development, Energy"
+      ],
+      [
+        "Yogendra Upadhyay",
+        "Higher Education"
+      ],
+      [
+        "Om Prakash Rajbhar (SBSP)",
+        "Panchayati Raj, Minority Welfare, Waqf & Haj"
+      ],
+      [
+        "Nand Gopal Gupta 'Nandi'",
+        "Industrial Development, Export Promotion, NRI & Investment"
+      ],
+      [
+        "Dara Singh Chauhan",
+        "Jails"
+      ],
+      [
+        "Bhupendra Chaudhary",
+        "MSME"
+      ],
+      [
+        "Manoj Pandey",
+        "Food and Logistics, Civil Supplies"
+      ],
+      [
+        "Baby Rani Maurya",
+        "Women's Welfare, Child Development"
+      ]
+    ],
+    "departments_count": null,
+    "departments_note": "~60-member council (max 60); second expansion 10 May 2026; portfolios reallocated 17 May 2026",
+    "sources": [
+      "upcmo.up.nic.in Cabinet Ministers page (July 2026)",
+      "TOI/newsdarpan UP cabinet lists (July 2026)",
+      "ThePrint portfolio analysis 18 May 2026",
+      "DoPT CS list"
+    ],
+    "verification": "verified-2026"
+  },
+  {
+    "state": "Uttarakhand",
+    "capital": "Dehradun",
+    "chief_minister": "Pushkar Singh Dhami",
+    "party_alliance": "BJP (NDA)",
+    "cm_since": "2021-07-04",
+    "deputy_cms": [],
+    "governor": "Lt. Gen. Gurmit Singh (Retd.)",
+    "chief_secretary": "Anand Bardhan, IAS",
+    "chief_secretary_note": "DoPT list 01.02.2026; consistent",
+    "website": "https://uk.gov.in",
+    "key_ministers": [
+      [
+        "Pushkar Singh Dhami (CM)",
+        "Home, Personnel, Vigilance, Finance, Planning, Revenue, Excise, Energy, I&PR + ~18 key departments"
+      ],
+      [
+        "Satpal Maharaj",
+        "Public Works, Tourism, Irrigation & Flood Control, Culture"
+      ],
+      [
+        "Dhan Singh Rawat",
+        "Health & Family Welfare; Education (reported)"
+      ],
+      [
+        "Ganesh Joshi",
+        "cabinet minister (portfolios to verify)"
+      ],
+      [
+        "Madan Kaushik",
+        "Panchayati Raj, Disaster Management, AYUSH"
+      ],
+      [
+        "Khajan Das",
+        "Social Welfare, Minority Welfare"
+      ],
+      [
+        "Pradeep Batra",
+        "Transport, IT"
+      ],
+      [
+        "Bharat Singh Chaudhary",
+        "Village Development, MSME"
+      ],
+      [
+        "Ram Singh Kaira",
+        "Urban Development, Environment"
+      ]
+    ],
+    "departments_count": null,
+    "departments_note": "Cabinet expanded Mar 2026 (5 new ministers); portfolios notified 22 Mar 2026",
+    "sources": [
+      "HT Dehradun / Asianet portfolio reports, 22 Mar 2026",
+      "DoPT CS list"
+    ],
+    "verification": "verified-2026"
+  },
+  {
+    "state": "West Bengal",
+    "capital": "Kolkata",
+    "chief_minister": "Suvendu Adhikari",
+    "party_alliance": "BJP (NDA)",
+    "cm_since": "2026-05-09",
+    "deputy_cms": [],
+    "governor": "R. N. Ravi",
+    "chief_secretary": "Manoj Kumar Agarwal, IAS",
+    "chief_secretary_note": "Feb 2026 DoPT list shows Nandini Chakravorty (pre-election); Wikipedia/sarkaritel (2026) show Manoj Kumar Agarwal - post-election change reported, verify on wb.gov.in",
+    "website": "https://wb.gov.in",
+    "key_ministers": [
+      [
+        "Suvendu Adhikari (CM)",
+        "Home & Hill Affairs, Land & Land Reforms, Refugee Relief, Power, I&C Affairs, Personnel & Administrative Reforms, unallocated"
+      ],
+      [
+        "Swapan Dasgupta",
+        "Finance"
+      ],
+      [
+        "Tapas Roy",
+        "Industry, Commerce & Enterprises, Public Enterprises, Industrial Reconstruction, NREs"
+      ],
+      [
+        "Dr. Sharadwat Mukherjee",
+        "Health & Family Welfare"
+      ],
+      [
+        "Dilip Ghosh",
+        "Panchayats & Rural Development, Agricultural Marketing"
+      ],
+      [
+        "Agnimitra Paul",
+        "Urban Development and Municipal Affairs"
+      ],
+      [
+        "Dipak Barman",
+        "School Education, Housing, MSME & Textiles"
+      ],
+      [
+        "Jagannath Chattopadhyay",
+        "Higher & Technical Education, Skill Development"
+      ],
+      [
+        "Nishith Pramanik",
+        "North Bengal Development, Water Resources Investigation & Development"
+      ],
+      [
+        "Arjun Singh",
+        "Labour, Transport"
+      ],
+      [
+        "Dudh Kumar Mondal",
+        "Agriculture"
+      ],
+      [
+        "Dr. Kalyan Chakraborti",
+        "IT & Electronics, Science & Tech, Food Processing"
+      ],
+      [
+        "Dr. Ajay Kumar Poddar",
+        "Public Health Engineering, Public Works"
+      ],
+      [
+        "Kshudiram Tudu",
+        "Tribal Development, Minority Affairs, Madrasah Education"
+      ]
+    ],
+    "departments_count": null,
+    "departments_note": "41-member council (19 cabinet, 3 MoS-IC, 19 MoS); BJP 207 / TMC 80 in 2026 election; portfolios allocated 10 June 2026",
+    "sources": [
+      "HT / ET / Indian Express / ThePrint / TOI / Outlook full portfolio lists, 10-11 June 2026",
+      "wb.gov.in List of Ministers PDF",
+      "ECI results (May 2026)"
+    ],
+    "verification": "verified-2026"
+  }
+]

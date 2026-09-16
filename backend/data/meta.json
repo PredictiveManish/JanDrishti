@@ -1,0 +1,16 @@
+{
+  "as_of": "2026-09-11",
+  "counts": {
+    "ministries": 52,
+    "states": 28,
+    "uts": 8,
+    "cabinet_ministers": 30,
+    "mos_ic": 5,
+    "mos": 35,
+    "state_budgets": 28,
+    "vigilance_items": 15,
+    "data_sources": 14,
+    "pib_updates": 20
+  },
+  "data_sources_note": "pmindia.gov.in, indiabudget.gov.in, cag.gov.in, cga.nic.in, sansad.in, pib.gov.in, DoPT, RBI, PRS, ECI/ADR"
+}
