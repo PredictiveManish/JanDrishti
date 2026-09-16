@@ -1,81 +1,118 @@
 #!/usr/bin/env python3
 """
-JanDrishti Pipeline #1 — PIB Press Releases (backend edition)
-==============================================================
-Fetches the latest press releases from the Press Information Bureau (pib.gov.in)
-via its official RSS feed and writes them to backend/data/pib_updates.json.
+JanDrishti Pipeline #1 — PIB Press Releases (hardened)
+=======================================================
+Fetches the latest press releases from the Press Information Bureau
+(pib.gov.in) and writes backend/data/pib_updates.json.
 
-Run manually:
-    python3 pipelines/fetch_pib.py --limit 40
+Sources (in order):
+  1. PRIMARY:   Official RSS feed  (RssMain.aspx)
+  2. FALLBACK:  Official HTML release listing (AllRelease.aspx)
 
-Or via the API:
-    POST /api/updates/refresh
+pib.gov.in intermittently rejects scripted clients with 403 Forbidden
+(bot detection). This module therefore:
+  - uses a browser-like requests.Session with full headers,
+  - retries each source with exponential backoff,
+  - falls back to the HTML listing if the RSS is blocked,
+  - on total failure, KEEPS the last-known-good pib_updates.json and
+    records diagnostics in pib_status.json (last attempt/error/success).
 
-Or on a schedule (Linux/Mac cron, hourly):
-    0 * * * * cd /path/to/jandrishti/backend && python3 pipelines/fetch_pib.py >> pib.log 2>&1
+API:
+  fetch_with_retries(limit)  -> dict  {ok, count, fetched_at?, error?, last_good?, source?}
+  fetch(limit)               -> list  (back-compat: items if success, [] if not)
 
-Requirements: requests, feedparser
+CLI:  python3 pipelines/fetch_pib.py [--limit 40]
 """
 import argparse
 import json
-import os
+import logging
+import re
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 
-try:
-    import requests
-except ImportError:
-    raise SystemExit("Missing dependency: pip install requests")
+import requests
+
 try:
     import feedparser
-except ImportError:
-    raise SystemExit("Missing dependency: pip install feedparser")
+except ImportError:  # only fatal when actually fetching, keeps module importable
+    feedparser = None
 
-PIB_RSS_URL = "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=3"
-HEADERS = {
-    "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
-    "Accept": "application/rss+xml, application/xml, text/xml, */*",
+log = logging.getLogger("jandrishti.pib")
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+DATA_DIR = BASE_DIR / "data"
+OUT_PATH = DATA_DIR / "pib_updates.json"
+STATUS_PATH = DATA_DIR / "pib_status.json"
+
+PRIMARY_URL = "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=3"
+FALLBACK_URL = "https://pib.gov.in/AllRelease.aspx"
+
+REQUEST_TIMEOUT = (10, 25)  # (connect, read) seconds
+MAX_ATTEMPTS = 3
+BACKOFF_BASE = 2.0  # seconds; 2, 4 between attempts
+
+BROWSER_HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+        "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+    ),
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "en-IN,en-GB;q=0.9,en;q=0.8,hi;q=0.7",
+    "Referer": "https://pib.gov.in/index.aspx",
+    "Connection": "keep-alive",
+    "Upgrade-Insecure-Requests": "1",
+    "Sec-Fetch-Dest": "document",
+    "Sec-Fetch-Mode": "navigate",
+    "Sec-Fetch-Site": "same-origin",
+    "Sec-Fetch-User": "?1",
 }
-OUT_PATH = Path(__file__).resolve().parent.parent / "data" / "pib_updates.json"
 
 
-def parse_date(entry):
-    for attr in ("published", "updated"):
-        val = getattr(entry, attr, None)
-        if val:
-            try:
-                dt = datetime(*val[:6], tzinfo=timezone.utc)
-                return dt.strftime("%d %b %Y")
-            except Exception:
-                pass
-    for attr in ("published", "updated", "summary"):
-        val = getattr(entry, attr, None)
-        if val and isinstance(val, str) and len(val) >= 10:
-            return val[:16]
-    return datetime.now(timezone.utc).strftime("%d %b %Y")
+# ── session ─────────────────────────────────────────────────────────────────
+def _session() -> requests.Session:
+    s = requests.Session()
+    s.headers.update(BROWSER_HEADERS)
+    return s
 
 
-def clean_summary(text, limit=280):
-    if not text:
-        return ""
-    text = " ".join(text.split())
-    for prefix in ("Posted On:", "PIB", "New Delhi,"):
-        if text.startswith(prefix):
-            text = text[len(prefix):].strip()
-    if len(text) > limit:
-        text = text[:limit].rsplit(" ", 1)[0] + "\u2026"
-    return text
+# ── status bookkeeping ──────────────────────────────────────────────────────
+def _read_status() -> dict:
+    if STATUS_PATH.exists():
+        try:
+            with open(STATUS_PATH, encoding="utf-8") as f:
+                return json.load(f)
+        except (json.JSONDecodeError, OSError):
+            pass
+    return {"last_success": None, "last_attempt": None, "last_error": None,
+            "source": None, "item_count": 0}
 
 
-def extract_prid(link):
-    if not link:
-        return None
-    if "PRID=" in link:
-        return link.split("PRID=")[-1].split("&")[0]
-    return None
+def _write_status(**updates) -> dict:
+    status = _read_status()
+    status.update(updates)
+    status["last_attempt"] = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+    STATUS_PATH.parent.mkdir(parents=True, exist_ok=True)
+    with open(STATUS_PATH, "w", encoding="utf-8") as f:
+        json.dump(status, f, ensure_ascii=False, indent=2)
+    return status
 
 
-def guess_ministry(title, summary=""):
+def _read_last_good():
+    """Return (items, fetched_at) of the last-known-good file, or ([], None)."""
+    if OUT_PATH.exists():
+        try:
+            with open(OUT_PATH, encoding="utf-8") as f:
+                items = json.load(f)
+            fetched = items[0].get("fetched_at") if items else None
+            return items, fetched
+        except (json.JSONDecodeError, OSError):
+            pass
+    return [], None
+
+
+# ── parsers ─────────────────────────────────────────────────────────────────
+def guess_ministry(title: str, summary: str = "") -> str:
     """Best-effort ministry tagging from title keywords (English + Hindi)."""
     t = (title + " " + summary).lower()
     rules = [
@@ -125,44 +162,168 @@ def guess_ministry(title, summary=""):
     return "Government of India"
 
 
-def fetch(limit=40):
-    """Fetch PIB RSS and write pib_updates.json. Returns the parsed items."""
-    print(f"Fetching PIB RSS: {PIB_RSS_URL}")
-    resp = requests.get(PIB_RSS_URL, headers=HEADERS, timeout=30, verify=False)
-    resp.raise_for_status()
-    print(f"  HTTP {resp.status_code}, {len(resp.content):,} bytes")
+def _clean_summary(text, limit=280):
+    if not text:
+        return ""
+    text = " ".join(text.split())
+    for prefix in ("Posted On:", "PIB", "New Delhi,"):
+        if text.startswith(prefix):
+            text = text[len(prefix):].strip()
+    if len(text) > limit:
+        text = text[:limit].rsplit(" ", 1)[0] + "\u2026"
+    return text
 
-    feed = feedparser.parse(resp.content)
-    print(f"  Parsed {len(feed.entries)} entries")
 
-    updates = []
-    for entry in feed.entries[:limit]:
+def _now():
+    return datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+
+
+# ── source 1: RSS ───────────────────────────────────────────────────────────
+def parse_rss(content: bytes):
+    if feedparser is None:
+        raise RuntimeError("feedparser is not installed (pip install feedparser)")
+    feed = feedparser.parse(content)
+    items = []
+    for entry in feed.entries:
         title = getattr(entry, "title", "").strip()
         if not title:
             continue
         link = getattr(entry, "link", "")
-        summary = clean_summary(getattr(entry, "summary", ""))
-        updates.append({
+        summary = _clean_summary(getattr(entry, "summary", ""))
+        date = None
+        for attr in ("published_parsed", "updated_parsed"):
+            val = getattr(entry, attr, None)
+            if val:
+                try:
+                    dt = datetime(*val[:6], tzinfo=timezone.utc)
+                    date = dt.strftime("%d %b %Y")
+                    break
+                except Exception:
+                    pass
+        items.append({
             "title": title,
             "ministry": guess_ministry(title, summary),
-            "date": parse_date(entry),
+            "date": date or datetime.now(timezone.utc).strftime("%d %b %Y"),
             "url": link,
-            "prid": extract_prid(link),
+            "prid": link.split("PRID=")[-1].split("&")[0] if "PRID=" in link else None,
             "summary": summary,
-            "fetched_at": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
         })
+    return items
 
-    OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
-    with open(OUT_PATH, "w", encoding="utf-8") as f:
-        json.dump(updates, f, ensure_ascii=False, indent=2)
-    print(f"Wrote {len(updates)} updates to {OUT_PATH}")
-    return updates
+
+# ── source 2: HTML release listing ─────────────────────────────────────────
+# AllRelease.aspx items look like:
+#   <li><a title='TITLE' href='/PressReleseDetail.aspx?PRID=2308717' ...>TITLE</a>
+#       <span class='publishdatesmall'>Posted on: 10 Sep 2026</li>
+_LISTING_RE = re.compile(
+    r"<a\s+title='([^']+)'\s+href='/PressReleseDetail\.aspx\?PRID=(\d+)'[^>]*>.*?"
+    r"Posted on:\s*([^<]+)</",
+    re.DOTALL,
+)
+
+
+def parse_html_listing(html: str):
+    items = []
+    for title, prid, date in _LISTING_RE.findall(html):
+        title = title.strip()
+        if not title or title == "\u092a\u094d\u0930\u0947\u0938 \u0935\u093f\u091c\u094d\u091e\u092a\u094d\u0924\u093f":  # skip 'Press Release' placeholders
+            continue
+        items.append({
+            "title": title,
+            "ministry": guess_ministry(title),
+            "date": " ".join(date.split()),
+            "url": f"https://pib.gov.in/PressReleseDetail.aspx?PRID={prid}",
+            "prid": prid,
+            "summary": "",
+        })
+    # newest first (listing is newest-first already, but be safe)
+    return items
+
+
+# ── fetch orchestration ─────────────────────────────────────────────────────
+def _attempt_source(session, source):
+    """One attempt at one source. Returns list of items."""
+    if source == "rss":
+        resp = session.get(PRIMARY_URL, timeout=REQUEST_TIMEOUT, verify=False)
+        resp.raise_for_status()
+        items = parse_rss(resp.content)
+    else:
+        resp = session.get(FALLBACK_URL, timeout=REQUEST_TIMEOUT, verify=False)
+        resp.raise_for_status()
+        items = parse_html_listing(resp.text)
+    if not items:
+        raise RuntimeError(f"{source} source returned 0 parseable releases")
+    return items
+
+
+def fetch_with_retries(limit=40, attempts=None, backoff=None):
+    """
+    Try RSS then HTML listing, each with retries + exponential backoff.
+    On success: write pib_updates.json + status; return success dict.
+    On total failure: keep last-known-good, write status with the error;
+    return {ok: False, error, last_good, count} — never raises.
+    """
+    attempts = MAX_ATTEMPTS if attempts is None else attempts
+    backoff = BACKOFF_BASE if backoff is None else backoff
+    import urllib3
+    urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
+    session = _session()
+    last_error = None
+
+    for source in ("rss", "html_listing"):
+        for attempt in range(1, attempts + 1):
+            try:
+                items = _attempt_source(session, source)
+                fetched_at = _now()
+                out = items[:limit]
+                for it in out:
+                    it["fetched_at"] = fetched_at
+                DATA_DIR.mkdir(parents=True, exist_ok=True)
+                with open(OUT_PATH, "w", encoding="utf-8") as f:
+                    json.dump(out, f, ensure_ascii=False, indent=2)
+                status = _write_status(
+                    last_success=fetched_at, last_error=None,
+                    source=source, item_count=len(out))
+                log.info("PIB fetch OK via %s: %d releases", source, len(out))
+                return {
+                    "ok": True, "count": len(out), "fetched_at": fetched_at,
+                    "source": source, "status": status,
+                }
+            except Exception as e:  # noqa: BLE001 — record everything, keep trying
+                last_error = f"{source} attempt {attempt}/{attempts}: {e.__class__.__name__}: {e}"
+                log.warning("PIB fetch failed (%s)", last_error)
+                if attempt < attempts:
+                    time.sleep(backoff * attempt)
+
+    # total failure — keep last-known-good, record diagnostics
+    items, last_good = _read_last_good()
+    status = _write_status(last_error=last_error, item_count=len(items))
+    log.error("PIB fetch failed on all sources; serving last-known-good from %s",
+              last_good or "never")
+    return {
+        "ok": False, "error": last_error, "last_good": last_good,
+        "count": len(items), "status": status,
+    }
+
+
+def fetch(limit=40):
+    """Back-compat wrapper: returns the item list ([] on failure)."""
+    result = fetch_with_retries(limit=limit)
+    if result.get("ok"):
+        with open(OUT_PATH, encoding="utf-8") as f:
+            return json.load(f)
+    return []
 
 
 if __name__ == "__main__":
-    import urllib3
-    urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+    logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
     parser = argparse.ArgumentParser(description="Fetch PIB press releases")
     parser.add_argument("--limit", type=int, default=40, help="Max releases to keep")
     args = parser.parse_args()
-    fetch(args.limit)
+    result = fetch_with_retries(limit=args.limit)
+    if result["ok"]:
+        print(f"OK: {result['count']} releases via {result['source']} at {result['fetched_at']}")
+    else:
+        print(f"FAILED: {result['error']}")
+        print(f"Serving last-known-good from: {result['last_good'] or 'never'} ({result['count']} items)")

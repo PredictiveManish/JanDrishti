@@ -4,6 +4,23 @@ JanDrishti Backend — FastAPI
 ============================
 Serves all platform data as JSON endpoints and hosts the frontend.
 
+Configuration (environment variables):
+    DEBUG=1                      dev mode: permissive CORS ("*"), verbose
+    ALLOWED_ORIGINS              comma-separated CORS allowlist, e.g.
+                                 "https://jandrishti.in,https://www.jandrishti.in"
+                                 (in DEBUG mode, defaults to "*"; otherwise
+                                 same-origin only — the frontend is served by
+                                 this app, so cross-origin is blocked)
+    HOST=0.0.0.0                 bind address
+    PORT=8000                    bind port
+    PIB_REFRESH_INTERVAL_MINUTES=60
+                                 in-process scheduler: fetch PIB releases
+                                 every N minutes while the app runs
+                                 (0 disables; first run happens shortly
+                                 after startup)
+    PIB_INITIAL_REFRESH_DELAY_SECONDS=30
+                                 delay before the first scheduled fetch
+
 Run:
     uvicorn main:app --reload        (from the backend/ directory)
     # then open http://localhost:8000
@@ -13,7 +30,7 @@ Endpoints:
     GET  /api/health            -> service status
     GET  /api/meta              -> dataset metadata & counts
     GET  /api/positions         -> constitutional positions
-    GET  /api/ministers          -> council of ministers (cabinet, MoS-IC, MoS)
+    GET  /api/ministers         -> council of ministers (cabinet, MoS-IC, MoS)
     GET  /api/ministries        -> 52 union ministries w/ secretaries
     GET  /api/states            -> 28 states w/ cabinets
     GET  /api/uts               -> 8 union territories
@@ -23,34 +40,130 @@ Endpoints:
     GET  /api/vigilance         -> taxpayer red flags
     GET  /api/sources           -> data source registry
     GET  /api/updates           -> latest PIB press releases
-    POST /api/updates/refresh   -> run the PIB pipeline NOW, return fresh items
+    GET  /api/updates/status    -> pipeline health (last success/error)
+    POST /api/updates/refresh   -> run the PIB pipeline NOW; returns a
+                                   structured result (ok=false + last_good
+                                   on upstream failure, never a raw 502)
 """
 import json
+import logging
 import os
 import sys
-from datetime import datetime, timezone
+from contextlib import asynccontextmanager
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
-from typing import Any, Dict, List, Optional
+from typing import Any
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, JSONResponse
 from pydantic import BaseModel
 
+# Make the pipelines package importable (backend/pipelines/fetch_pib.py)
+_PIPELINE_DIR = Path(__file__).resolve().parent / "pipelines"
+if str(_PIPELINE_DIR) not in sys.path:
+    sys.path.insert(0, str(_PIPELINE_DIR))
+import fetch_pib  # noqa: E402  (module-level import so tests can monkeypatch it)
+
 BASE_DIR = Path(__file__).resolve().parent
 DATA_DIR = BASE_DIR / "data"
 FRONTEND_DIR = BASE_DIR.parent / "frontend"
 
+log = logging.getLogger("jandrishti.api")
+
+# ── configuration (environment-driven) ────────────────────────────────────────
+DEBUG = os.getenv("DEBUG", "").strip().lower() in ("1", "true", "yes", "on")
+HOST = os.getenv("HOST", "0.0.0.0")
+PORT = int(os.getenv("PORT", "8000"))
+
+
+def _resolve_cors_origins() -> list[str]:
+    """ALLOWED_ORIGINS wins; else "*" only in DEBUG; else none (same-origin)."""
+    raw = os.getenv("ALLOWED_ORIGINS", "").strip()
+    if raw:
+        return [o.strip() for o in raw.split(",") if o.strip()]
+    if DEBUG:
+        return ["*"]  # dev convenience only
+    # Production default: the frontend is served by this app, so no
+    # cross-origin access is needed — CORS blocks everything else.
+    return []
+
+
+ALLOWED_ORIGINS = _resolve_cors_origins()
+
+
+# ── scheduled PIB refresh (in-process, no external cron needed) ──────────────
+def _int_env(name: str, default: int) -> int:
+    try:
+        return int(os.getenv(name, str(default)))
+    except ValueError:
+        return default
+
+
+def _scheduled_pib_refresh() -> None:
+    """Job body: safe to fail — pipeline handles degradation internally."""
+    try:
+        result = fetch_pib.fetch_with_retries(limit=40)
+        if result.get("ok"):
+            log.info("[scheduler] PIB refresh OK: %s releases via %s",
+                     result["count"], result["source"])
+        else:
+            log.warning("[scheduler] PIB refresh failed: %s (keeping feed from %s)",
+                        result.get("error"), result.get("last_good"))
+    except Exception:  # absolute safety net — the job must never crash the app
+        log.exception("[scheduler] PIB refresh job crashed")
+
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    interval = _int_env("PIB_REFRESH_INTERVAL_MINUTES", 60)
+    initial_delay = _int_env("PIB_INITIAL_REFRESH_DELAY_SECONDS", 30)
+    scheduler = None
+    if interval > 0:
+        try:
+            from apscheduler.schedulers.background import BackgroundScheduler
+            from apscheduler.triggers.interval import IntervalTrigger
+
+            scheduler = BackgroundScheduler(timezone="UTC")
+            scheduler.add_job(
+                _scheduled_pib_refresh,
+                IntervalTrigger(
+                    minutes=interval,
+                    start_date=datetime.now(timezone.utc) + timedelta(seconds=initial_delay),
+                ),
+                id="pib_refresh",
+                max_instances=1,
+                coalesce=True,
+            )
+            scheduler.start()
+            log.info("PIB scheduler started: every %d min (first run in ~%ds)",
+                     interval, initial_delay)
+        except ImportError:
+            log.warning("APScheduler not installed — scheduled PIB refresh disabled "
+                        "(pip install apscheduler)")
+    else:
+        log.info("PIB scheduler disabled (PIB_REFRESH_INTERVAL_MINUTES=0)")
+    log.info("JanDrishti starting | mode=%s | cors_origins=%s | refresh_interval=%s min",
+             "debug" if DEBUG else "production", ALLOWED_ORIGINS or "same-origin-only",
+             interval if interval > 0 else "off")
+    yield
+    if scheduler:
+        scheduler.shutdown(wait=False)
+        log.info("PIB scheduler stopped")
+
+
 app = FastAPI(
     title="JanDrishti API",
-    description="Indian government transparency platform — central ministries, all 28 states, budgets, expenditure, CAG findings, and a live PIB feed.",
-    version="1.1.0",
+    description=("Indian government transparency platform — central ministries, "
+                 "all 28 states, budgets, expenditure, CAG findings, and a live PIB feed."),
+    version="1.3.0",
+    lifespan=lifespan,
 )
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # tighten for production
-    allow_methods=["*"],
+    allow_origins=ALLOWED_ORIGINS,
+    allow_methods=["GET", "POST", "OPTIONS"],
     allow_headers=["*"],
 )
 
@@ -130,31 +243,63 @@ def updates():
     return load("pib_updates.json")
 
 
+@app.get("/api/updates/status")
+def updates_status():
+    """Pipeline health: last success / last attempt / last error."""
+    path = DATA_DIR / "pib_status.json"
+    if not path.exists():
+        return {
+            "last_success": None,
+            "last_attempt": None,
+            "last_error": None,
+            "source": None,
+            "item_count": 0,
+            "note": "pipeline has never run",
+        }
+    with open(path, encoding="utf-8") as f:
+        return json.load(f)
+
+
 # ── live PIB refresh ────────────────────────────────────────────────────────
 class RefreshResponse(BaseModel):
     ok: bool
     count: int
-    fetched_at: Optional[str] = None
+    fetched_at: str | None = None
+    source: str | None = None
     message: str
+    error: str | None = None
+    last_good: str | None = None
 
 
 @app.post("/api/updates/refresh")
 def refresh_updates():
-    """Run the PIB pipeline on demand and return the fresh feed."""
-    sys.path.insert(0, str(BASE_DIR / "pipelines"))
+    """Run the PIB pipeline on demand.
+
+    Returns 200 with ok=False (and the last-known-good details) when
+    pib.gov.in rejects us — the client always gets a structured answer.
+    """
     try:
-        import fetch_pib  # noqa: PEP8-named module living in pipelines/
-    except ImportError as e:
-        raise HTTPException(status_code=500, detail=f"pipeline import failed: {e}")
-    try:
-        items = fetch_pib.fetch(limit=40)
-    except Exception as e:
-        raise HTTPException(status_code=502, detail=f"PIB fetch failed: {e}")
+        result = fetch_pib.fetch_with_retries(limit=40)
+    except Exception as e:  # absolute safety net — never 500 on upstream trouble
+        log.exception("PIB refresh crashed unexpectedly")
+        items, last_good = fetch_pib._read_last_good()
+        return RefreshResponse(
+            ok=False, count=len(items), last_good=last_good,
+            message="Pipeline error — serving last-known-good feed",
+            error=str(e),
+        )
+    if result.get("ok"):
+        return RefreshResponse(
+            ok=True, count=result["count"], fetched_at=result["fetched_at"],
+            source=result["source"],
+            message=f"Fetched {result['count']} press releases from PIB",
+        )
     return RefreshResponse(
-        ok=True,
-        count=len(items),
-        fetched_at=items[0]["fetched_at"] if items else None,
-        message=f"Fetched {len(items)} press releases from PIB",
+        ok=False, count=result.get("count", 0),
+        last_good=result.get("last_good"),
+        error=result.get("error"),
+        message=("PIB rejected the request (bot detection) — "
+                 "serving last-known-good feed"),
     )
 
 
@@ -181,6 +326,7 @@ def all_data():
         "vigilance": load("vigilance.json"),
         "dataSources": load("sources.json"),
         "pibUpdates": load("pib_updates.json"),
+        "pibStatus": updates_status(),
     }
 
 
@@ -198,4 +344,4 @@ def index():
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run(app, host=HOST, port=PORT)
