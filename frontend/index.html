@@ -205,6 +205,17 @@ td.num, th.num { text-align: right; font-family: var(--font-mono); font-variant-
 .pib-item p { font-size: 13px; color: var(--text-dim); margin-top: 6px; }
 .pib-item a { font-family: var(--font-mono); font-size: 11px; color: var(--gold); text-decoration: none; }
 .pib-item a:hover { text-decoration: underline; }
+/* ── in-content external links (all open in a new tab) ── */
+.state-card .val a, td a.ext-link, .site-footer a, .pib-item h4 a { color: var(--gold); text-decoration: none; border-bottom: 1px dotted var(--gold); }
+.state-card .val a:hover, td a.ext-link:hover, .site-footer a:hover, .pib-item h4 a:hover { border-bottom-style: solid; }
+td a.ext-link { font-family: var(--font-mono); font-size: 11px; }
+/* ── deployment cards: prose + command blocks ── */
+.arch-card p { font-size: 12.5px; color: var(--text-dim); margin: 8px 0 0; line-height: 1.55; }
+.arch-card pre { font-family: var(--font-mono); font-size: 11px; color: var(--gold); background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 10px 12px; margin: 10px 0 0; overflow-x: auto; line-height: 1.7; white-space: pre; }
+/* ── site footer ── */
+.site-footer { border-top: 1px solid var(--border); margin-top: 48px; padding: 30px 40px 36px; text-align: center; font-family: var(--font-mono); font-size: 11px; color: var(--text-light); letter-spacing: 0.8px; line-height: 2.1; }
+.site-footer .brand { font-size: 10px; opacity: 0.75; }
+.site-footer a { font-weight: 600; }
 .refresh-btn { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: 12px; font-weight: 500; letter-spacing: 0.5px; background: var(--navy-2); color: #fff; border: 1px solid var(--navy-3); border-radius: 20px; padding: 8px 18px; cursor: pointer; transition: all 0.15s; }
 .refresh-btn:hover { background: var(--navy-3); }
 .refresh-btn:disabled { opacity: 0.5; cursor: wait; }
@@ -260,7 +271,7 @@ td.num, th.num { text-align: right; font-family: var(--font-mono); font-variant-
     <a href="#" data-section="vigilance"><span class="dot"></span> <span>Vigilance</span></a>
     <a href="#" data-section="updates"><span class="dot"></span> <span>Latest Updates</span></a>
     <a href="#" data-section="sources"><span class="dot"></span> <span>Data Sources</span></a>
-    <a href="#" data-section="architecture"><span class="dot"></span> <span>Live Architecture</span></a>
+    <!-- <a href="#" data-section="architecture"><span class="dot"></span> <span>Architecture & Deploy</span></a> -->
   </div>
   <div class="theme-row">
     <button class="theme-btn" id="themeToggle" aria-label="Toggle dark / light mode">
@@ -472,43 +483,82 @@ td.num, th.num { text-align: right; font-family: var(--font-mono); font-variant-
 
 <section class="section" id="architecture">
   <div class="hero" style="padding:32px 40px;">
-    <h2>Live Update Architecture</h2>
-    <p>How this platform stays current: three tiers of data freshness, from real-time press releases to annual audited accounts — now running on a FastAPI backend with pipelines that write into its data directory.</p>
+    <h2>Architecture & Deployment</h2>
+    <p>One Python process serves the frontend, the JSON API and the scheduled data pipelines — deployable with Docker or any Procfile platform in minutes. The PIB feed refreshes itself in-process; no external cron is required.</p>
   </div>
-  <div class="sec-heading"><span class="num">01</span><h3>System Architecture (Running)</h3></div>
+  <div class="sec-heading"><span class="num">01</span><h3>Runtime Architecture</h3></div>
   <div class="arch-grid">
     <div class="arch-card">
-      <span class="tier tier-1">Backend</span>
-      <h4>FastAPI server (main.py)</h4>
+      <span class="tier tier-1">Server</span>
+      <h4>FastAPI — backend/main.py</h4>
       <ul>
-        <li><span class="src">GET /api/* endpoints</span> <span class="cad">13 routes</span></li>
-        <li><span class="src">POST /api/updates/refresh</span> <span class="cad">On demand</span></li>
-        <li><span class="src">Serves frontend at /</span> <span class="cad">Always on</span></li>
-        <li><span class="src">Reads from data/*.json</span> <span class="cad">Per request</span></li>
+        <li><span class="src">15 GET /api/* routes</span> <span class="cad">Always on</span></li>
+        <li><span class="src">Serves frontend at /</span> <span class="cad">One process</span></li>
+        <li><span class="src">Pipeline health: /api/updates/status</span> <span class="cad">Live</span></li>
+        <li><span class="src">CORS allowlist via environment</span> <span class="cad">Prod-safe</span></li>
       </ul>
     </div>
     <div class="arch-card">
       <span class="tier tier-2">Pipeline</span>
-      <h4>PIB fetcher (pipelines/fetch_pib.py)</h4>
+      <h4>PIB fetcher — backend/pipelines/</h4>
       <ul>
-        <li><span class="src">PIB RSS → pib_updates.json</span> <span class="cad">On run</span></li>
-        <li><span class="src">Ministry auto-tagging</span> <span class="cad">EN + HI</span></li>
-        <li><span class="src">Cron hourly recommended</span> <span class="cad">Scheduled</span></li>
-        <li><span class="src">Same pattern for CGA/CAG next</span> <span class="cad">Planned</span></li>
+        <li><span class="src">RSS feed + AllRelease.aspx fallback</span> <span class="cad">2 sources</span></li>
+        <li><span class="src">Retry with exponential backoff</span> <span class="cad">3 attempts</span></li>
+        <li><span class="src">403? Serves last-known-good</span> <span class="cad">Never breaks</span></li>
+        <li><span class="src">Writes data/pib_updates.json</span> <span class="cad">On success</span></li>
       </ul>
     </div>
     <div class="arch-card">
-      <span class="tier tier-3">Frontend</span>
-      <h4>Dynamic page (index.html)</h4>
+      <span class="tier tier-3">Scheduler</span>
+      <h4>In-process refresh (APScheduler)</h4>
       <ul>
-        <li><span class="src">Fetches /api/all on load</span> <span class="cad">Every visit</span></li>
-        <li><span class="src">Dark / light toggle</span> <span class="cad">Persisted</span></li>
-        <li><span class="src">Live PIB refresh button</span> <span class="cad">On demand</span></li>
-        <li><span class="src">No rebuild needed for news</span> <span class="cad">Ever</span></li>
+        <li><span class="src">Runs while the app runs</span> <span class="cad">No cron host</span></li>
+        <li><span class="src">PIB_REFRESH_INTERVAL_MINUTES</span> <span class="cad">Default 60</span></li>
+        <li><span class="src">First run 30s after startup</span> <span class="cad">Configurable</span></li>
+        <li><span class="src">Manual refresh button too</span> <span class="cad">On demand</span></li>
       </ul>
     </div>
   </div>
-  <div class="sec-heading mt-24"><span class="num">02</span><h3>Recommended Refresh Cadence</h3></div>
+  <div class="sec-heading mt-24"><span class="num">02</span><h3>Deploy It</h3></div>
+  <div class="arch-grid">
+    <div class="arch-card">
+      <span class="tier tier-1">Docker</span>
+      <h4>Any host with Docker</h4>
+      <p>Two-stage image, runs as non-root (uid 10001), installs requirements.txt and starts uvicorn on $PORT.</p>
+      <pre>docker build -t jandrishti .
+docker run -p 8000:8000 \
+  -e ALLOWED_ORIGINS="https://yourdomain.in" \
+  jandrishti</pre>
+    </div>
+    <div class="arch-card">
+      <span class="tier tier-2">Render / Railway</span>
+      <h4>Procfile platforms (free tier works)</h4>
+      <p>Push this repo to GitHub, create a Web Service, and the included Procfile does the rest. The scheduler runs inside the web instance — one service, no workers, no add-ons.</p>
+      <pre># Procfile (already in the repo)
+web: cd backend && uvicorn main:app \
+  --host 0.0.0.0 --port $PORT</pre>
+    </div>
+    <div class="arch-card">
+      <span class="tier tier-3">VPS / own server</span>
+      <h4>Ubuntu or any Linux box</h4>
+      <p>Python 3.12+, then run behind Nginx or Caddy for automatic HTTPS. ₹400–800/month on a small cloud instance.</p>
+      <pre>pip install -r requirements.txt
+cd backend
+uvicorn main:app --host 0.0.0.0 --port 8000</pre>
+    </div>
+  </div>
+  <div class="sec-heading mt-24"><span class="num">03</span><h3>Runtime Configuration (environment variables)</h3></div>
+  <div class="table-wrap"><table class="cadence-table">
+    <thead><tr><th>Variable</th><th>Default</th><th>Purpose</th></tr></thead>
+    <tbody>
+      <tr><td class="mono">ALLOWED_ORIGINS</td><td class="mono text-sm">(same-origin)</td><td class="text-sm">Comma-separated CORS allowlist, e.g. https://yourdomain.in — only needed if the frontend is hosted on a different origin</td></tr>
+      <tr><td class="mono">DEBUG</td><td class="mono text-sm">off</td><td class="text-sm">1 = dev mode: CORS allows all origins, verbose logging</td></tr>
+      <tr><td class="mono">HOST / PORT</td><td class="mono text-sm">0.0.0.0 / 8000</td><td class="text-sm">Bind address and port (PaaS platforms inject PORT automatically)</td></tr>
+      <tr><td class="mono">PIB_REFRESH_INTERVAL_MINUTES</td><td class="mono text-sm">60</td><td class="text-sm">Fetch PIB releases every N minutes in-process; 0 disables the scheduler</td></tr>
+      <tr><td class="mono">PIB_INITIAL_REFRESH_DELAY_SECONDS</td><td class="mono text-sm">30</td><td class="text-sm">Delay before the first scheduled fetch after startup</td></tr>
+    </tbody>
+  </table></div>
+<div class="sec-heading mt-24"><span class="num">04</span><h3>Recommended Refresh Cadence (planned pipelines)</h3></div>
   <div class="table-wrap"><table class="cadence-table">
     <thead><tr><th>Data Feed</th><th>Mechanism</th><th>Cadence</th></tr></thead>
     <tbody>
@@ -526,7 +576,7 @@ td.num, th.num { text-align: right; font-family: var(--font-mono); font-variant-
       <tr><td>NITI Aayog dashboards</td><td>Scrape</td><td><span class="freq freq-monthly">Monthly (ADP) / Annual (SDG)</span></td></tr>
     </tbody>
   </table></div>
-  <div class="sec-heading mt-24"><span class="num">03</span><h3>Top Pipeline Risks</h3></div>
+  <div class="sec-heading mt-24"><span class="num">05</span><h3>Top Pipeline Risks</h3></div>
   <div class="vigilance-grid">
     <div class="vig-item medium"><span class="vig-cat">Risk</span><h4>PDF is the dominant format</h4><p>Budget documents, CAG reports, and Parliament Q&A are all PDF. Invest early in robust table extraction (Camelot/pdfplumber) + OCR fallback for scanned documents.</p></div>
     <div class="vig-item medium"><span class="vig-cat">Risk</span><h4>No SLAs or notification mechanisms</h4><p>No government data source offers webhooks or change notifications. The pipeline must poll-and-diff with content hashes, and cache everything aggressively.</p></div>
@@ -536,6 +586,11 @@ td.num, th.num { text-align: right; font-family: var(--font-mono); font-variant-
     <div class="vig-item low"><span class="vig-cat">Risk</span><h4>Citation discipline is essential</h4><p>Always store source URL + document title + access date on every record. Government documents get silently revised — your data must remain auditable.</p></div>
   </div>
 </section>
+
+<footer class="site-footer">
+  <div class="brand">JANDRISHTI · TRANSPARENCY FOR THE REPUBLIC OF INDIA</div>
+  <div>Made by <a href="https://github.com/predictivemanish" target="_blank" rel="noopener">PredictiveManish</a> and <a href="https://www.sarvam.ai" target="_blank" rel="noopener">SarvamAI</a> — India's Fullstack AI Platform</div>
+</footer>
 
 </div>
 
@@ -683,7 +738,7 @@ function renderStates(search) {
       '<div class="row"><span class="key">Governor</span><span class="val">' + esc(s.governor || '\u2014') + '</span></div>' +
       '<div class="row"><span class="key">Chief Secretary</span><span class="val">' + esc(s.chief_secretary || '\u2014') + '</span></div>' +
       '<div class="row"><span class="key">Capital</span><span class="val">' + esc(s.capital) + '</span></div>' +
-      '<div class="row"><span class="key">Website</span><span class="val mono" style="font-size:11px;">' + esc(s.website || '\u2014') + '</span></div>' +
+      '<div class="row"><span class="key">Website</span><span class="val mono" style="font-size:11px;">' + (s.website ? '<a href="' + esc(s.website) + '" target="_blank" rel="noopener">' + esc(s.website.replace(/^https?:\/\//, '')) + ' \u2197</a>' : '\u2014') + '</span></div>' +
       '</div>' +
       (ministers ? '<div class="ministers"><h5>Key Ministers & Portfolios</h5>' + ministers + '</div><button class="expand-btn">Click to expand/collapse ministers \u2192</button>' : '') +
       '</div>';
@@ -846,10 +901,15 @@ function renderVigilance() {
   }).join('');
 }
 
+function jdLink(u) {
+  if (!u) return '—';
+  var href = u.indexOf('http') === 0 ? u : 'https://' + u;
+  return '<a class="ext-link" href="' + esc(href) + '" target="_blank" rel="noopener">' + esc(u) + ' ↗</a>';
+}
 function renderSources() {
   var body = document.getElementById('sourcesBody'); if (!body || !DATA) return;
   body.innerHTML = DATA.dataSources.map(function (s) {
-    return '<tr><td><strong>' + esc(s.name) + '</strong></td><td class="mono text-sm">' + esc(s.url) + '</td><td class="text-sm">' + esc(s.format) + '</td><td>' + (s.api ? '<span class="ds-api">Yes</span>' : '<span class="ds-no-api">No</span>') + '</td><td class="text-sm">' + esc(s.cadence) + '</td><td class="text-sm">' + esc(s.scope) + '</td></tr>';
+    return '<tr><td><strong>' + esc(s.name) + '</strong></td><td class="mono text-sm">' + jdLink(s.url) + '</td><td class="text-sm">' + esc(s.format) + '</td><td>' + (s.api ? '<span class="ds-api">Yes</span>' : '<span class="ds-no-api">No</span>') + '</td><td class="text-sm">' + esc(s.cadence) + '</td><td class="text-sm">' + esc(s.scope) + '</td></tr>';
   }).join('');
 }
 
@@ -860,11 +920,20 @@ function renderPib() {
   var updates = DATA ? DATA.pibUpdates : [];
   if (!updates.length) { if (empty) empty.style.display = 'block'; return; }
   if (empty) empty.style.display = 'none';
-  if (meta && updates[0] && updates[0].fetched_at) meta.textContent = 'FEED FETCHED ' + updates[0].fetched_at.toUpperCase() + ' \u00b7 ' + updates.length + ' LATEST RELEASES \u00b7 SOURCE: PIB.GOV.IN RSS';
+  if (meta) {
+    var st = DATA.pibStatus || {};
+    var line = 'FEED FETCHED ' + ((st.last_success || (updates[0] && updates[0].fetched_at) || 'unknown').toUpperCase()) +
+      ' \u00b7 ' + updates.length + ' RELEASES \u00b7 SOURCE: PIB.GOV.IN';
+    if (st.last_error) {
+      line += ' \u00b7 STALE FEED \u2014 LAST FETCH ATTEMPT FAILED (' + (st.last_attempt || 'unknown') + ')';
+    }
+    meta.textContent = line;
+    meta.style.color = st.last_error ? '#f0b429' : '';
+  }
   feed.innerHTML = updates.map(function (u) {
     return '<div class="pib-item">' +
       '<div class="pib-meta"><span class="pib-ministry">' + esc(u.ministry) + '</span><span>' + esc(u.date) + '</span></div>' +
-      '<h4>' + esc(u.title) + '</h4>' +
+      (u.url ? '<h4><a href="' + esc(u.url) + '" target="_blank" rel="noopener">' + esc(u.title) + '</a></h4>' : '<h4>' + esc(u.title) + '</h4>') +
       (u.summary ? '<p>' + esc(u.summary) + '</p>' : '') +
       (u.url ? '<a href="' + esc(u.url) + '" target="_blank" rel="noopener">Read on PIB \u2192</a>' : '') +
       '</div>';
@@ -930,15 +999,24 @@ document.getElementById('refreshPib').addEventListener('click', async function (
     var res = await fetch('/api/updates/refresh', { method: 'POST' });
     if (!res.ok) throw new Error('HTTP ' + res.status);
     var out = await res.json();
-    // reload just the updates list
-    var upd = await fetch('/api/updates');
-    DATA.pibUpdates = await upd.json();
-    renderPib();
-    btn.querySelector('span').textContent = out.message + ' \u2713';
+    if (out.ok) {
+      var upd = await fetch('/api/updates');
+      DATA.pibUpdates = await upd.json();
+      var st = await fetch('/api/updates/status');
+      DATA.pibStatus = await st.json();
+      renderPib();
+      btn.querySelector('span').textContent = out.message + ' \u2713';
+    } else {
+      // structured failure — show the error and the last-known-good time
+      var st2 = await fetch('/api/updates/status');
+      DATA.pibStatus = await st2.json();
+      renderPib();
+      btn.querySelector('span').textContent = 'PIB blocked the request \u2014 showing feed from ' + (out.last_good || 'unknown') + ' \u26a0';
+    }
   } catch (e) {
     btn.querySelector('span').textContent = 'Fetch failed \u2014 is the backend running?';
   }
-  setTimeout(function () { btn.disabled = false; btn.querySelector('span').textContent = 'Fetch latest releases now'; }, 3000);
+  setTimeout(function () { btn.disabled = false; btn.querySelector('span').textContent = 'Fetch latest releases now'; }, 4000);
 });
 
 // ── search wiring ──

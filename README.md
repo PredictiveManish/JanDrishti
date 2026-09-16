@@ -9,46 +9,67 @@ and a live PIB press-release feed.
 ## Stack
 
 - **Backend**: Python + FastAPI (`backend/main.py`)
-  - 13 JSON API endpoints under `/api/*`
+  - 15 JSON API endpoints under `/api/*`
   - `POST /api/updates/refresh` runs the PIB pipeline on demand
+  - In-process scheduler (APScheduler) keeps the PIB feed fresh — no
+    external cron needed
   - Serves the frontend at `/` — one server, one command
-- **Data**: `backend/data/*.json` (12 datasets, as of 11 Sep 2026, sourced
+- **Data**: `backend/data/*.json` (snapshot as of 11 Sep 2026, sourced
   from pmindia.gov.in, indiabudget.gov.in, cag.gov.in, cga.nic.in, sansad.in,
   pib.gov.in, DoPT, RBI, PRS, ECI/ADR)
 - **Pipeline**: `backend/pipelines/fetch_pib.py` — pulls PIB's official RSS
-  feed, auto-tags ministries (English + Hindi), writes `pib_updates.json`
-- **Frontend**: `frontend/index.html` — single dynamic page, fetches all data
-  from `/api/all` at load; dark/light theme toggle (persisted); live
-  "Fetch latest releases" button
+  feed (with an AllRelease.aspx fallback), auto-tags ministries
+  (English + Hindi), writes `pib_updates.json`
+- **Frontend**: `frontend/index.html` — single dynamic page, fetches all
+  data from `/api/all` at load; dark/light theme toggle (persisted); live
+  "Fetch latest releases" button with stale-feed error state
 
-## Run it
+## Run it (local)
 
 ```bash
 # 1. Install dependencies (once)
 pip install -r requirements.txt
 
-# 2. (Optional) pull the latest PIB press releases
+# 2. Start the server
 cd backend
-python3 pipelines/fetch_pib.py
-
-# 3. Start the server
 uvicorn main:app --reload
 
-# 4. Open http://localhost:8000
+# 3. Open http://localhost:8000
 ```
 
-## Keep it live
+The PIB feed refreshes itself on a timer while the server runs (see
+`PIB_REFRESH_INTERVAL_MINUTES` below), and the "Fetch latest releases
+now" button in the Latest Updates section triggers an immediate refresh.
 
-The frontend re-fetches from the API on every page load, so the pipeline is
-the only thing that needs scheduling:
+## Configuration (environment variables)
 
-```bash
-# Linux/Mac cron — hourly PIB refresh:
-0 * * * * cd /path/to/jandrishti/backend && python3 pipelines/fetch_pib.py >> pib.log 2>&1
-```
+| Variable | Default | Purpose |
+|---|---|---|
+| `DEBUG` | off | `1`/`true` enables dev mode: CORS allows all origins |
+| `ALLOWED_ORIGINS` | *(empty)* | Comma-separated CORS allowlist, e.g. `https://jandrishti.in,https://www.jandrishti.in`. If unset and not in DEBUG, only same-origin requests are allowed (the frontend is served by this app) |
+| `HOST` | `0.0.0.0` | Bind address |
+| `PORT` | `8000` | Bind port |
+| `PIB_REFRESH_INTERVAL_MINUTES` | `60` | Fetch PIB releases every N minutes via the in-process scheduler. `0` disables |
+| `PIB_INITIAL_REFRESH_DELAY_SECONDS` | `30` | Delay before the first scheduled fetch after startup |
 
-Or click **"Fetch latest releases now"** in the Latest Updates section —
-the backend runs the pipeline on demand via `POST /api/updates/refresh`.
+## The PIB pipeline and bot-detection
+
+`pib.gov.in` intermittently rejects scripted clients with **403 Forbidden**
+(bot detection). The pipeline is built for this:
+
+1. Tries the official **RSS feed** first, using a browser-like session
+   (full header set, keep-alive).
+2. Retries each source **3 times with exponential backoff** (2s, 4s, …).
+3. Falls back to the official **AllRelease.aspx HTML listing** if the RSS
+   is blocked.
+4. If everything fails, it **keeps serving the last-known-good
+   `pib_updates.json`**, records the error in `pib_status.json`, and
+   the API responds with a structured `ok: false` + `last_good`
+   timestamp — never a raw 502. The frontend shows a visible
+   "stale feed" state with the last successful fetch time.
+
+Pipeline health is exposed at `GET /api/updates/status`
+(`last_success`, `last_attempt`, `last_error`).
 
 ## API quick reference
 
@@ -67,22 +88,73 @@ the backend runs the pipeline on demand via `POST /api/updates/refresh`.
 | `GET /api/vigilance` | 15 taxpayer red flags |
 | `GET /api/sources` | 14-source data registry |
 | `GET /api/updates` | Latest PIB press releases |
-| `POST /api/updates/refresh` | Run the PIB pipeline now |
+| `GET /api/updates/status` | Pipeline health (last success/error) |
+| `POST /api/updates/refresh` | Run the PIB pipeline now (structured result) |
 | `GET /api/all` | Everything in one call (used by the frontend) |
 
 Interactive API docs are auto-generated at `http://localhost:8000/docs`.
+
+## Tests
+
+```bash
+pip install -r requirements.txt -r requirements-dev.txt
+python -m pytest
+```
+
+The suite (11 tests) covers every GET endpoint's status code and JSON
+shape, the frontend being served at `/`, and the PIB refresh path with
+**mocked** PIB fetches — success, 403 rejection, and crash cases — so CI
+never depends on pib.gov.in. Pipeline parsers (RSS, HTML listing) are
+unit-tested against local fixtures.
+
+## Deploying
+
+### Docker
+
+```bash
+docker build -t jandrishti .
+docker run -p 8000:8000 \
+  -e ALLOWED_ORIGINS="https://yourdomain.in" \
+  -e PIB_REFRESH_INTERVAL_MINUTES=60 \
+  jandrishti
+```
+
+The image is a two-stage build: dependencies install in a builder stage,
+and the runtime stage is slim, runs as a non-root user (uid 10001), and
+contains no build toolchain. Set `-e PORT=...` if your platform needs a
+different port.
+
+### Render / Railway / Heroku (Procfile)
+
+The repo ships a `Procfile`, so PaaS platforms can deploy it directly:
+
+1. Push this repo to GitHub.
+2. Create a **Web Service** (Render) / app (Railway) from the repo —
+   the platform detects the Procfile and runs
+   `uvicorn main:app --host 0.0.0.0 --port $PORT`.
+3. Set `ALLOWED_ORIGINS` to your site's domain in the platform's
+   environment settings.
+
+The in-process scheduler means a single web dyno/instance keeps the PIB
+feed fresh — no separate worker or external cron required. (If you scale
+to multiple instances, set `PIB_REFRESH_INTERVAL_MINUTES=0` on all but
+one to avoid redundant fetches.)
 
 ## Project structure
 
 ```
 jandrishti/
-├── README.md
+├── Dockerfile                 # two-stage, non-root runtime
+├── Procfile                   # PaaS entrypoint
+├── .dockerignore / .gitignore
+├── pytest.ini
 ├── requirements.txt
 ├── backend/
-│   ├── main.py               # FastAPI app
-│   ├── data/                 # 12 JSON datasets (the platform's database)
-│   └── pipelines/
-│       └── fetch_pib.py      # Live PIB RSS pipeline
+│   ├── main.py                # FastAPI app + scheduler + config
+│   ├── data/                  # 13 JSON datasets (the platform's database)
+│   ├── pipelines/
+│   │   └── fetch_pib.py       # Hardened PIB pipeline (RSS + fallback)
+│   └── tests/                 # pytest suite (no network dependency)
 └── frontend/
     └── index.html            # Dynamic SPA (fetches from the API)
 ```
@@ -111,3 +183,7 @@ of 2026).
 - Office-holder data changes with reshuffles — re-verify before production
   use (see the "needs-verification" flags in the data files).
 - The pre-populated datasets are a snapshot dated 11 September 2026.
+- The Dockerfile has not been built in CI yet (no Docker available during
+  development); it is kept structurally simple — if the build surfaces an
+  issue, it will be in the two-stage copy paths, which mirror the Procfile
+  layout.
