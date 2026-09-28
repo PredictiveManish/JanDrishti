@@ -44,6 +44,9 @@ Endpoints:
     POST /api/updates/refresh   -> run the PIB pipeline NOW; returns a
                                    structured result (ok=false + last_good
                                    on upstream failure, never a raw 502)
+    GET  /api/search?q=query    -> unified search across all datasets
+                                   (ministers, ministries, states, budget,
+                                   PIB updates, vigilance); min 2 chars
 """
 import json
 import logging
@@ -301,6 +304,143 @@ def refresh_updates():
         message=("PIB rejected the request (bot detection) — "
                  "serving last-known-good feed"),
     )
+
+
+# ── unified search ─────────────────────────────────────────────────────────
+@app.get("/api/search")
+def global_search(q: str):
+    """Search across all datasets in one call.
+
+    Returns results grouped by category: ministers, ministries, states,
+    budget line-items, PIB updates, and vigilance flags.
+
+    Query requirements:
+    - Minimum 2 characters.
+    - Case-insensitive substring match on the most descriptive fields.
+    """
+    query = q.strip().lower()
+    if len(query) < 2:
+        raise HTTPException(
+            status_code=400,
+            detail="Search query must be at least 2 characters.",
+        )
+
+    results: dict[str, list[Any]] = {
+        "ministers": [],
+        "ministries": [],
+        "states": [],
+        "budget_items": [],
+        "pib_updates": [],
+        "vigilance": [],
+    }
+
+    # 1. Ministers — data is a dict with three category keys, each a list of
+    #    [name, portfolio] pairs.
+    ministers_data = load("ministers.json")
+    category_labels = {
+        "cabinet": "Cabinet",
+        "mos_independent_charge": "MoS (IC)",
+        "mos": "MoS",
+    }
+    for cat_key, cat_label in category_labels.items():
+        for entry in ministers_data.get(cat_key, []):
+            name, portfolio = entry[0], entry[1]
+            if query in name.lower() or query in portfolio.lower():
+                results["ministers"].append({
+                    "name": name,
+                    "portfolio": portfolio,
+                    "category": cat_label,
+                })
+
+    # 2. Ministries — list of {ministry, departments[], minister_in_charge,
+    #    secretary_or_head}
+    for m in load("ministries.json"):
+        searchable = " ".join([
+            m.get("ministry", ""),
+            m.get("minister_in_charge", ""),
+            m.get("secretary_or_head", ""),
+            " ".join(m.get("departments", [])),
+        ]).lower()
+        if query in searchable:
+            results["ministries"].append({
+                "ministry": m.get("ministry"),
+                "minister_in_charge": m.get("minister_in_charge"),
+                "secretary_or_head": m.get("secretary_or_head"),
+                "departments": m.get("departments", []),
+            })
+
+    # 3. States — list of {state, capital, chief_minister, governor, …}
+    for s in load("states.json"):
+        searchable = " ".join([
+            s.get("state", ""),
+            s.get("chief_minister", ""),
+            s.get("governor", ""),
+            s.get("capital", ""),
+            s.get("party_alliance", ""),
+        ]).lower()
+        if query in searchable:
+            results["states"].append({
+                "state": s.get("state"),
+                "capital": s.get("capital"),
+                "chief_minister": s.get("chief_minister"),
+                "governor": s.get("governor"),
+                "party_alliance": s.get("party_alliance"),
+            })
+
+    # 4. Budget — union ministry allocations and scheme budgets
+    budget_data = load("union_budget.json")
+    for mb in budget_data.get("ministry_budgets", []):
+        if query in mb.get("ministry", "").lower():
+            results["budget_items"].append({
+                "type": "Ministry Allocation",
+                "name": mb.get("ministry"),
+                "be_2526_cr": mb.get("be_2526"),
+                "be_2425_cr": mb.get("be_2425"),
+                "pct_of_budget": mb.get("pct"),
+            })
+    for sb in budget_data.get("scheme_budgets", []):
+        searchable = " ".join([
+            sb.get("scheme", ""),
+            sb.get("ministry", ""),
+        ]).lower()
+        if query in searchable:
+            results["budget_items"].append({
+                "type": "Scheme",
+                "name": sb.get("scheme"),
+                "ministry": sb.get("ministry"),
+                "be_2526_cr": sb.get("be_2526"),
+            })
+
+    # 5. PIB updates — list of {title, ministry, date, url, prid}
+    for u in load("pib_updates.json"):
+        if query in u.get("title", "").lower() or query in u.get("ministry", "").lower():
+            results["pib_updates"].append({
+                "title": u.get("title"),
+                "ministry": u.get("ministry"),
+                "date": u.get("date"),
+                "url": u.get("url"),
+            })
+
+    # 6. Vigilance flags — list of {title, detail, severity, category}
+    for v in load("vigilance.json"):
+        searchable = " ".join([
+            v.get("title", ""),
+            v.get("detail", ""),
+            v.get("category", ""),
+        ]).lower()
+        if query in searchable:
+            results["vigilance"].append({
+                "title": v.get("title"),
+                "category": v.get("category"),
+                "severity": v.get("severity"),
+            })
+
+    total_matches = sum(len(v) for v in results.values())
+    return {
+        "query": q,
+        "total_matches": total_matches,
+        "results": results,
+    }
 
 
 # ── aggregated load (single round-trip for the frontend) ───────────────────
