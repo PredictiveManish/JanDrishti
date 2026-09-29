@@ -47,7 +47,12 @@ Endpoints:
     GET  /api/search?q=query    -> unified search across all datasets
                                    (ministers, ministries, states, budget,
                                    PIB updates, vigilance); min 2 chars
+    GET  /api/export/{dataset}  -> export platform datasets as CSV files
+                                   (state-budgets, ministers, ministries,
+                                   vigilance, scheme-budgets, positions, sources)
 """
+import csv
+import io
 import json
 import logging
 import os
@@ -59,7 +64,7 @@ from typing import Any
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import FileResponse, JSONResponse
+from fastapi.responses import FileResponse, JSONResponse, Response
 from pydantic import BaseModel
 
 # Make the pipelines package importable (backend/pipelines/fetch_pib.py)
@@ -461,6 +466,105 @@ def global_search(q: str):
         "total_matches": total_matches,
         "results": results,
     }
+
+
+# ── data export (CSV format) ────────────────────────────────────────────────
+@app.get("/api/export/{dataset}")
+def export_csv(dataset: str):
+    """Export platform datasets as downloadable CSV files.
+
+    Supported datasets:
+    - state-budgets
+    - ministers
+    - ministries
+    - vigilance
+    - scheme-budgets
+    - positions
+    - sources
+    """
+    ds = dataset.strip().lower()
+    output = io.StringIO()
+
+    if ds == "state-budgets":
+        data = load("state_budgets.json")
+        fields = ["state", "budget_size_display", "budget_size_cr", "fiscal_deficit_display", "fiscal_deficit_pct", "key_allocations_display", "portal_url"]
+        writer = csv.DictWriter(output, fieldnames=fields, extrasaction="ignore")
+        writer.writeheader()
+        for s in data:
+            writer.writerow({
+                "state": s.get("state"),
+                "budget_size_display": s.get("budget_size_display"),
+                "budget_size_cr": s.get("budget_size_cr"),
+                "fiscal_deficit_display": s.get("fiscal_deficit_display"),
+                "fiscal_deficit_pct": s.get("fiscal_deficit_pct"),
+                "key_allocations_display": s.get("key_allocations_display"),
+                "portal_url": s.get("portal_url"),
+            })
+
+    elif ds == "ministers":
+        data = load("ministers.json")
+        writer = csv.writer(output)
+        writer.writerow(["name", "portfolio", "category"])
+        category_labels = {
+            "cabinet": "Cabinet",
+            "mos_independent_charge": "MoS (IC)",
+            "mos": "MoS",
+        }
+        for cat_key, cat_label in category_labels.items():
+            for m in data.get(cat_key, []):
+                writer.writerow([m[0], m[1], cat_label])
+
+    elif ds == "ministries":
+        data = load("ministries.json")
+        writer = csv.writer(output)
+        writer.writerow(["ministry", "minister_in_charge", "secretary_or_head", "departments"])
+        for m in data:
+            departments = "; ".join(m.get("departments", []))
+            writer.writerow([m.get("ministry"), m.get("minister_in_charge"), m.get("secretary_or_head"), departments])
+
+    elif ds == "vigilance":
+        data = load("vigilance.json")
+        fields = ["title", "category", "severity", "detail"]
+        writer = csv.DictWriter(output, fieldnames=fields, extrasaction="ignore")
+        writer.writeheader()
+        for v in data:
+            writer.writerow(v)
+
+    elif ds == "scheme-budgets":
+        data = load("union_budget.json").get("scheme_budgets", [])
+        fields = ["scheme", "ministry", "be_2425", "re_2425", "be_2526", "cut_pct"]
+        writer = csv.DictWriter(output, fieldnames=fields, extrasaction="ignore")
+        writer.writeheader()
+        for sb in data:
+            writer.writerow(sb)
+
+    elif ds == "positions":
+        data = load("positions.json")
+        fields = ["office", "holder", "since", "note", "verification"]
+        writer = csv.DictWriter(output, fieldnames=fields, extrasaction="ignore")
+        writer.writeheader()
+        for p in data:
+            writer.writerow(p)
+
+    elif ds == "sources":
+        data = load("sources.json")
+        fields = ["name", "url", "format", "cadence", "scope", "api"]
+        writer = csv.DictWriter(output, fieldnames=fields, extrasaction="ignore")
+        writer.writeheader()
+        for r in data:
+            writer.writerow(r)
+
+    else:
+        raise HTTPException(
+            status_code=400,
+            detail=f"Unknown dataset '{dataset}'. Supported datasets: state-budgets, ministers, ministries, vigilance, scheme-budgets, positions, sources",
+        )
+
+    return Response(
+        content=output.getvalue(),
+        media_type="text/csv",
+        headers={"Content-Disposition": f'attachment; filename="{ds}.csv"'},
+    )
 
 
 # ── aggregated load (single round-trip for the frontend) ───────────────────

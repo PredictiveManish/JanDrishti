@@ -16,6 +16,7 @@ def _seed_status(monkeypatch, tmp_path, last_success="2026-09-15 10:00 UTC"):
     status_path = tmp_path / "pib_status.json"
     out_path = tmp_path / "pib_updates.json"
     monkeypatch.setattr(main, "DATA_DIR", tmp_path)
+    monkeypatch.setattr(main, "_last_manual_refresh", None)
     monkeypatch.setattr(main.fetch_pib, "STATUS_PATH", status_path)
     monkeypatch.setattr(main.fetch_pib, "OUT_PATH", out_path)
     out_path.write_text(json.dumps([
