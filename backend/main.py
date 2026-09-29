@@ -285,8 +285,8 @@ def refresh_updates():
     
     global _last_manual_refresh
     now = datetime.now(timezone.utc)
-    # ── rate limit: one manual refresh per 60 seconds ──
-    cooldown_seconds = 60
+    # ── rate limit: one manual refresh per 10 minutes ──
+    cooldown_seconds = 600
     if _last_manual_refresh is not None:
         elapsed = (now - _last_manual_refresh).total_seconds()
         if elapsed < cooldown_seconds:
