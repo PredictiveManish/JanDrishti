@@ -73,6 +73,7 @@ DATA_DIR = BASE_DIR / "data"
 FRONTEND_DIR = BASE_DIR.parent / "frontend"
 
 log = logging.getLogger("jandrishti.api")
+_last_manual_refresh: datetime | None = None
 
 # ── configuration (environment-driven) ────────────────────────────────────────
 DEBUG = os.getenv("DEBUG", "").strip().lower() in ("1", "true", "yes", "on")
@@ -281,6 +282,25 @@ def refresh_updates():
     Returns 200 with ok=False (and the last-known-good details) when
     pib.gov.in rejects us — the client always gets a structured answer.
     """
+    
+    global _last_manual_refresh
+    now = datetime.now(timezone.utc)
+    # ── rate limit: one manual refresh per 60 seconds ──
+    cooldown_seconds = 60
+    if _last_manual_refresh is not None:
+        elapsed = (now - _last_manual_refresh).total_seconds()
+        if elapsed < cooldown_seconds:
+            wait = int(cooldown_seconds - elapsed)
+            return JSONResponse(
+                status_code=429,
+                content={
+                    "ok": False,
+                    "message": f"Rate limit active. Please wait {wait}s before refreshing again.",
+                    "retry_after_seconds": wait,
+                },
+            )
+    _last_manual_refresh = now
+    
     try:
         result = fetch_pib.fetch_with_retries(limit=40)
     except Exception as e:  # absolute safety net — never 500 on upstream trouble
