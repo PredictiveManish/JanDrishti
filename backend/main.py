@@ -50,6 +50,7 @@ Endpoints:
     GET  /api/export/{dataset}  -> export platform datasets as CSV files
                                    (state-budgets, ministers, ministries,
                                    vigilance, scheme-budgets, positions, sources)
+    GET  /api/updates/rss       -> RSS 2.0 XML feed of PIB press releases
 """
 import csv
 import io
@@ -57,6 +58,7 @@ import json
 import logging
 import os
 import sys
+import xml.etree.ElementTree as ET
 from contextlib import asynccontextmanager
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -250,6 +252,41 @@ def sources():
 @app.get("/api/updates")
 def updates():
     return load("pib_updates.json")
+
+
+@app.get("/api/updates/rss")
+def pib_rss_feed():
+    """Generates an RSS 2.0 XML feed of the latest PIB updates.
+
+    Suitable for RSS readers (Feedly, NetNewsWire), Telegram bots, and news aggregators.
+    """
+    updates = load("pib_updates.json")
+
+    rss = ET.Element("rss", version="2.0")
+    channel = ET.SubElement(rss, "channel")
+
+    ET.SubElement(channel, "title").text = "JanDrishti — Live PIB Feed"
+    ET.SubElement(channel, "link").text = "http://localhost:8000"
+    ET.SubElement(channel, "description").text = (
+        "Official Indian Government press releases from the Press Information Bureau, auto-tagged by Ministry."
+    )
+    ET.SubElement(channel, "language").text = "en-in"
+
+    for item in updates:
+        title = item.get("title", "")
+        ministry = item.get("ministry", "")
+        full_title = f"[{ministry}] {title}" if ministry else title
+
+        entry = ET.SubElement(channel, "item")
+        ET.SubElement(entry, "title").text = full_title
+        ET.SubElement(entry, "link").text = item.get("url", "")
+        ET.SubElement(entry, "guid").text = item.get("prid", item.get("url", ""))
+
+        if item.get("date"):
+            ET.SubElement(entry, "pubDate").text = item.get("date")
+
+    xml_str = '<?xml version="1.0" encoding="UTF-8"?>\n' + ET.tostring(rss, encoding="unicode")
+    return Response(content=xml_str, media_type="application/xml")
 
 
 @app.get("/api/updates/status")
